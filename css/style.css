@@ -460,12 +460,16 @@ a:hover {
   margin: 0;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.35rem;
   border-bottom: 1px solid var(--accent);
 }
 
 .page-header + .section .prose-section:first-child {
-  margin-top: 0.6rem !important;
+  margin-top: 0 !important;
+}
+
+.page-header + .section .prose-section > p:first-of-type {
+  margin-top: 0;
 }
 
 .page-header .lede {
@@ -479,11 +483,6 @@ a:hover {
    (about, projects, contact, resume) even when section has inline padding-top:0 */
 .page-header + .section {
   padding-top: 1rem !important;
-}
-
-/* Restore top margin for first prose block when inline styles force margin-top:0 */
-.page-header + .section .prose-section:first-child {
-  margin-top: 1rem !important;
 }
 
 /* ----- Project detail ----- */
@@ -575,8 +574,13 @@ a:hover {
 /* ----- About / lists ----- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.15rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: start;
 }
 
 .skill-block {
@@ -584,7 +588,8 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem 1.1rem;
-  box-shadow: var(--shadow);
+  min-width: 0;
+  box-shadow: none;
 }
 
 .skill-block h3 {
@@ -597,6 +602,22 @@ a:hover {
   padding-left: 1.1rem;
   color: var(--text-muted);
   font-size: 0.9rem;
+}
+
+.skill-block li {
+  margin-bottom: 0.45rem;
+}
+
+@media (max-width: 960px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ----- Professional timeline ----- */
