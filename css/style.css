@@ -94,6 +94,11 @@ a:hover {
   background: var(--bg-alt);
 }
 
+/* Thin structural transitions between major sections */
+.section + .section {
+  border-top: 1px solid rgba(30, 58, 138, 0.08);
+}
+
 .section-title {
   font-size: 1.4rem;
   font-weight: 600;
@@ -212,16 +217,15 @@ a:hover {
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.15;
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.2rem;
   color: #f8fafc;
 }
 
-.name-tag {
-  display: inline-block;
-  padding: 0.35rem 0.65rem;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  background: rgba(15, 23, 42, 0.38);
-  border-radius: 6px;
+.hero-divider {
+  width: min(420px, 78%);
+  height: 1px;
+  background: rgba(203, 213, 225, 0.4);
+  margin: 0 0 0.5rem;
 }
 
 .hero .title-line {
@@ -298,19 +302,9 @@ a:hover {
 }
 
 .hero-snapshot {
-  border: 1px solid rgba(148, 163, 184, 0.26);
-  border-radius: 8px;
-  background: rgba(15, 23, 42, 0.35);
-  padding: 0.8rem 0.95rem;
-}
-
-.snapshot-title {
-  margin: 0 0 0.45rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent-soft);
-  font-weight: 600;
+  border-left: 1px solid rgba(148, 163, 184, 0.34);
+  padding: 0.15rem 0 0.15rem 1rem;
+  background: transparent;
 }
 
 .hero-snapshot ul {
@@ -321,11 +315,11 @@ a:hover {
 
 .hero-snapshot li {
   margin: 0;
-  padding: 0.18rem 0;
+  padding: 0.22rem 0;
   color: var(--hero-text);
   font-size: 0.88rem;
   line-height: 1.4;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .hero-snapshot li:last-child {
@@ -693,6 +687,12 @@ a:hover {
   .hero-layout {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .hero-snapshot {
+    border-left: none;
+    border-top: 1px solid rgba(148, 163, 184, 0.3);
+    padding: 0.75rem 0 0;
   }
 
   .nav-toggle {
