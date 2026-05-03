@@ -545,7 +545,7 @@ a:hover {
 
 .pdf-frame {
   width: 100%;
-  min-height: 70vh;
+  min-height: 75vh;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-card);
