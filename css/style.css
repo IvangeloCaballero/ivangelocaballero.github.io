@@ -460,7 +460,7 @@ a:hover {
   margin: 0;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  padding-bottom: 0.35rem;
+  padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--accent);
 }
 
@@ -469,6 +469,11 @@ a:hover {
 }
 
 .page-header + .section .prose-section > p:first-of-type {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+}
+
+.page-header + .section .prose-section > p + p {
   margin-top: 0;
 }
 
