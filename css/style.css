@@ -14,6 +14,10 @@
   --border: #dbe3ec;
   --accent: #1e3a8a;
   --accent-hover: #1e40af;
+  --accent-soft: #60a5fa;
+  --hero-bg: #0f172a;
+  --hero-text: #e2e8f0;
+  --hero-muted: #cbd5e1;
   --shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
   --shadow-hover: 0 6px 18px rgba(15, 23, 42, 0.08);
 
@@ -165,9 +169,9 @@ a:hover {
 
 /* ----- Hero ----- */
 .hero {
-  padding: 3.25rem 0 2.5rem;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
+  padding: 4rem 0 3.2rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+  background: var(--hero-bg);
 }
 
 .hero-inner {
@@ -179,7 +183,7 @@ a:hover {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--accent-hover);
+  color: var(--accent-soft);
   margin: 0 0 0.75rem;
 }
 
@@ -189,18 +193,19 @@ a:hover {
   letter-spacing: -0.025em;
   line-height: 1.15;
   margin: 0 0 0.35rem;
+  color: #f8fafc;
 }
 
 .hero .title-line {
   font-size: 1.05rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--hero-text);
   margin: 0 0 0.75rem;
 }
 
 .hero .tagline {
   font-size: 1rem;
-  color: var(--text-muted);
+  color: var(--hero-muted);
   margin: 0;
   max-width: 38rem;
   line-height: 1.58;
@@ -223,13 +228,13 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--accent);
-  color: #fff;
+  background: #1d4ed8;
+  color: #eff6ff;
 }
 
 .btn-primary:hover {
-  background: var(--accent-hover);
-  color: #fff;
+  background: #2563eb;
+  color: #f8fbff;
   text-decoration: none;
   transform: translateY(-1px);
 }
@@ -250,7 +255,18 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.75rem;
+  margin-top: 1.2rem;
+}
+
+.hero .btn-secondary {
+  background: transparent;
+  color: var(--hero-text);
+  border: 1px solid rgba(203, 213, 225, 0.35);
+}
+
+.hero .btn-secondary:hover {
+  border-color: #bfdbfe;
+  color: #e0f2fe;
 }
 
 /* ----- Project cards ----- */
@@ -592,21 +608,21 @@ a:hover {
 
 /* ----- Footer ----- */
 .site-footer {
-  border-top: 1px solid rgba(30, 58, 138, 0.2);
+  border-top: 1px solid rgba(148, 163, 184, 0.28);
   padding: 2rem 0;
   margin-top: 2rem;
   text-align: center;
   font-size: 0.85rem;
-  color: var(--text-muted);
-  background: var(--bg-footer);
+  color: #cbd5e1;
+  background: #111827;
 }
 
 .site-footer a {
-  color: var(--text-muted);
+  color: #cbd5e1;
 }
 
 .site-footer a:hover {
-  color: var(--accent);
+  color: #dbeafe;
 }
 
 /* ----- Mobile nav ----- */
