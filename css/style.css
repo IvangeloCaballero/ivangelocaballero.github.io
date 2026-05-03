@@ -545,8 +545,8 @@ a:hover {
 
 .pdf-frame {
   width: 100%;
-  height: 78vh;      /* fixed viewport-like height */
-  min-height: 620px; /* optional */
+  height: 85vh;
+  min-height: 700px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-card);
