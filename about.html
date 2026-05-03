@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Ivangelo Caballero</title>
+  <meta name="description" content="About Ivangelo Caballero — design engineer and mechanical designer.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Ivangelo Caballero</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
+      <nav class="nav-menu" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <h1>About</h1>
+        <p class="lede">Engineering discipline with design intent. <!-- EDIT: optional subtitle --></p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <!--
+          ========== EDIT: BIO ==========
+          Replace paragraphs with your story. Keep it concise for recruiters.
+        -->
+        <div class="prose-section" style="margin-top:0;">
+          <h2>Bio</h2>
+          <p>
+            I am a design engineer focused on turning requirements into manufacturable mechanical
+            solutions. My work spans 3D CAD, tolerance analysis, prototyping support, and clear
+            documentation for cross-functional teams.
+          </p>
+          <p>
+            I care about design thinking—framing the problem, iterating with feedback, and validating
+            assumptions before committing to tooling. <!-- EDIT: second paragraph -->
+          </p>
+        </div>
+
+        <!-- EDIT: Skill lists — add/remove <li> items as needed -->
+        <div class="prose-section">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-block">
+              <h3>Design &amp; engineering</h3>
+              <ul>
+                <li>Mechanical system layout</li>
+                <li>Design for manufacturing (DFM)</li>
+                <li>Tolerancing &amp; fits</li>
+                <li>Design reviews &amp; documentation</li>
+              </ul>
+            </div>
+            <div class="skill-block">
+              <h3>CAD &amp; visualization</h3>
+              <ul>
+                <li>Solid modeling &amp; assemblies</li>
+                <li>Drawings &amp; BOMs</li>
+                <li>Rendering &amp; design communication</li>
+              </ul>
+            </div>
+            <div class="skill-block">
+              <h3>Tools (edit to match your stack)</h3>
+              <ul>
+                <li>CAD: SolidWorks / Fusion 360 / Onshape</li>
+                <li>FEA / CFD (if applicable)</li>
+                <li>PLM / PDM, version control</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <p><a href="projects.html">View projects →</a> &nbsp;·&nbsp; <a href="contact.html">Contact →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="y"></span> Ivangelo Caballero.</p>
+      <p><a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    (function () {
+      var btn = document.getElementById("nav-toggle");
+      var menu = document.getElementById("site-nav");
+      if (!btn || !menu) return;
+      btn.addEventListener("click", function () {
+        var open = menu.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    })();
+  </script>
+</body>
+</html>

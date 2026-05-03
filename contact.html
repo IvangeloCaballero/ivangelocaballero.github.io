@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Ivangelo Caballero</title>
+  <meta name="description" content="Contact Ivangelo Caballero.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Ivangelo Caballero</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
+      <nav class="nav-menu" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <h1>Contact</h1>
+        <p class="lede">Open to roles and select freelance engagements. <!-- EDIT --></p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <!--
+          ========== EDIT: CONTACT LINKS ==========
+          Replace mailto, LinkedIn URL, and GitHub URL with your own.
+        -->
+        <ul class="contact-list">
+          <li>
+            <strong>Email</strong>
+            <a href="mailto:you@example.com">you@example.com</a>
+          </li>
+          <li>
+            <strong>LinkedIn</strong>
+            <a href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-profile</a>
+          </li>
+          <li>
+            <strong>GitHub</strong>
+            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">github.com/your-username</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="y"></span> Ivangelo Caballero.</p>
+      <p><a href="index.html">Home</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    (function () {
+      var btn = document.getElementById("nav-toggle");
+      var menu = document.getElementById("site-nav");
+      if (!btn || !menu) return;
+      btn.addEventListener("click", function () {
+        var open = menu.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    })();
+  </script>
+</body>
+</html>

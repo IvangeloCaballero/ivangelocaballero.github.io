@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Ivangelo Caballero</title>
+  <meta name="description" content="Resume for Ivangelo Caballero — design engineer.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Ivangelo Caballero</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
+      <nav class="nav-menu" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html" aria-current="page">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <h1>Resume</h1>
+        <p class="lede">Download or view below. <!-- EDIT --></p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <!--
+          ========== EDIT: RESUME PDF ==========
+          1. Export your resume as a PDF.
+          2. Place it in assets/documents/ (create folder if needed).
+          3. Update both links below to match the filename, e.g. assets/documents/Ivangelo-Caballero-Resume.pdf
+          The <iframe> is optional: remove the whole block if you only want the download button.
+        -->
+        <div class="resume-actions">
+          <a class="btn btn-primary" href="assets/documents/resume.pdf" download>Download PDF resume</a>
+          <a class="btn btn-secondary" href="contact.html">Contact</a>
+        </div>
+        <p class="note-muted">
+          If the preview is blank, add your file at <code>assets/documents/resume.pdf</code> or update the paths in this HTML file.
+        </p>
+
+        <!-- Optional embedded PDF (works in most desktop browsers) -->
+        <iframe
+          class="pdf-frame"
+          title="Resume PDF"
+          src="assets/documents/resume.pdf"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="y"></span> Ivangelo Caballero.</p>
+      <p><a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    (function () {
+      var btn = document.getElementById("nav-toggle");
+      var menu = document.getElementById("site-nav");
+      if (!btn || !menu) return;
+      btn.addEventListener("click", function () {
+        var open = menu.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    })();
+  </script>
+</body>
+</html>
