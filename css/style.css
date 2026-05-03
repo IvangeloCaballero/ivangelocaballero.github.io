@@ -428,11 +428,16 @@ a:hover {
 
 .resume-page .page-header {
   border-bottom: none;
-  padding-bottom: 1.25rem;
+  padding: 1.6rem 0 0.2rem; /* controls top and bottom spacing */
 }
-
+.resume-page .page-header h1 {
+  margin-bottom: 0.1rem;     /* tighten title -> buttons */
+}
 .resume-page .page-header .resume-actions {
-  margin: 0.15rem 0 0.2rem;
+  margin: 0.05rem 0 0.1rem;  /* tighten buttons -> subtitle */
+}
+.resume-page .page-header .lede {
+  margin-top: 0;
 }
 
 .pdf-frame {
