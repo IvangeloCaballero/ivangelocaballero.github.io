@@ -418,26 +418,98 @@ a:hover {
   font-size: 0.9rem;
 }
 
+/* ----- Professional timeline ----- */
+.timeline {
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 1.15rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  width: 1px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  margin: 0 0 1.4rem;
+  padding: 0 0 0 1.2rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -0.05rem;
+  top: 0.4rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--bg);
+}
+
+.timeline-date {
+  margin: 0 0 0.25rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.timeline-item h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.02rem;
+  letter-spacing: -0.01em;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.timeline-item .tools-used {
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
 /* ----- Resume ----- */
 .resume-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin: 1.6rem 0 3rem;
+  margin: 1.5rem 0 2rem;
 }
 
 .resume-page .page-header {
   border-bottom: none;
-  padding: 1.6rem 0 0.2rem; /* controls top and bottom spacing */
+  padding: 2rem 0 0.5rem;
 }
-.resume-page .page-header h1 {
-  margin-bottom: 0.1rem;     /* tighten title -> buttons */
-}
+
 .resume-page .page-header .resume-actions {
-  margin: 0.05rem 0 0.1rem;  /* tighten buttons -> subtitle */
+  margin: 0.35rem 0 0.4rem;
 }
+
 .resume-page .page-header .lede {
   margin-top: 0;
+}
+
+.resume-page .section {
+  padding-top: 0.5rem !important;
+}
+
+.resume-page .note-muted {
+  margin-bottom: 0.6rem;
 }
 
 .pdf-frame {
