@@ -325,6 +325,17 @@ a:hover {
   line-height: 1.52;
 }
 
+/* Add breathing room below inner-page headers
+   (about, projects, contact, resume) even when section has inline padding-top:0 */
+.page-header + .section {
+  padding-top: 1rem !important;
+}
+
+/* Restore top margin for first prose block when inline styles force margin-top:0 */
+.page-header + .section .prose-section:first-child {
+  margin-top: 1rem !important;
+}
+
 /* ----- Project detail ----- */
 .project-hero {
   margin: 0;
