@@ -339,6 +339,47 @@ a:hover {
   font-weight: 400;
 }
 
+/* ----- Skills grid ----- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.skill-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1rem;
+}
+
+.skill-block h3 {
+  margin: 0 0 0.75rem;
+}
+
+.skill-block ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  line-height: 1.6;
+}
+
+.skill-block li {
+  margin-bottom: 0.45rem;
+}
+
+@media (max-width: 960px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ----- Project cards ----- */
 .project-grid {
   display: grid;
@@ -405,7 +446,6 @@ a:hover {
 /* ----- Page header (inner pages) ----- */
 .page-header {
   padding: 2rem 0 1.4rem;
-  border-bottom: 1px solid var(--rule-color);
   background: var(--bg);
 }
 
