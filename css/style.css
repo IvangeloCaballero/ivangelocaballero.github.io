@@ -18,6 +18,7 @@
   --hero-bg: #0f172a;
   --hero-text: #e2e8f0;
   --hero-muted: #cbd5e1;
+  --rule-color: rgba(148, 163, 184, 0.24);
   --shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
   --shadow-hover: 0 6px 18px rgba(15, 23, 42, 0.08);
 
@@ -94,11 +95,6 @@ a:hover {
   background: var(--bg-alt);
 }
 
-/* Thin structural transitions between major sections */
-.section + .section {
-  border-top: 1px solid rgba(30, 58, 138, 0.08);
-}
-
 .section-title {
   font-size: 1.4rem;
   font-weight: 600;
@@ -122,7 +118,7 @@ a:hover {
   content: "";
   display: block;
   height: 1px;
-  background: rgba(30, 58, 138, 0.12);
+  background: var(--rule-color);
 }
 
 .header-inner {
@@ -182,8 +178,8 @@ a:hover {
 
 /* ----- Hero ----- */
 .hero {
-  padding: 4rem 0 3.2rem;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+  padding: 3.5rem 0 2.7rem;
+  border-bottom: 1px solid var(--rule-color);
   background: var(--hero-bg);
 }
 
@@ -222,9 +218,9 @@ a:hover {
 }
 
 .hero-divider {
-  width: min(420px, 78%);
+  width: min(18.5rem, 62%);
   height: 1px;
-  background: rgba(203, 213, 225, 0.4);
+  background: var(--rule-color);
   margin: 0 0 0.5rem;
 }
 
@@ -302,8 +298,7 @@ a:hover {
 }
 
 .hero-snapshot {
-  border-left: 1px solid rgba(148, 163, 184, 0.34);
-  padding: 0.15rem 0 0.15rem 1rem;
+  padding: 2.4rem 0 0.15rem 0;
   background: transparent;
 }
 
@@ -315,15 +310,25 @@ a:hover {
 
 .hero-snapshot li {
   margin: 0;
-  padding: 0.22rem 0;
+  padding: 0.2rem 0;
   color: var(--hero-text);
   font-size: 0.88rem;
   line-height: 1.4;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
 }
 
-.hero-snapshot li:last-child {
-  border-bottom: none;
+.hero-snapshot .snapshot-high {
+  color: #eaf2ff;
+  font-weight: 600;
+}
+
+.hero-snapshot .snapshot-mid {
+  color: var(--hero-text);
+  font-weight: 500;
+}
+
+.hero-snapshot .snapshot-low {
+  color: var(--hero-muted);
+  font-weight: 400;
 }
 
 /* ----- Project cards ----- */
@@ -392,7 +397,7 @@ a:hover {
 /* ----- Page header (inner pages) ----- */
 .page-header {
   padding: 2rem 0 1.4rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--rule-color);
   background: var(--bg);
 }
 
@@ -665,7 +670,7 @@ a:hover {
 
 /* ----- Footer ----- */
 .site-footer {
-  border-top: 1px solid rgba(148, 163, 184, 0.28);
+  border-top: 1px solid var(--rule-color);
   padding: 2rem 0;
   margin-top: 2rem;
   text-align: center;
@@ -690,9 +695,7 @@ a:hover {
   }
 
   .hero-snapshot {
-    border-left: none;
-    border-top: 1px solid rgba(148, 163, 184, 0.3);
-    padding: 0.75rem 0 0;
+    padding: 0.6rem 0 0;
   }
 
   .nav-toggle {
@@ -720,14 +723,6 @@ a:hover {
     align-items: stretch;
     padding: 1rem 1.25rem 1.25rem;
     gap: 0;
-  }
-
-  .nav-list li {
-    border-bottom: 1px solid var(--border);
-  }
-
-  .nav-list li:last-child {
-    border-bottom: none;
   }
 
   .nav-list a {
