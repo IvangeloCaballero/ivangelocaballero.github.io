@@ -426,6 +426,15 @@ a:hover {
   margin: 1.5rem 0 2rem;
 }
 
+.resume-page .page-header {
+  border-bottom: none;
+  padding-bottom: 1.25rem;
+}
+
+.resume-page .page-header .resume-actions {
+  margin: 1rem 0 0.75rem;
+}
+
 .pdf-frame {
   width: 100%;
   min-height: 70vh;
