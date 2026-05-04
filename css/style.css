@@ -105,7 +105,7 @@ a:hover {
 }
 
 .section.section--home-gap {
-  padding-top: 1.9rem;
+  padding-top: 1.5rem;
 }
 
 .section:nth-of-type(even) {
@@ -195,7 +195,7 @@ a:hover {
 
 /* ----- Hero ----- */
 .hero {
-  padding: 3rem 0 2rem;
+  padding: 3rem 0 1.25rem;
   border-bottom: 1px solid var(--rule-color);
   background: var(--hero-bg);
 }
@@ -988,7 +988,7 @@ a:hover {
 
 /* ----- Hero ----- */
 .hero {
-  padding: 3rem 0 2rem;
+  padding: 3rem 0 1.25rem;
   border-bottom: 1px solid var(--rule-color);
   background: var(--hero-bg);
 }
