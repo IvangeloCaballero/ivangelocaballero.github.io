@@ -548,17 +548,6 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
-.about-profile {
-  float: right;
-  width: min(170px, 100%);
-  max-width: 170px;
-  aspect-ratio: 1 / 1;
-  height: auto;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 0 1rem 1.5rem;
-}
-
 .about-bio p {
   line-height: 1.72;
 }
@@ -796,12 +785,31 @@ a:hover {
   }
 }
 
+.about-profile {
+  float: right;
+  width: min(170px, 100%);
+  max-width: 170px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 0 1rem 1.5rem;
+  position: relative;
+}
+
 .about-profile img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Position is now controlled by JavaScript via CSS variables */
-  /* Adjust via data-x and data-y attributes on the image */
+
+  /* Adjustable centering */
   transform: translate(var(--profile-img-x, 0px), var(--profile-img-y, 0px));
+
+  /* ✅ THIS LINE RESTORES THE CIRCLE VISUALLY */
+  border-radius: 50%;
+
   display: block;
+}
+
 }/* ============================================
