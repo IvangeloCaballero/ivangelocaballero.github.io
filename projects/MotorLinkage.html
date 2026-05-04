@@ -7,6 +7,48 @@
   <title>Sample Mechanical Enclosure — Ivangelo Caballero</title>
   <meta name="description" content="Sample project: DFM-focused mechanical enclosure design.">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .project-hero {
+      margin-top: 0.5rem;
+    }
+    .project-hero img {
+      object-fit: contain;
+    }
+    .motor-linkage-two-column {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      align-items: start;
+      margin-top: 1rem;
+    }
+    .motor-linkage-two-column > div,
+    .motor-linkage-two-column figure {
+      min-width: 0;
+    }
+    .motor-linkage-placeholder {
+      border-radius: var(--radius);
+      background: #d9d9d9;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      min-height: 240px;
+    }
+    .motor-linkage-placeholder img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .motor-linkage-caption {
+      margin: 0.75rem 1rem 0 1rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    @media (min-width: 760px) {
+      .motor-linkage-two-column {
+        grid-template-columns: minmax(0, 1fr) 320px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!--
@@ -69,14 +111,22 @@
 
         <article class="prose-section">
           <h2>Design Process</h2>
-          <p>
-            A complete linkage concept was developed through parametric CAD modeling and kinematic assembly definition. Components were modeled from scratch, assembled with motion constraints, and refined to verify smooth operation and logical assembly order prior to documentation release. <!-- EDIT -->
-          </p>
-          <ul>
-            <li>Stakeholder requirements &amp; risk review</li>
-            <li>Concept sketches &amp; CAD exploration</li>
-            <li>Prototype feedback loop <!-- EDIT list items --></li>
-          </ul>
+          <div class="motor-linkage-two-column">
+            <div>
+              <p>
+                A complete linkage concept was developed through parametric CAD modeling and kinematic assembly definition. Components were modeled from scratch, assembled with motion constraints, and refined to verify smooth operation and logical assembly order prior to documentation release. <!-- EDIT -->
+              </p>
+              <ul>
+                <li>Stakeholder requirements &amp; risk review</li>
+                <li>Concept sketches &amp; CAD exploration</li>
+                <li>Prototype feedback loop <!-- EDIT list items --></li>
+              </ul>
+            </div>
+            <figure class="motor-linkage-placeholder">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23d9d9d9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='24' fill='%23757575'%3EPlaceholder image%3C/text%3E%3C/svg%3E" width="600" height="400" alt="Kinematic assembly and linkage geometry placeholder">
+              <figcaption class="motor-linkage-caption">Kinematic assembly and linkage geometry overview.</figcaption>
+            </figure>
+          </div>
         </article>
 
         <article class="prose-section">
