@@ -195,7 +195,7 @@ a:hover {
 
 /* ----- Hero ----- */
 .hero {
-  padding: 3rem 0 1.25rem;
+  padding: 2.25rem 0 1.25rem;
   border-bottom: 1px solid var(--rule-color);
   background: var(--hero-bg);
 }
@@ -988,7 +988,7 @@ a:hover {
 
 /* ----- Hero ----- */
 .hero {
-  padding: 3rem 0 1.25rem;
+  padding: 2.25rem 0 1.25rem;
   border-bottom: 1px solid var(--rule-color);
   background: var(--hero-bg);
 }
