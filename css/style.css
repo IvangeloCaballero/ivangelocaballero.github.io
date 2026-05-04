@@ -104,6 +104,10 @@ a:hover {
   padding: var(--space-8) 0;
 }
 
+.section.section--home-gap {
+  padding-top: 2.4rem;
+}
+
 .section:nth-of-type(even) {
   background: var(--bg-alt);
 }
