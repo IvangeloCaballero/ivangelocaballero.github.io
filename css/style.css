@@ -564,14 +564,6 @@ a:hover {
   margin: 0 0 1rem 1.5rem;
 }
 
-.about-profile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 40%;
-  display: block;
-}
-
 .about-bio p {
   line-height: 1.72;
 }
@@ -1359,14 +1351,6 @@ a:hover {
   margin: 0 0 1rem 1.5rem;
 }
 
-.about-profile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 40%;
-  display: block;
-}
-
 .about-bio p {
   line-height: 1.72;
 }
@@ -1596,15 +1580,14 @@ a:hover {
   .site-header {
     position: relative;
   }
-   
+
 .about-profile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 35%; /* or the % you preferred */
+  object-position: center 35%;
   display: block;
 }
-``
 
 }
 
