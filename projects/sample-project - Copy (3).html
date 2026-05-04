@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- EDIT: Page title & SEO description -->
+  <title>Sample Mechanical Enclosure — Ivangelo Caballero</title>
+  <meta name="description" content="Sample project: DFM-focused mechanical enclosure design.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!--
+    ========== NEW PROJECT PAGE CHECKLIST ==========
+    1. Save a copy of this file: projects/your-project-slug.html
+    2. Update <title> and <meta name="description"> above.
+    3. On index.html and projects.html, add/update a project card:
+       - href="projects/your-project-slug.html"
+       - thumbnail in assets/thumbnails/
+    4. Replace hero image, gallery images, and all section text below.
+    5. Optional: uncomment video block and paste your YouTube embed or Google Drive preview URL.
+
+    PATHS: Files in projects/ use ../ to reach css/ and assets/
+  -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">Ivangelo Caballero</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
+      <nav class="nav-menu" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <!-- EDIT: Project title -->
+        <h1>Sample Mechanical Enclosure</h1>
+        <p class="lede">Placeholder project demonstrating layout for portfolio case studies. <!-- EDIT: one-line summary --></p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <!-- EDIT: Large hero image — swap src and alt -->
+        <figure class="project-hero">
+          <img src="../assets/images/placeholder-hero.svg" width="1200" height="675" alt="Hero render of the sample enclosure project">
+        </figure>
+
+        <article class="prose-section">
+          <h2>Overview</h2>
+          <p>
+            This sample page outlines a compact electronics enclosure designed for sheet-metal fabrication
+            and service access. <!-- EDIT: Replace with your real project overview. -->
+          </p>
+        </article>
+
+        <article class="prose-section">
+          <h2>Problem / Objective</h2>
+          <p>
+            The objective was to protect internal components from dust and ESD while maintaining airflow
+            for a small thermal load, within a fixed BOM cost. <!-- EDIT -->
+          </p>
+        </article>
+
+        <article class="prose-section">
+          <h2>Design Process</h2>
+          <p>
+            Requirements were translated into a concept set; the down-selected concept was detailed in CAD
+            with attention to bend radii, fastener access, and cable routing. <!-- EDIT -->
+          </p>
+          <ul>
+            <li>Stakeholder requirements &amp; risk review</li>
+            <li>Concept sketches &amp; CAD exploration</li>
+            <li>Prototype feedback loop <!-- EDIT list items --></li>
+          </ul>
+        </article>
+
+        <article class="prose-section">
+          <h2>Tools Used</h2>
+          <ul>
+            <li>CAD: SolidWorks (placeholder—edit to your tools)</li>
+            <li>Rendering: KeyShot / native CAD</li>
+            <li>Documentation: drawings, BOM <!-- EDIT --></li>
+          </ul>
+        </article>
+
+        <article class="prose-section">
+          <h2>Final Outcome</h2>
+          <p>
+            The outcome is a manufacturable design with defined tolerances and assembly order, ready for
+            vendor quote and first article. <!-- EDIT -->
+          </p>
+        </article>
+
+        <article class="prose-section">
+          <h2>Image gallery</h2>
+          <p class="note-muted">
+            <!-- HOW TO ADD IMAGES: Copy a <div class="gallery-item">...</div> block and set img src to your file in ../assets/images/ -->
+          </p>
+          <div class="gallery">
+            <div class="gallery-item">
+              <img src="../assets/images/gallery-1.svg" width="800" height="600" alt="Gallery image 1 description">
+            </div>
+            <div class="gallery-item">
+              <img src="../assets/images/gallery-2.svg" width="800" height="600" alt="Gallery image 2 description">
+            </div>
+            <div class="gallery-item">
+              <img src="../assets/images/gallery-3.svg" width="800" height="600" alt="Gallery image 3 description">
+            </div>
+          </div>
+        </article>
+
+        <article class="prose-section">
+          <h2>Video (optional)</h2>
+          <p class="note-muted">
+            Uncomment one of the blocks below. For YouTube: use Share → Embed → copy the src URL.
+            For Google Drive: File → Share → Anyone with link → Preview link, then use an embed/preview URL in iframe src.
+          </p>
+
+          <!-- YouTube example (uncomment and replace VIDEO_ID):
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Project video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          -->
+
+          <!-- Google Drive: use a preview embed URL from your file’s share settings (uncomment and replace):
+          <div class="video-wrap">
+            <iframe
+              src="https://drive.google.com/file/d/FILE_ID/preview"
+              title="Project video"
+              allowfullscreen
+            ></iframe>
+          </div>
+          -->
+
+          <p class="note-muted">No video embedded in the sample—add one using the comments above if needed.</p>
+        </article>
+
+        <p><a href="../projects.html">← All projects</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="y"></span> Ivangelo Caballero.</p>
+      <p><a href="../contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    (function () {
+      var btn = document.getElementById("nav-toggle");
+      var menu = document.getElementById("site-nav");
+      if (!btn || !menu) return;
+      btn.addEventListener("click", function () {
+        var open = menu.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    })();
+  </script>
+</body>
+</html>
