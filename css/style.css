@@ -479,8 +479,7 @@ a:hover {
 
 .prose-section {
   background: rgba(241, 245, 249, 0.38);
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  border-left: 2px solid rgba(30, 58, 138, 0.28);
+  border: none;
   border-radius: 8px;
   padding: 0.85rem 0.95rem 0.9rem;
 }
@@ -550,19 +549,17 @@ a:hover {
 }
 
 .skill-block {
-  background: rgba(30, 58, 138, 0.06);
-  border: 1px solid rgba(30, 58, 138, 0.2);
-  border-top-color: rgba(30, 58, 138, 0.34);
+  background: transparent;
+  border: none;
   border-radius: var(--radius);
   padding: 1rem 1.1rem;
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .about-bio {
-  background: rgba(15, 23, 42, 0.035);
-  border: 1px solid rgba(30, 58, 138, 0.16);
-  border-left: 2px solid rgba(30, 58, 138, 0.34);
-  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.04);
+  border: none;
+  border-radius: 0;
   padding-left: 0.75rem;
 }
 
@@ -600,9 +597,8 @@ a:hover {
   position: relative;
   margin-top: 1rem;
   padding-left: 1.15rem;
-  border: 1px solid rgba(30, 58, 138, 0.16);
-  border-left: 2px solid rgba(30, 58, 138, 0.34);
-  background: rgba(15, 23, 42, 0.03);
+  border: none;
+  background: rgba(15, 23, 42, 0.045);
   border-radius: 6px;
   padding-top: 0.35rem;
   padding-bottom: 0.2rem;
@@ -667,7 +663,6 @@ a:hover {
   font-size: 0.86rem;
   color: var(--text-muted);
   font-weight: 400;
-  border-top: 1px solid rgba(30, 58, 138, 0.22);
   padding-top: 0.22rem;
 }
 
