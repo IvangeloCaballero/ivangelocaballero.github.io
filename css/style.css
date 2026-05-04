@@ -469,11 +469,12 @@ a:hover {
 .prose-section h2 {
   font-size: 1.08rem;
   font-weight: 600;
-  margin: 0 0 0.55rem;
+  margin: 0 0 0.5rem;
   padding-bottom: 0.4rem;
-  border-bottom: 1px solid rgba(30, 58, 138, 0.2);
+  border-bottom: 1px solid rgba(30, 58, 138, 0.24);
   letter-spacing: -0.01em;
   line-height: 1.25;
+  color: var(--accent);
 }
 
 .prose-section p,
@@ -543,13 +544,20 @@ a:hover {
 .skill-block {
   background: var(--bg-card);
   border: 1px solid var(--border);
+  border-top-color: rgba(30, 58, 138, 0.28);
   border-radius: var(--radius);
   padding: 1rem 1.1rem;
   box-shadow: var(--shadow);
 }
 
+.about-bio {
+  border-left: 2px solid rgba(30, 58, 138, 0.2);
+  padding-left: 0.75rem;
+}
+
 .about-bio p {
-  line-height: 1.72;
+  line-height: 1.66;
+  color: #334155;
 }
 
 .about-bio p:first-of-type {
@@ -595,7 +603,7 @@ a:hover {
 
 .timeline-item {
   position: relative;
-  margin: 0 0 1.2rem;
+  margin: 0 0 1.05rem;
   padding: 0 0 0 1.2rem;
 }
 
@@ -616,7 +624,7 @@ a:hover {
 }
 
 .timeline-date {
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.2rem;
   font-size: 0.82rem;
   color: var(--accent);
   letter-spacing: 0.05em;
@@ -625,19 +633,21 @@ a:hover {
 }
 
 .timeline-item h3 {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.32rem;
   font-size: 1.02rem;
   letter-spacing: -0.01em;
+  color: var(--text);
 }
 
 .timeline-item p {
-  margin: 0;
+  margin: 0 0 0.25rem;
   color: var(--text-muted);
+  line-height: 1.52;
 }
 
 .timeline-item .tools-used {
-  margin-top: 0.45rem;
-  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
   font-weight: 400;
 }
