@@ -10,13 +10,15 @@
   <style>
     .project-hero {
       margin-top: 0.25rem;
+      max-height: 460px;
+      overflow: hidden;
     }
     .project-hero img {
       width: 100%;
-      height: auto;
-      max-height: 460px;
-      object-fit: contain;
-      object-position: center;
+      height: 100%;
+      max-height: none;
+      object-fit: cover;
+      object-position: center 38%;
       display: block;
     }
     .motor-linkage-two-column {
@@ -25,6 +27,7 @@
       grid-template-columns: 1fr;
       align-items: stretch;
       margin-top: 1rem;
+      margin-bottom: 0.65rem;
     }
     .motor-linkage-two-column > div,
     .motor-linkage-two-column figure {
@@ -33,19 +36,20 @@
     .motor-linkage-placeholder {
       border-radius: var(--radius);
       background: #d9d9d9;
-      border: 1px solid var(--border);
+      border: none;
       overflow: hidden;
       min-height: 0;
-      max-height: 280px;
+      max-height: none;
+      aspect-ratio: 1 / 1;
       display: grid;
-      align-content: start;
+      align-content: center;
       align-self: start;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.45rem;
     }
     .motor-linkage-placeholder img {
       width: 100%;
-      height: auto;
-      max-height: 240px;
+      height: 100%;
+      max-height: none;
       object-fit: contain;
       object-position: center;
       display: block;
