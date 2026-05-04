@@ -477,13 +477,6 @@ a:hover {
   color: var(--accent);
 }
 
-.prose-section {
-  background: rgba(241, 245, 249, 0.38);
-  border: none;
-  border-radius: 8px;
-  padding: 0.85rem 0.95rem 0.9rem;
-}
-
 .prose-section p,
 .prose-section ul {
   color: var(--text-muted);
@@ -549,17 +542,16 @@ a:hover {
 }
 
 .skill-block {
-  background: transparent;
-  border: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top-color: rgba(30, 58, 138, 0.28);
   border-radius: var(--radius);
   padding: 1rem 1.1rem;
-  box-shadow: none;
+  box-shadow: var(--shadow);
 }
 
 .about-bio {
-  background: rgba(15, 23, 42, 0.04);
-  border: none;
-  border-radius: 0;
+  border-left: 2px solid rgba(30, 58, 138, 0.2);
   padding-left: 0.75rem;
 }
 
@@ -597,11 +589,6 @@ a:hover {
   position: relative;
   margin-top: 1rem;
   padding-left: 1.15rem;
-  border: none;
-  background: rgba(15, 23, 42, 0.045);
-  border-radius: 6px;
-  padding-top: 0.35rem;
-  padding-bottom: 0.2rem;
 }
 
 .timeline::before {
@@ -611,7 +598,7 @@ a:hover {
   top: 0.2rem;
   bottom: 0.2rem;
   width: 1px;
-  background: rgba(30, 58, 138, 0.46);
+  background: rgba(30, 58, 138, 0.25);
 }
 
 .timeline-item {
@@ -663,7 +650,6 @@ a:hover {
   font-size: 0.86rem;
   color: var(--text-muted);
   font-weight: 400;
-  padding-top: 0.22rem;
 }
 
 .timeline-item .tools-used strong {
@@ -815,9 +801,6 @@ a:hover {
   height: 170px;
   border-radius: 50%;
   overflow: hidden;
-  clip-path: circle(50%);
-  -webkit-clip-path: circle(50%);
-  isolation: isolate;
   float: right;
   margin: 0 0 1rem 1.5rem;
 }
@@ -829,6 +812,8 @@ a:hover {
   object-fit: cover;
   object-position: center 35%; /* 🔧 adjust ONLY this */
   display: block;
-  border-radius: 50%;
 }
 
+
+
+}/* ============================================
