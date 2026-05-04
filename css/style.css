@@ -531,20 +531,15 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
-.about-bio {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-}
-
 .about-profile {
-  width: 170px;
-  flex-shrink: 0;
+  float: right;
+  width: min(170px, 100%);
+  max-width: 170px;
   aspect-ratio: 1 / 1;
   height: auto;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0;
+  margin: 0 0 1rem 1.5rem;
 }
 
 .about-profile img {
@@ -560,11 +555,10 @@ a:hover {
 }
 
 @media (max-width: 720px) {
-  .about-bio {
-    flex-direction: column;
-  }
   .about-profile {
+    float: none;
     margin: 0 auto 1rem;
+    display: block;
   }
 }
 
