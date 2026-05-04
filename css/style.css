@@ -421,7 +421,7 @@ a:hover {
 
 /* ----- Page header (inner pages) ----- */
 .page-header {
-  padding: 2rem 0 1.4rem;
+  padding: 1.4rem 0 0.8rem;
   background: var(--bg);
 }
 
@@ -430,8 +430,14 @@ a:hover {
   margin: 0;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  padding-bottom: 1rem;
+  padding-bottom: 0.35rem;
   border-bottom: 1px solid var(--accent);
+}
+
+/* Normalize divider spacing between section titles and page headers */
+.section-title,
+.page-header h1 {
+  padding-bottom: 0.4rem;
 }
 
 .page-header .lede {
