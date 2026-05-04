@@ -546,8 +546,12 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 45%;
   display: block;
+}
+
+.about-bio p {
+  line-height: 1.72;
 }
 
 .about-bio p:first-of-type {
@@ -636,7 +640,13 @@ a:hover {
 .timeline-item .tools-used {
   margin-top: 0.45rem;
   font-size: 0.9rem;
-  color: var(--text);
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.timeline-item .tools-used strong {
+  font-weight: 500;
+  color: var(--text-muted);
 }
 
 /* ----- Resume ----- */
