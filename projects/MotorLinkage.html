@@ -37,23 +37,22 @@
       background: #d9d9d9;
       border: none;
       overflow: hidden;
-      min-height: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-self: stretch;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      min-height: 0;
+      height: auto;
+      display: grid;
+      place-items: center;
+      align-self: start;
       margin-bottom: 0.45rem;
     }
     .motor-linkage-placeholder img {
       width: 100%;
-      height: auto;
+      height: 100%;
       max-height: none;
       object-fit: contain;
       object-position: center;
       display: block;
-      flex: 1 1 auto;
-      min-height: 0;
     }
     .motor-linkage-caption {
       margin: 0.75rem 1rem 0 1rem;
@@ -64,9 +63,6 @@
     @media (min-width: 760px) {
       .motor-linkage-two-column {
         grid-template-columns: minmax(0, 1fr) 320px;
-      }
-      .motor-linkage-two-column > div {
-        min-height: 100%;
       }
     }
   </style>
