@@ -533,11 +533,13 @@ a:hover {
 
 .about-profile {
   float: right;
-  width: 96px;
-  height: 96px;
+  width: min(170px, 100%);
+  max-width: 170px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 0 1rem 1rem;
+  margin: 0 0 1rem 1.5rem;
 }
 
 .about-profile img {
@@ -546,6 +548,10 @@ a:hover {
   object-fit: cover;
   object-position: center;
   display: block;
+}
+
+.about-bio p:first-of-type {
+  margin-top: -0.45rem;
 }
 
 @media (max-width: 720px) {
