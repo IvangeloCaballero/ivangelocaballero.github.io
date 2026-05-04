@@ -495,7 +495,7 @@ a:hover {
 /* ----- Gallery ----- */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -509,8 +509,22 @@ a:hover {
 
 .gallery-item img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  max-width: none;
+  aspect-ratio: 16 / 11;
   object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 980px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ----- Video embed ----- */
@@ -816,4 +830,31 @@ a:hover {
 
 
 
-}/* ============================================
+/* ----- Image fullscreen overlay ----- */
+.zoomable-image {
+  cursor: zoom-in;
+}
+
+.image-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.84);
+  z-index: 1200;
+}
+
+.image-overlay.is-open {
+  display: flex;
+}
+
+.image-overlay img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 95vw;
+  max-height: 92vh;
+  object-fit: contain;
+}
