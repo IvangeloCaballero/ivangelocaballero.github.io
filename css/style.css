@@ -785,14 +785,15 @@ a:hover {
   }
 }
 
-.
-about-profile {
-  float: right;
+.about-profile {
+  position: relative;      /* 🔴 REQUIRED */
   width: 170px;
-  height: 170px;            /* ✅ fixed mask size */
+  height: 170px;
+
   border-radius: 50%;
   overflow: hidden;
-  position: relative;
+
+  float: right;
   margin: 0 0 1rem 1.5rem;
 }
 
