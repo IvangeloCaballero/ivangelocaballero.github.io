@@ -35,7 +35,7 @@
   --space-7: 2.5rem;
   --space-8: 3rem;
   --radius: 10px;
-  --max-width: 1320px;
+  --max-width: 1100px;
   --header-height: 64px;
 }
 
@@ -47,7 +47,6 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 body {
@@ -58,13 +57,6 @@ body {
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
 }
 
 h1, h2, h3 {
@@ -92,15 +84,11 @@ a:hover {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
 }
 
 .section {
   padding: var(--space-8) 0;
-}
-
-.section.section--home-gap {
-  padding-top: 1.2rem;
 }
 
 .section:nth-of-type(even) {
@@ -190,7 +178,7 @@ a:hover {
 
 /* ----- Hero ----- */
 .hero {
-  padding: 2.25rem 0 2.25rem;
+  padding: 3.5rem 0 2.7rem;
   border-bottom: 1px solid var(--rule-color);
   background: var(--hero-bg);
 }
@@ -212,7 +200,7 @@ a:hover {
 }
 
 .hero-label {
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -329,8 +317,7 @@ a:hover {
 }
 
 .hero-snapshot .snapshot-high {
-  color: var(--hero-text);
-  font-weight: 500;
+  color: #eaf2ff;
   font-weight: 600;
 }
 
@@ -340,15 +327,15 @@ a:hover {
 }
 
 .hero-snapshot .snapshot-low {
-  color: var(--hero-text);
-  font-weight: 500;
+  color: var(--hero-muted);
+  font-weight: 400;
 }
 
 /* ----- Project cards ----- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
 }
 
 .project-card {
@@ -407,31 +394,18 @@ a:hover {
   line-height: 1.46;
 }
 
-@media (max-width: 980px) {
-  .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 720px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ----- Page header (inner pages) ----- */
 .page-header {
   padding: 2rem 0 1.4rem;
+  border-bottom: 1px solid var(--rule-color);
   background: var(--bg);
 }
 
 .page-header h1 {
   font-size: clamp(1.65rem, 3.5vw, 2rem);
-  margin: 0;
+  margin: 0 0 0.25rem;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--accent);
 }
 
 .page-header .lede {
@@ -445,6 +419,11 @@ a:hover {
    (about, projects, contact, resume) even when section has inline padding-top:0 */
 .page-header + .section {
   padding-top: 1rem !important;
+}
+
+/* Restore top margin for first prose block when inline styles force margin-top:0 */
+.page-header + .section .prose-section:first-child {
+  margin-top: 1rem !important;
 }
 
 /* ----- Project detail ----- */
@@ -536,8 +515,8 @@ a:hover {
 /* ----- About / lists ----- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(260px, 1fr));
-  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.15rem;
 }
 
 .skill-block {
@@ -546,22 +525,6 @@ a:hover {
   border-radius: var(--radius);
   padding: 1rem 1.1rem;
   box-shadow: var(--shadow);
-}
-
-.about-bio p {
-  line-height: 1.72;
-}
-
-.about-bio p:first-of-type {
-  margin-top: -0.45rem;
-}
-
-@media (max-width: 720px) {
-  .about-profile {
-    float: none;
-    margin: 0 auto 1rem;
-    display: block;
-  }
 }
 
 .skill-block h3 {
@@ -574,6 +537,86 @@ a:hover {
   padding-left: 1.1rem;
   color: var(--text-muted);
   font-size: 0.9rem;
+}
+
+/* ----- About page hierarchy refinements ----- */
+.about-page .prose-section {
+  margin: 2.35rem 0;
+}
+
+.about-page .prose-section:first-child {
+  margin-top: 1.35rem;
+}
+
+.about-page .prose-section h2 {
+  font-size: 1.12rem;
+  font-weight: 600;
+  margin: 0 0 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(30, 58, 138, 0.24);
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+
+.about-page .prose-section p,
+.about-page .prose-section ul {
+  max-width: 72ch;
+  line-height: 1.66;
+  margin: 0 0 0.85rem;
+}
+
+.about-page .prose-section li {
+  margin-bottom: 0.42rem;
+}
+
+.about-page .skills-grid {
+  gap: 1rem;
+}
+
+/* Keep image behavior, only improve breathing room/wrap quality */
+.about-page .about-profile {
+  float: right;
+  margin: 0.1rem 0 1.2rem 1.8rem;
+  shape-outside: circle(50%);
+}
+
+.about-page .timeline {
+  margin-top: 0.9rem;
+  padding-left: 1.2rem;
+}
+
+.about-page .timeline-item {
+  margin: 0 0 1.45rem;
+  padding-left: 1.3rem;
+}
+
+.about-page .timeline-date {
+  margin: 0 0 0.35rem;
+}
+
+.about-page .timeline-item h3 {
+  margin: 0 0 0.55rem;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.about-page .timeline-item > p:not(.tools-used):not(.systems-used) {
+  max-width: 72ch;
+  line-height: 1.62;
+}
+
+.about-page .timeline-item .tools-used,
+.about-page .timeline-item .systems-used {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.about-page .timeline-item .tools-used strong,
+.about-page .timeline-item .systems-used strong {
+  font-weight: 500;
+  color: var(--text-muted);
 }
 
 /* ----- Professional timeline ----- */
@@ -638,13 +681,7 @@ a:hover {
 .timeline-item .tools-used {
   margin-top: 0.45rem;
   font-size: 0.9rem;
-  color: var(--text-muted);
-  font-weight: 400;
-}
-
-.timeline-item .tools-used strong {
-  font-weight: 500;
-  color: var(--text-muted);
+  color: var(--text);
 }
 
 /* ----- Resume ----- */
@@ -704,10 +741,9 @@ a:hover {
 
 .contact-list strong {
   display: block;
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  font-size: 0.8rem;
   color: var(--text-muted);
   margin-bottom: 0.25rem;
 }
@@ -715,7 +751,7 @@ a:hover {
 /* ----- Footer ----- */
 .site-footer {
   border-top: 1px solid var(--rule-color);
-  padding: 0.75rem 0;
+  padding: 2rem 0;
   margin-top: 2rem;
   text-align: center;
   font-size: 0.85rem;
@@ -733,6 +769,22 @@ a:hover {
 
 /* ----- Mobile nav ----- */
 @media (max-width: 720px) {
+  .about-page .about-profile {
+    float: none;
+    margin: 0 auto 1rem;
+    shape-outside: none;
+  }
+
+  .about-page .prose-section {
+    margin: 2rem 0;
+  }
+
+  .about-page .prose-section p,
+  .about-page .prose-section ul,
+  .about-page .timeline-item > p:not(.tools-used):not(.systems-used) {
+    max-width: none;
+  }
+
   .hero-layout {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -784,26 +836,3 @@ a:hover {
     max-height: none !important;
   }
 }
-
-
-.about-profile {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  overflow: hidden;
-  float: right;
-  margin: 0 0 1rem 1.5rem;
-}
-
-/* Browser handles the crop */
-.about-profile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%; /* 🔧 adjust ONLY this */
-  display: block;
-}
-
-
-
-}/* ============================================
