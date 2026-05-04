@@ -800,6 +800,8 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 78% 30%;
+  /* Position is now controlled by JavaScript via CSS variables */
+  /* Adjust via data-x and data-y attributes on the image */
+  transform: translate(var(--profile-img-x, 0px), var(--profile-img-y, 0px));
   display: block;
 }/* ============================================
