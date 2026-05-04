@@ -18,7 +18,7 @@
       display: grid;
       gap: 1.5rem;
       grid-template-columns: 1fr;
-      align-items: start;
+      align-items: stretch;
       margin-top: 1rem;
     }
     .motor-linkage-two-column > div,
@@ -30,11 +30,13 @@
       background: #d9d9d9;
       border: 1px solid var(--border);
       overflow: hidden;
-      min-height: 240px;
+      min-height: 420px;
+      display: grid;
     }
     .motor-linkage-placeholder img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
     .motor-linkage-caption {
@@ -110,9 +112,9 @@
         </article>
 
         <article class="prose-section">
-          <h2>Design Process</h2>
           <div class="motor-linkage-two-column">
             <div>
+              <h2>Design Process</h2>
               <p>
                 A complete linkage concept was developed through parametric CAD modeling and kinematic assembly definition. Components were modeled from scratch, assembled with motion constraints, and refined to verify smooth operation and logical assembly order prior to documentation release. <!-- EDIT -->
               </p>
@@ -121,22 +123,20 @@
                 <li>Concept sketches &amp; CAD exploration</li>
                 <li>Prototype feedback loop <!-- EDIT list items --></li>
               </ul>
+
+              <h2>Tools Used</h2>
+              <ul>
+                <li>CAD: PTC Creo</li>
+                <li>Assembly &amp Kinematics: Creo Mechanism</li>
+                <li>Rendering/Visualization: Native CAD rendering</li>
+                <li>Documentation: 2D drawings, BOM generation, exploded views <!-- EDIT --></li>
+              </ul>
             </div>
             <figure class="motor-linkage-placeholder">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23d9d9d9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='24' fill='%23757575'%3EPlaceholder image%3C/text%3E%3C/svg%3E" width="600" height="400" alt="Kinematic assembly and linkage geometry placeholder">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23d9d9d9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='24' fill='%23757575'%3EPlaceholder image%3C/text%3E%3C/svg%3E" alt="Kinematic assembly and linkage geometry placeholder">
               <figcaption class="motor-linkage-caption">Kinematic assembly and linkage geometry overview.</figcaption>
             </figure>
           </div>
-        </article>
-
-        <article class="prose-section">
-          <h2>Tools Used</h2>
-          <ul>
-            <li>CAD: PTC Creo</li>
-            <li>Assembly &amp Kinematics: Creo Mechanism</li>
-            <li>Rendering/Visualization: Native CAD rendering</li>
-            <li>Documentation: 2D drawings, BOM generation, exploded views <!-- EDIT --></li>
-          </ul>
         </article>
 
         <article class="prose-section">
