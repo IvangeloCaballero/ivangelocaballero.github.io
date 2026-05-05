@@ -32,10 +32,10 @@
       margin-top: 1rem;
       margin-bottom: 0.65rem;
     }
-    -linkage-two-column > div,
-    -linkage-two-column figure {
+    .motor-linkage-two-column > div,
+    .motor-linkage-two-column figure {
       min-width: 0;
-    }
+  }
     .motor-linkage-placeholder {
       border-radius: var(--radius);
       background: #eef1f6;
@@ -59,12 +59,6 @@
     color: var(--text-muted);
     text-align: center;
 
-    }
-    .motor-linkage-caption {
-      margin: 0.75rem 1rem 0 1rem;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.5;
     }
     @media (min-width: 760px) {
       .motor-linkage-two-column {
@@ -181,24 +175,24 @@
             <!-- HOW TO ADD IMAGES: Copy a <div class="gallery-item">...</div> block and set img src to your file in ../assets/images/ -->
           </p>
           <div class="gallery">
-            <div class="gallery-item">
-              <img src="../assets/images/motorwiperlinkage.png" width="800" height="600" 
-              alt="Exploded wiper linkage assembly"
-              class="zoomable-image"
-              data-label="Exploded Assembly & BOM"
-            </div>
-            <div class="gallery-item">
-              <img src="../assets/images/BRKT A Assembly.png"
-              alt="Bracket B sub-assembly"
-              class="zoomable-image"
-              data-label="Bracket B Sub-Assembly"
-            </div>
-            <div class="gallery-item">
-              <img src="../assets/images/wiperlinkageinitialposition.jpg"
-              alt="Kinematic sweep position"
-              class="zoomable-image"
-              data-label="Kinematic Sweep Position"
-            </div>
+            <div class="gallery-item" data-label="Exploded Assembly & BOM">
+              <img
+                src="../assets/images/motorwiperlinkage.png"
+                alt="Exploded view of the wiper linkage assembly"
+                class="zoomable-image">
+      </div>
+            <div class="gallery-item" data-label="Bracket B Sub-Assembly">
+            <img
+            src="../assets/images/BRKT A Assembly.png"
+            alt="Bracket B sub-assembly showing joint interfaces"
+            class="zoomable-image">
+      </div>
+            <div class="gallery-item" data-label="Kinematic Sweep Position">
+            <img
+            src="../assets/images/wiperlinkageinitialposition.jpg"
+            alt="Wiper linkage shown at an extreme kinematic sweep position"
+            class="zoomable-image">
+        </div>
           </div>
         </article>
 
