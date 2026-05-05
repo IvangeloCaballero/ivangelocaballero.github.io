@@ -225,7 +225,7 @@ a:hover {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   gap: 1.5rem;
-  align-items: start;
+  align-items: center;
 }
 
 .hero-main {
@@ -366,11 +366,16 @@ a:hover {
 }
 
 /* ----- Project cards ----- */
-.project-grid {
+
+project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
+  justify-content: center;   /* centers the grid as a block */
+  max-width: 1200px;         /* prevents visual drift */
+  margin: 0 auto;            /* keeps it centered in container */
 }
+
 
 .project-card {
   background: var(--bg-card);
