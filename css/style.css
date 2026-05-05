@@ -547,12 +547,12 @@ a:hover {
   border-radius: var(--radius);
   border: 1px solid var(--border);
   overflow: hidden;
-  background: #000;
+  background: var(--bg-alt);
 }
 
 .video-wrap iframe {
   width: 100%;
-  height: 405px; /* 720 × 9 / 16 */
+  height: 440px; /* 720 × 9 / 16 */
   border: 0;
 }
 
