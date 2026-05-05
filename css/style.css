@@ -547,7 +547,7 @@ a:hover {
   border-radius: var(--radius);
   border: 1px solid var(--border);
   overflow: hidden;
-  background: var(--bg-alt);
+  background: none;
 }
 
 .video-wrap iframe {
