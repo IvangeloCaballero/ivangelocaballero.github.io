@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- EDIT: Page title & SEO description -->
-  <title>Buffer Tank - SolidWorks</title>
+  <title>Buffer Tank - SolidWorks Simulation</title>
   <meta name="description" content="Sample project: DFM-focused mechanical enclosure design.">
   <link rel="stylesheet" href="../css/style.css">
   <style>
@@ -100,8 +100,8 @@
     <header class="page-header">
       <div class="container">
         <!-- EDIT: Project title -->
-        <h1>Motor Wiper Linkage - PTC Creo</h1>
-        <p class="lede">End‑to‑end mechanical design and documentation case study. <!-- EDIT: one-line summary --></p>
+        <h1>Buffer Tank - SolidWorks Simulation</h1>
+        <p class="lede">Concept‑level pressure vessel design with structural evaluation of nozzle interfaces. <!-- EDIT: one-line summary --></p>
       </div>
     </header>
 
@@ -115,50 +115,29 @@
         <article class="prose-section">
           <h2>Overview</h2>
           <p>
-            This project documents the complete mechanical design of a motor‑driven wiper linkage assembly, developed from initial concept through detailed CAD modeling, kinematic assembly definition, and manufacturing documentation. The work emphasizes functional motion control, part interoperability, and manufacturability.
-          </p>
+            This project presents a concept‑level buffer tank design developed to study shell sizing, nozzle geometry, and structural behavior under internal pressure using static analysis. </p>
+          <p><em>The geometry was reconstructed from publicly available reference images of generic industrial buffer tanks for concept‑level evaluation. </em>  </p>
         </article>
 
         <article class="prose-section">
-          <h2>Problem / Objective</h2>
+          <h2>Objective</h2>
           <p>
-            The objective of this project was to design a motor‑driven wiper linkage capable of converting rotary motor input into controlled, synchronized output motion. The focus was on defining correct linkage geometry, motion constraints, and component interfaces to support accurate kinematics and production‑ready documentation. <!-- EDIT -->
+            Evaluate structural behavior and safety margin under assumed operating and maximum internal pressure, with emphasis on identifying governing regions. <!-- EDIT -->
           </p>
         </article>
 
         <article class="prose-section">
           <div class="motor-linkage-two-column">
             <div>
-              <h2>Design Process</h2>
-              <p>
-                A complete linkage concept was developed through parametric CAD modeling and kinematic assembly definition. Components were modeled from scratch, assembled with motion constraints, and refined to verify smooth operation and logical assembly order prior to documentation release. <!-- EDIT -->
-              </p>
+              <h2>Key Parameters</h2>
               <ul>
-                <li>Functional requirements analysis &amp; linkage architecture definition</li>
-                <li>Linkage geometry definition &amp; dimensional layout validation</li>
-                <li>Concept sketches &amp; CAD exploration</li>
-                <li>Motion behavior review &amp; clearance checks across full sweep range<!-- EDIT list items --></li>
-              </ul>
-
-              <h2>Tools Used</h2>
-              <ul>
-                <li>CAD: PTC Creo</li>
-                <li>Assembly &amp Kinematics: Creo Mechanism</li>
-                <li>Rendering/Visualization: Native CAD rendering</li>
-                <li>Documentation: 2D drawings, BOM generation, exploded views <!-- EDIT --></li>
-              </ul>
+                <li><strong>Material:</strong> ASTM A36 Steel</li>
+                <li><strong>Shell thickness:</strong> 6&nbsp;mm</li>
+                <li><strong>Operating pressure:</strong> 0.2&nbsp;MPa</li>
+                <li><strong>Maximum pressure:</strong> 0.6&nbsp;MPa</li>
+                <li><strong>Evaluation:</strong> von&nbsp;Mises stress &amp; yield‑based FoS</li>
+             </ul>
             </div>
-            <figure class="motor-linkage-placeholder">
-        <img
-            src="../assets/images/Wiper Linkage Assembly.png"
-            alt="Kinematic assembly and linkage geometry overview"
-            class="zoomable"
-          >
-            <figcaption class="motor-linkage-caption">
-            Kinematic assembly and linkage geometry overview.
-          </figcaption>
-        </figure>
-
           </div>
         </article>
 
