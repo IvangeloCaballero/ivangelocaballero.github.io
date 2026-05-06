@@ -115,7 +115,8 @@
         <article class="prose-section">
           <h2>Overview</h2>
           <p>
-            This project presents a concept‑level buffer tank design developed to study shell sizing, nozzle geometry, and structural behavior under internal pressure using static analysis.<em>        The geometry was reconstructed from publicly available reference images of generic industrial buffer tanks for concept‑level evaluation. </em>  </p>
+            This project presents a concept‑level buffer tank design developed to study shell sizing, nozzle geometry, and structural behavior under internal pressure using static analysis. <br>
+            <em>The geometry was reconstructed from publicly available reference images of generic industrial buffer tanks for concept‑level evaluation. </em>  </p>
         </article>
 
         <article class="prose-section">
@@ -146,14 +147,15 @@
             Structural response is governed by the maximum internal pressure case (0.6 MPa).
             Comparison of operating (0.2 MPa) and maximum internal pressure cases shows von Mises
             stress and yield‑based Factor of Safety concentrated at nozzle–shell junctions, with
-            minimum FoS ≈ 2.4 at maximum pressure. <em>The operating pressure case exhibits a
+            minimum FoS ≈ 2.4 at maximum pressure. <br>
+            <em>The operating pressure case exhibits a
             significantly higher safety margin and does not govern design decisions.</em>
           </p>
        <figure class="project-hero">
          <img src="../assets/images/Buffer Tank/Buffer Tank_Simulation-Static v1v2.jpg"
             alt="Static structural analysis results showing von Mises stress and factor of safety for operating and maximum pressure cases"
            class="zoomable">
-      <figcaption class="motor-linkage-caption">
+      <figcaption class="analysis-caption">
         Static structural analysis comparing operating (0.2 MPa) and maximum (0.6 MPa) internal pressure cases; nozzle–shell junctions govern the minimum Factor of Safety.
     </figcaption>
   </figure>
@@ -164,64 +166,32 @@
             <!-- HOW TO ADD IMAGES: Copy a <div class="gallery-item">...</div> block and set img src to your file in ../assets/images/ -->
           </p>
           <div class="gallery">
-            <div class="gallery-item" data-label="Exploded Assembly & BOM">
+            <div class="gallery-item" data-label="Nozzle Section Geometry">
               <img
-                src="../assets/images/motorwiperlinkage.png"
-                alt="Exploded view of the wiper linkage assembly"
+                src="../assets/images/Buffer Tank/Buffer Tank_Nozzle Details.JPG"
+                alt="Nozzle Section Geometry"
                 class="zoomable-image">
       </div>
-            <div class="gallery-item" data-label="Bracket B Sub-Assembly">
+            <div class="gallery-item" data-label="Buffer Tank 2D">
             <img
-            src="../assets/images/BRKT A Assembly.png"
-            alt="Bracket B sub-assembly showing joint interfaces"
+            src="../assets/images/Buffer Tank/Buffer Tank 2D.jpg"
+            alt="Buffer Tank 2D"
             class="zoomable-image">
       </div>
-            <div class="gallery-item" data-label="Kinematic Sweep Position">
+            <div class="gallery-item" data-label="Back Iso">
             <img
-            src="../assets/images/wiperlinkageiinitialposition (1).jpg"
-            alt="Wiper linkage shown at an extreme kinematic sweep position"
+            src="..assets/images/Buffer Tank/Buffer Tank Back Iso.JPG"
+            alt="Back details of buffer tank"
             class="zoomable-image">
         </div>
           </div>
         </article>
 
-        <article class="prose-section">
-          <h2>Video</h2>
-          <p class="note-muted">
-            This clip demonstrates the modeled kinematic behavior of the wiper linkage assembly, showing coordinated motion between the motor crank and output linkages across the full sweep range.
-          </p>
-
-          <!-- YouTube example (uncomment and replace VIDEO_ID):
-          <div class="video-wrap">
-            <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID"
-              title="Project video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          -->
-
-        <div class="video-wrap">
-          <iframe
-        src="https://drive.google.com/file/d/14samXT-ENPABpOmwcJ1QNyaqLRjY_oNX/preview"
-        title="Wiper linkage kinematic motion"
-        allowfullscreen>
-        </iframe>
-        </div>
-
-          <!-- Google Drive: use a preview embed URL from your file’s share settings (uncomment and replace):
-          <div class="video-wrap">
-            <iframe
-              src="https://drive.google.com/file/d/FILE_ID/preview"
-              title="Project video"
-              allowfullscreen
-            ></iframe>
-          </div>
-          -->
-
+      <article class="prose-section">
+          <h2>Conclusion</h2>
+          <p>
+            Based on the concept‑level analysis, the buffer tank remains structurally acceptable at the assumed maximum internal pressure of 0.6 MPa, with the nozzle–shell junctions clearly governing the structural response and a minimum Factor of Safety of about 2.4. To improve margin for higher or maximum pressure operation, I would increase the shell thickness from the current 6 mm to roughly 8–10 mm. In addition, I would recommend adding local reinforcement pads around the nozzle flanges—on the order of 1.0–1.5× the shell thickness and approximately 2–3× the nozzle diameter—to better distribute load and reduce local stress concentration.  </p>
         </article>
-
         <p><a href="../projects.html">← All projects</a></p>
       </div>
     </section>
