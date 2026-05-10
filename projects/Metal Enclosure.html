@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- EDIT: Page title & SEO description -->
+  <title>Sheet‑Metal Electrical Enclosure - SolidWorks</title>
+  <meta name="description" content="Sample project: DFM-focused mechanical enclosure design.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    
+    .project-hero {
+      margin: 1rem -1.5rem 1.75rem; 
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--bg-alt);
+      padding: 1rem;
+    }
+    .project-hero img {
+      width: 100%;
+      height: auto;
+      max-height: 460px;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+    }
+    .motor-linkage-two-column {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      margin-top: 1rem;
+      margin-bottom: 0.65rem;
+    }
+    .motor-linkage-two-column > div,
+    .motor-linkage-two-column figure {
+      min-width: 0;
+  }
+    .motor-linkage-placeholder {
+      border-radius: var(--radius);
+      background: #eef1f6;
+      border: 1px solid rgba(30, 58, 138, 0.45); /* dark navy tint */
+      padding: 0.75rem;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      min-height: 0;
+      height: auto;
+      display: grid;
+      place-items: center;
+      align-self: center;
+      margin-top: 0.35rem; /* subtle downward nudge */
+      margin-bottom: 0.45rem;
+    }
+    .motor-linkage-caption {  
+    margin-top: 0.75rem;
+    font-size: 0.95rem;     /* slightly larger */
+    font-style: italic;     /* figure-style caption */
+    line-height: 1.45;
+    color: var(--text-muted);
+    text-align: center;
+    }
+    @media (min-width: 760px) {
+      .motor-linkage-two-column {
+        grid-template-columns: minmax(0, 1fr) 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--
+    ========== NEW PROJECT PAGE CHECKLIST ==========
+    1. Save a copy of this file: projects/your-project-slug.html
+    2. Update <title> and <meta name="description"> above.
+    3. On index.html and projects.html, add/update a project card:
+       - href="projects/your-project-slug.html"
+       - thumbnail in assets/thumbnails/
+    4. Replace hero image, gallery images, and all section text below.
+    5. Optional: uncomment video block and paste your YouTube embed or Google Drive preview URL.
+
+    PATHS: Files in projects/ use ../ to reach css/ and assets/
+  -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">Ivangelo Caballero</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
+      <nav class="nav-menu" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <!-- EDIT: Project title -->
+        <h1>Sheet‑Metal Electrical Enclosure - SolidWorks</h1>
+        <p class="lede">Sheet‑metal design focused on manufacturability and press‑brake forming <!-- EDIT: one-line summary --></p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <!-- EDIT: Large hero image — swap src and alt -->
+        <figure class="project-hero">
+          <img src="../assets/images/MetalEnclosure/Electric Metal Enclosure.JPG" width="1200" height="675" alt="Hero render of the sample enclosure project">
+        </figure>
+
+        <article class="prose-section">
+          <h2>Design Summary</h2>
+          <p>
+            Modular sheet‑metal electrical enclosure designed with emphasis on manufacturability, ventilation, and service access. The architecture is based on a folded main chassis with bolt‑on panels and door assembly. Representative fabrication data is included to demonstrate production intent.
+          </p>
+        </article>
+
+     <article class="prose-section">
+          <div class="motor-linkage-two-column">
+            <div>
+              <h2>Key Design Considerations</h2>
+              <ul>
+                <li><strong>Ventilation &amp; passive airflow:</strong> Side‑panel vents and lower intake openings support passive airflow for heat dissipation without active cooling.</li>
+                <li><strong>Cable management:</strong> Rear‑panel cable entry cutouts are positioned to simplify wiring access while maintaining enclosure integrity.</li>
+                <li><strong>Sealing &amp; protection:</strong> Door gasket and quarter‑turn latch provide consistent compression for environmental sealing and quick service access.</li>
+                <li><strong>Modularity:</strong> Bolt‑on panels and door allow configuration changes or maintenance without altering the main chassis.</li>
+             </ul>
+            </div>
+          </div>
+        </article>
+        
+        <article class="prose-section">
+          <h2>Fabrication Definition</h2>
+          <p>            
+            The main enclosure chassis is manufactured as a folded sheet‑metal component to minimize part count and simplify press‑brake forming. The flat pattern shown below defines bend directions, internal bend radii, and representative flange lengths for the primary structural element. This fabrication view illustrates how modular panels and the door assembly interface with the chassis without additional tooling complexity.
+          </p>
+       <figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
+         <img src="../assets/images/MetalEnclosure/Chassis_FlatPattern.jpg"
+            alt="Static structural analysis results showing von Mises stress and factor of safety for operating and maximum pressure cases"
+           class="zoomable">
+  </figure>
+</article>
+
+        <p><a href="../projects.html">← All projects</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="y"></span> Ivangelo Caballero.</p>
+      <p><a href="../contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    (function () {
+      var btn = document.getElementById("nav-toggle");
+      var menu = document.getElementById("site-nav");
+      if (!btn || !menu) return;
+      btn.addEventListener("click", function () {
+        var open = menu.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    })();
+  </script>
+  <script src="../js/site.js"></script>
+</body>
+</html>
