@@ -132,9 +132,6 @@
         </article>
 
 <article class="prose-section">
-
-<article class="prose-section">
-
   <h2>Process Flow and Layout</h2>
   <div style="
     display: grid;
@@ -171,50 +168,99 @@
   </div>
 </article>
 
-        <article class="prose-section">
-          <h2>Final Outcome</h2>
-          <p>
-            The final result is a fully defined wiper linkage assembly with validated kinematic behavior and complete manufacturing documentation. The design includes clear part relationships, an organized BOM, and an exploded assembly view suitable for communication with manufacturing, supplier quotation, and further development or program integration. <!-- EDIT -->
-          </p>
-        </article>
+<article class="prose-section">
 
-        <article class="prose-section">
-          <h2>Video</h2>
-          <p class="note-muted">
-            This clip demonstrates the modeled kinematic behavior of the wiper linkage assembly, showing coordinated motion between the motor crank and output linkages across the full sweep range.
-          </p>
+  <h2>Component Design and Standard Integration</h2>
 
-          <!-- YouTube example (uncomment and replace VIDEO_ID):
-          <div class="video-wrap">
-            <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID"
-              title="Project video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          -->
+  <div style="
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 1.5rem;
+    align-items: start;
+    margin-top: 1rem;
+  ">
 
-        <div class="video-wrap">
-          <iframe
-        src="https://drive.google.com/file/d/14samXT-ENPABpOmwcJ1QNyaqLRjY_oNX/preview"
-        title="Wiper linkage kinematic motion"
-        allowfullscreen>
-        </iframe>
-        </div>
+    <!-- LEFT: TEXT + BULLETS -->
+    <div>
 
-          <!-- Google Drive: use a preview embed URL from your file’s share settings (uncomment and replace):
-          <div class="video-wrap">
-            <iframe
-              src="https://drive.google.com/file/d/FILE_ID/preview"
-              title="Project video"
-              allowfullscreen
-            ></iframe>
-          </div>
-          -->
+      <p>
+        The system incorporates both custom-designed components and standard parts. Valves and piping elements were selected from Inventor Content Center to ensure compatibility with commonly used industrial components. Major equipment such as the filtration unit, storage tanks, pump configuration, and supporting skid structure were designed and modeled to meet system requirements and spatial constraints.
+      </p>
 
-        </article>
+      <p>
+        Flange connections were detailed to reflect proper mating conditions and sealing interfaces, following standard dimensional practices aligned with ASME B16.5.
+      </p>
 
+      <ul>
+        <li>Custom modeling of tanks, filter unit, pump setup, and skid frame</li>
+        <li>Use of Inventor Content Center for standard valves and piping</li>
+        <li>Flange design aligned with ASME B16.5 dimensions</li>
+        <li>Consideration of alignment, sealing surfaces, and bolt arrangement</li>
+      </ul>
+
+    </div>
+
+    <!-- RIGHT: IMAGE -->
+    <div class="gallery-item" style="
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.5rem;
+      background: #f0f2f6;
+    ">
+
+      <img
+        src="../assets/images/ProcessSkid/Flange Section.png"
+        class="zoomable-image"
+        alt="Flange section detail showing bolt arrangement and sealing interface">
+
+      <p style="
+        font-size: 0.8rem;
+        text-align: center;
+        color: var(--text-muted);
+        margin-top: 0.5rem;
+      ">
+        Flange section detailing mating geometry and sealing interface.
+      </p>
+
+    </div>
+
+  </div>
+
+</article>
+
+<article class="prose-section">
+  <h2>Bill of Materials and Cost Estimation</h2>
+
+  <p>
+    A bill of materials was developed to document the major components of the system and provide an initial cost estimate. The breakdown includes primary equipment, piping elements, and fittings, supporting evaluation of material requirements and overall project feasibility.
+  </p>
+
+  <p>
+    <a href="../assets/files/ProcessSkid_BOM.xlsx" target="_blank">
+      View Full BOM and Cost Estimation (Excel)
+    </a>
+  </p>
+</article>
+
+        
+<article class="prose-section">
+  <h2>Video</h2>
+
+  <p class="note-muted">
+    This clip presents a walkthrough of the modular filtration skid, highlighting the arrangement of components, piping layout, and overall system integration within the skid structure.
+  </p>
+
+  <div class="video-wrap">
+    <iframe
+      src="https://drive.google.com/file/d/14samXT-ENPABpOmwcJ1QNyaqLRjY_oNX/preview"
+      title="Modular filtration skid walkthrough"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+</article>
+
+        
         <p><a href="../projects.html">← All projects</a></p>
       </div>
     </section>
