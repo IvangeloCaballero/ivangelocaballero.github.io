@@ -4,6 +4,7 @@
     ".gallery-item img",
     ".motor-linkage-placeholder img",
     ".about-profile img"
+    ".process-image-box img"
   ].join(", ");
 
   const images = Array.from(document.querySelectorAll(selector)).filter((img) => {
