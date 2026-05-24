@@ -131,10 +131,8 @@ sne<!DOCTYPE html>
         </figure>
         </article>
 
-
 <article class="prose-section">
   <h2>Process Flow and Layout</h2>
-
   <div style="
     display: grid;
     grid-template-columns: 60% 40%;
@@ -143,32 +141,34 @@ sne<!DOCTYPE html>
     margin-top: 1.5rem;
     align-items: stretch;
   ">
-
     <!-- LEFT TEXT -->
     <div>
       <p>
         The process flow diagram illustrates the sequence of operation from water inlet through pumping, filtration, and distribution to outlet streams. Flow paths are arranged to maintain continuity while allowing parallel filtration and separate instrumentation discharge. The floor plan shows how these components are spatially arranged within the skid, ensuring efficient routing, accessibility, and compact system integration.
       </p>
     </div>
-<!-- RIGHT COLUMN: FLOW DIAGRAM -->
-<div class="gallery" style="grid-row: span 2;">
-  <div class="gallery-item process-image-box">
-    <img 
-      src="../assets/images/ProcessSkid/Process Flow Diagram.png"
-      class="zoomable-image process-image"
-      alt="Process Flow Diagram">
+    <!-- RIGHT: FLOW DIAGRAM (FULL HEIGHT ✅) -->
+    <div class="gallery" style="grid-row: span 2;">
+      <div class="gallery-item process-image-box" style="height: 100%;">
+        <img 
+          src="../assets/images/ProcessSkid/Process Flow Diagram.png"
+          class="zoomable-image process-image"
+          style="height:100%; width:auto; object-fit:contain;"
+          alt="Process Flow Diagram">
+      </div>
+    </div>
+    <!-- LEFT: FLOOR PLAN (FULL WIDTH ✅) -->
+    <div class="gallery">
+      <div class="gallery-item process-image-box">
+        <img 
+          src="../assets/images/ProcessSkid/Floor Plan.png"
+          class="zoomable-image process-image"
+          style="width:100%; height:auto; object-fit:contain;"
+          alt="Floor Plan">
+      </div>
+    </div>
   </div>
-</div>
-
-<!-- LEFT COLUMN: FLOOR PLAN -->
-<div class="gallery">
-  <div class="gallery-item process-image-box">
-    <img 
-      src="../assets/images/ProcessSkid/Floor Plan.png"
-      class="zoomable-image process-image"
-      alt="Floor Plan">
-  </div>
-</div>
+</article>
 </article>
 
         <article class="prose-section">
