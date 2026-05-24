@@ -132,36 +132,56 @@
         </article>
 
 
-<article class="prose-section"> 
+<article class="prose-section">
+
   <h2>Process Flow and Layout</h2>
 
-  <p>
-    The process flow diagram illustrates the sequence of operation from water inlet through pumping, filtration, and distribution to outlet streams. Flow paths are arranged to maintain continuity while allowing parallel filtration and separate instrumentation discharge. The corresponding floor plan shows how these components are spatially arranged within the skid, ensuring efficient routing, accessibility, and compact system integration.
-  </p>
-<div style="max-width: 1000px; margin: 2rem auto;">
-  <div class="gallery" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+  <div style="
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    align-items: start;
+    max-width: 1000px;
+    margin: 2rem auto;
+  ">
+
+    <!-- TEXT (TOP LEFT) -->
     <div>
-      <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
-        Process Flow Diagram
-      </div>
-      <div class="gallery-item" style="overflow: hidden; border: 2px solid rgba(0,0,0,0.08);">
-        <img src="../assets/images/ProcessSkid/Process Flow Diagram.png"
-             class="zoomable-image"
-             style="width: 135%; transform: translate(-15%, -10%);">
-      </div>
+      <p>
+        The process flow diagram illustrates the sequence of operation from water inlet through pumping, filtration, and distribution to outlet streams. Flow paths are arranged to maintain continuity while allowing parallel filtration and separate instrumentation discharge.
+      </p>
     </div>
-    <div>
-      <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
-        Floor Plan Layout
-      </div>
-      <div class="gallery-item">
-        <img src="../assets/images/ProcessSkid/Floor Plan.png"
-             class="zoomable-image"
-             style="width: 100%;">
-      </div>
-    </div>
+
+    <!-- FLOW DIAGRAM (RIGHT — SPANS BOTH ROWS) -->
+    <figure style="grid-row: span 2; overflow: hidden;">
+      <img
+        src="../assets/images/ProcessSkid/Process Flow Diagram.png"
+        class="zoomable-image"
+        style="width: 110%; transform: translate(-5%, -5%);"
+        alt="Process flow diagram showing system operation"
+      >
+    </figure>
+
+    <!-- FLOOR PLAN (BOTTOM LEFT) -->
+    <figure>
+      <img
+        src="../assets/images/ProcessSkid/Floor Plan.png"
+        class="zoomable-image"
+        style="width: 100%;"
+        alt="Floor plan showing spatial arrangement of components"
+      >
+      <figcaption style="
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-top: 0.5rem;
+      ">
+        Floor plan layout showing component arrangement and piping routing.
+      </figcaption>
+    </figure>
+
   </div>
-</div>
+
 </article>
 
         <article class="prose-section">
