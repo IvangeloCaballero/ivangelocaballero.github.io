@@ -135,30 +135,33 @@
   <h2>Process Flow and Layout</h2>
   <div style="
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 60% 40%;
     gap: 1.5rem;
-    max-width: 1100px;
-    margin: 2rem auto;
+    margin-top: 1.5rem;
     align-items: start;">
     <div>
       <p>
         The process flow diagram illustrates the sequence of operation from water inlet through pumping, filtration, and distribution to outlet streams. Flow paths are arranged to maintain continuity while allowing parallel filtration and separate instrumentation discharge. The floor plan shows how these components are spatially arranged within the skid, ensuring efficient routing, accessibility, and compact system integration.
       </p>
+      <!-- FLOOR PLAN (CLICKABLE ✅) -->
+      <div class="gallery">
+        <div class="gallery-item">
+          <img
+            src="../assets/images/ProcessSkid/Floor Plan.png"
+            class="zoomable-image"
+            alt="Floor plan layout">
+        </div>
+      </div>
     </div>
-    <!-- FLOW DIAGRAM (RIGHT, SPANS BOTH) -->
-    <div style="grid-row: span 2; overflow: hidden;">
-      <img 
-        src="../assets/images/ProcessSkid/Process Flow Diagram.png"
-        class="zoomable-image"
-        style="width: 130%; transform: translate(-12%, -8%);">
-    </div>
-    <!-- FLOOR PLAN (BOTTOM LEFT) -->
-    <div style="margin-left: -8px;">
-      <img 
-        src="../assets/images/ProcessSkid/Floor Plan.png"
-        class="zoomable-image"
-        style="width: 100%;">
+    <!-- RIGHT COLUMN (FLOW DIAGRAM — CLICKABLE ✅) -->
+    <div class="gallery">
+      <div class="gallery-item" style="overflow: hidden; height: 100%;">
+        <img
+          src="../assets/images/ProcessSkid/Process Flow Diagram.png"
+          class="zoomable-image"
+          alt="Process flow diagram"
+          style="width: 125%; transform: translate(-10%, -5%);">
+      </div>
     </div>
   </div>
 </article>
