@@ -903,9 +903,11 @@ a:hover {
   overflow: hidden;
 }
 
+
 .process-image {
-  width: auto;
+  width: 100%;
   height: 100%;
-  object-fit: contain !important;
+  object-fit: contain; /* keep this */
 }
+
 
