@@ -894,8 +894,8 @@ a:hover {
 }
 
 
-process-image-box {
-  aspect-ratio: auto !important;   /* remove forced ratio */
+.process-image-box {
+  aspect-ratio: auto !important; 
   height: 100%;
   display: flex;
   align-items: center;
@@ -908,3 +908,4 @@ process-image-box {
   height: 100%;
   object-fit: contain !important;
 }
+
