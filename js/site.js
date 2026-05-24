@@ -1,21 +1,23 @@
 (() => {
-  const selector = [
-    ".project-hero img",
-    ".gallery-item img",
-    ".motor-linkage-placeholder img",
-    ".about-profile img"
-    ".process-image-box img"
-  ].join(", ");
 
-const images = Array.from(document.querySelectorAll('.zoomable-image')).filter(img => {
-  const src = img.getAttribute("src");
-  return src && src.trim() !== "";
-});
+  // ✅ TARGET ALL CLICKABLE IMAGES
+  const images = Array.from(document.querySelectorAll(
+    ".project-hero img, \
+     .gallery-item img, \
+     .motor-linkage-placeholder img, \
+     .about-profile img, \
+     .zoomable-image"
+  )).filter(img => {
+    const src = img.getAttribute("src");
+    return src && src.trim() !== "";
+  });
 
   if (!images.length) return;
 
-  images.forEach((img) => img.classList.add("zoomable-image"));
+  // ✅ ENSURE ALL HAVE CLICK CURSOR
+  images.forEach(img => img.classList.add("zoomable-image"));
 
+  // ✅ CREATE OVERLAY
   const overlay = document.createElement("div");
   overlay.className = "image-overlay";
   overlay.setAttribute("aria-hidden", "true");
@@ -23,8 +25,10 @@ const images = Array.from(document.querySelectorAll('.zoomable-image')).filter(i
   const overlayImg = document.createElement("img");
   overlayImg.alt = "";
   overlay.appendChild(overlayImg);
+
   document.body.appendChild(overlay);
 
+  // ✅ CLOSE FUNCTION
   const closeOverlay = () => {
     overlay.classList.remove("is-open");
     overlay.setAttribute("aria-hidden", "true");
@@ -33,7 +37,8 @@ const images = Array.from(document.querySelectorAll('.zoomable-image')).filter(i
     document.body.style.overflow = "";
   };
 
-  images.forEach((img) => {
+  // ✅ OPEN ON CLICK
+  images.forEach(img => {
     img.addEventListener("click", () => {
       overlayImg.src = img.currentSrc || img.src;
       overlayImg.alt = img.alt || "";
@@ -43,10 +48,14 @@ const images = Array.from(document.querySelectorAll('.zoomable-image')).filter(i
     });
   });
 
+  // ✅ CLICK OUTSIDE TO CLOSE
   overlay.addEventListener("click", closeOverlay);
+
+  // ✅ ESC KEY CLOSE
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && overlay.classList.contains("is-open")) {
       closeOverlay();
     }
   });
+
 })();
