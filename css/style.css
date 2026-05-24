@@ -896,18 +896,19 @@ a:hover {
 
 .process-image-box {
   aspect-ratio: auto !important; 
-  height: 100%;
+  height: 100% !important;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-
 .process-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* keep this */
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  aspect-ratio: auto !important;
 }
+
 
 
