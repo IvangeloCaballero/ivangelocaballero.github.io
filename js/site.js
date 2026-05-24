@@ -7,10 +7,10 @@
     ".process-image-box img"
   ].join(", ");
 
-  const images = Array.from(document.querySelectorAll(selector)).filter((img) => {
-    const src = img.getAttribute("src");
-    return src && src.trim() !== "";
-  });
+const images = Array.from(document.querySelectorAll('.zoomable-image')).filter(img => {
+  const src = img.getAttribute("src");
+  return src && src.trim() !== "";
+});
 
   if (!images.length) return;
 
