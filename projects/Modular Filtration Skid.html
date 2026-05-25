@@ -98,37 +98,86 @@ The process flow diagram illustrates the sequence of operation from water inlet 
 <article class="prose-section">
 <h2>Component Design and Standard Integration</h2>
 
-<div style="display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:start;margin-top:1rem;">
+<div style="
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1rem;
+">
 
 <div>
 
 <p>
-The system incorporates both custom-designed components and standard parts. Valves and piping elements were selected from Inventor Content Center, while major equipment such as the filtration unit, tanks, pump configuration, and supporting skid structure were modeled to meet system requirements.
+The system incorporates both custom-designed components and standard parts. Valves and piping elements were selected from Inventor Content Center to ensure compatibility with commonly used industrial components. Major equipment such as the filtration unit, storage tanks, pump configuration, and supporting skid structure were modeled to meet system requirements and spatial constraints.
 </p>
 
 <p>
-Flange dimensions were developed based on ASME B16.5 Class 300 tables, and presented using a sectional view to clearly communicate mating geometry and sealing interfaces.
+Piping and flange connections were designed following ASME B16.5 Class 300 standards, with NPS 1 and NPS 3 components used consistently throughout the system. Flange dimensions were interpreted from standard tables and translated into a detailed 2D sectional drawing to clearly define mating geometry, sealing surfaces, and bolt arrangement.
 </p>
 
 <ul>
-<li>Custom modeling of tanks, filter unit, and skid frame</li>
-<li>Use of Inventor Content Center for standard components</li>
-<li>Flange design based on ASME B16.5 dimensions</li>
-<li>Consideration of sealing surfaces and bolt arrangement</li>
+<li>Custom modeling of tanks, filter unit, pump setup, and skid frame</li>
+<li>Use of Inventor Content Center for standard valves and piping</li>
+<li>Consistent use of Class 300 flanges for NPS 1 and NPS 3 piping</li>
+<li>Definition of sealing surfaces, bore, and bolt pattern in sectional view</li>
 </ul>
 
 </div>
 
-<div style="display:flex;flex-direction:column;gap:0.75rem">
+<div style="
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+">
 
-<div style="border:1px dashed var(--border);padding:0.5rem;background:#f7f8fa;border-radius:8px">
-<img src="../assets/images/ProcessSkid/Flange ASME.jpg" style="width:100%;">
-<p style="font-size:0.75rem;text-align:center">
+<div style="
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  background: #ffffff;
+">
+
+<img
+  src="../assets/images/ProcessSkid/Flange Section.png"
+  class="zoomable-image"
+  alt="Section view of the buffer tank flange connection">
+
+<p style="
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+">
+Section view of the buffer tank flange connection showing bore, bolt circle, sealing surfaces, and mating geometry.
+</p>
+
+</div>
+
+<div style="
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  background: #f7f8fa;
+">
+
+<img
+  src="../assets/images/ProcessSkid/Flange ASME.jpg"
+  class="zoomable-image"
+  alt="ASME B16.5 reference table for flange dimensions">
+
+<p style="
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+">
 Reference:
 <a href="https://ssmalloys.com/wp-content/uploads/2024/08/ASME-B16.5-Dimensions-of-Class-300-Flanges-in-inches.pdf" target="_blank">
 ASME B16.5 Class 300 flange tables
 </a>
 </p>
+
 </div>
 
 </div>
