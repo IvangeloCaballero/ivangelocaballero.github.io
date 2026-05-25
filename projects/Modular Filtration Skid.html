@@ -1,290 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- EDIT: Page title & SEO description -->
-  <title>Modular Filtration Skid - Mechanical Layout Design </title>
-  <meta name="description" content="Sample project: DFM-focused mechanical enclosure design.">
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    
-    .project-hero {
-      margin: 1rem -1.5rem 1.75rem; 
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--bg-alt);
-      padding: 1rem;
-    }
-    .project-hero img {
-      width: 100%;
-      height: auto;
-      max-height: 460px;
-      object-fit: contain;
-      object-position: center;
-      display: block;
-    }
-    .motor-linkage-two-column {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: 1fr;
-      align-items: stretch;
-      margin-top: 1rem;
-      margin-bottom: 0.65rem;
-    }
-    .motor-linkage-two-column > div,
-    .motor-linkage-two-column figure {
-      min-width: 0;
-  }
-    .motor-linkage-placeholder {
-      border-radius: var(--radius);
-      background: #eef1f6;
-      border: 1px solid rgba(30, 58, 138, 0.45); /* dark navy tint */
-      padding: 0.75rem;
-      overflow: hidden;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      min-height: 0;
-      height: auto;
-      display: grid;
-      place-items: center;
-      align-self: center;
-      margin-top: 0.35rem; /* subtle downward nudge */
-      margin-bottom: 0.45rem;
-    }
-    .motor-linkage-caption {  
-    margin-top: 0.75rem;
-    font-size: 0.95rem;     /* slightly larger */
-    font-style: italic;     /* figure-style caption */
-    line-height: 1.45;
-    color: var(--text-muted);
-    text-align: center;
-    }
-    @media (min-width: 760px) {
-      .motor-linkage-two-column {
-        grid-template-columns: minmax(0, 1fr) 320px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modular Filtration Skid - Mechanical Layout Design</title>
+<meta name="description" content="Piping system layout and flow design.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.project-hero {
+  margin: 1rem -1.5rem 1.75rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-alt);
+  padding: 1rem;
+}
+.project-hero img {
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  object-fit: contain;
+  display: block;
+}
+</style>
 </head>
+
 <body>
-  <!--
-    ========== NEW PROJECT PAGE CHECKLIST ==========
-    1. Save a copy of this file: projects/your-project-slug.html
-    2. Update <title> and <meta name="description"> above.
-    3. On index.html and projects.html, add/update a project card:
-       - href="projects/your-project-slug.html"
-       - thumbnail in assets/thumbnails/
-    4. Replace hero image, gallery images, and all section text below.
-    5. Optional: uncomment video block and paste your YouTube embed or Google Drive preview URL.
 
-    PATHS: Files in projects/ use ../ to reach css/ and assets/
-  -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="../index.html">Ivangelo Caballero</a>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
-      <nav class="nav-menu" id="site-nav" aria-label="Main">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../projects.html">Projects</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../resume.html">Resume</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <header class="page-header">
-      <div class="container">
-        <!-- EDIT: Project title -->
-        <h1>Modular Filtration Skid - Mechanical Layout Design </h1>
-        <p class="lede">Piping system layout and flow design.<!-- EDIT: one-line summary --></p>
-      </div>
-    </header>
-
-    <section class="section" style="padding-top:0;">
-      <div class="container">
-        <!-- EDIT: Large hero image — swap src and alt -->
-        <figure class="project-hero">
-         <img src="../assets/images/ProcessSkid/Modular Filtration Skid.png" width="1200" height="675" alt="Hero render of the sample enclosure project">
-        </figure>
-
-        <article class="prose-section">
-          <h2>Overview</h2>
-          <p>
-            This project involves the design of a modular filtration skid, focusing on piping layout, flow routing, and component arrangement. The system integrates process functionality with practical considerations such as accessibility, structural support, and material estimation.
-          </p>
-        </article>
-
-        <article class="prose-section">
-          <h2>System Layout</h2>
-          <p>
-            Multi-view representation of the system showing orthographic and isometric perspectives for spatial understanding.
-          </p>
-            <figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
-         <img src="../assets/images/ProcessSkid/Skid_Master_2D.jpg"
-            alt="Static structural analysis results showing von Mises stress and factor of safety for operating and maximum pressure cases"
-           class="zoomable">
-        </figure>
-        </article>
-
-<article class="prose-section">
-  <h2>Process Flow and Layout</h2>
-  <div style="
-    display: grid;
-    grid-template-columns: 52% 48%;
-    grid-template-rows: auto auto;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-    align-items: stretch;
-  ">
-    <!-- LEFT: TEXT -->
-    <div>
-      <p>
-        The process flow diagram illustrates the sequence of operation from water inlet through pumping, filtration, and distribution to outlet streams. Flow paths are arranged to maintain continuity while allowing parallel filtration and separate instrumentation discharge. The floor plan shows how these components are spatially arranged within the skid, ensuring efficient routing, accessibility, and compact system integration.
-      </p>
-    </div>
-    <!-- RIGHT: FLOW DIAGRAM ✅ CLICKABLE -->
-    <div style="grid-row: span 2;">
-      <div class="process-image-box" style="height: 100%;">
-        <img
-          src="../assets/images/ProcessSkid/Process Flow Diagram.png"
-          class="zoomable-image process-image"
-          alt="Process Flow Diagram">
-      </div>
-    </div>
-    <!-- LEFT: FLOOR PLAN ✅ CLICKABLE -->
-    <div>
-      <div class="process-image-box">
-        <img
-          src="../assets/images/ProcessSkid/Floor Plan.png"
-          class="zoomable-image process-image"
-          alt="Floor Plan">
-      </div>
-    </div>
-  </div>
-</article>
-
-<article class="prose-section">
-
-  <h2>Component Design and Standard Integration</h2>
-
-  <div style="
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 1.5rem;
-    align-items: start;
-    margin-top: 1rem;
-  ">
-
-    <!-- LEFT: TEXT + BULLETS -->
-    <div>
-
-      <p>
-        The system incorporates both custom-designed components and standard parts. Valves and piping elements were selected from Inventor Content Center to ensure compatibility with commonly used industrial components. Major equipment such as the filtration unit, storage tanks, pump configuration, and supporting skid structure were designed and modeled to meet system requirements and spatial constraints.
-      </p>
-
-      <p>
-        Flange connections were detailed to reflect proper mating conditions and sealing interfaces, following standard dimensional practices aligned with ASME B16.5.
-      </p>
-
-      <ul>
-        <li>Custom modeling of tanks, filter unit, pump setup, and skid frame</li>
-        <li>Use of Inventor Content Center for standard valves and piping</li>
-        <li>Flange design aligned with ASME B16.5 dimensions</li>
-        <li>Consideration of alignment, sealing surfaces, and bolt arrangement</li>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../index.html">Ivangelo Caballero</a>
+    <button type="button" class="nav-toggle" id="nav-toggle">Menu</button>
+    <nav class="nav-menu" id="site-nav">
+      <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../contact.html">Contact</a></li>
       </ul>
-
-    </div>
-
-    <!-- RIGHT: IMAGE -->
-    <div class="gallery-item" style="
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.5rem;
-      background: #f0f2f6;
-    ">
-
-      <img
-        src="../assets/images/ProcessSkid/Flange Section.png"
-        class="zoomable-image"
-        alt="Flange section detail showing bolt arrangement and sealing interface">
-
-      <p style="
-        font-size: 0.8rem;
-        text-align: center;
-        color: var(--text-muted);
-        margin-top: 0.5rem;
-      ">
-        Flange section detailing mating geometry and sealing interface.
-      </p>
-
-    </div>
-
+    </nav>
   </div>
+</header>
 
+<main>
+<header class="page-header">
+  <div class="container">
+    <h1>Modular Filtration Skid - Mechanical Layout Design</h1>
+    <p class="lede">Piping system layout and flow design.</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:0;">
+<div class="container">
+
+<figure class="project-hero">
+<img src="../assets/images/ProcessSkid/Modular Filtration Skid.png">
+</figure>
+
+<article class="prose-section">
+<h2>Overview</h2>
+<p>
+This project involves the design of a modular filtration skid, focusing on piping layout, flow routing, and component arrangement. The system integrates process functionality with considerations such as accessibility, structural support, and material estimation.
+</p>
 </article>
 
 <article class="prose-section">
-  <h2>Bill of Materials and Cost Estimation</h2>
+<h2>System Layout</h2>
+<p>Multi-view representation of the system showing orthographic and isometric perspectives.</p>
 
-  <p>
-    A bill of materials was developed to document the major components of the system and provide an initial cost estimate. The breakdown includes primary equipment, piping elements, and fittings, supporting evaluation of material requirements and overall project feasibility.
-  </p>
-
-  <p>
-    <a href="../assets/files/ProcessSkid_BOM.xlsx" target="_blank">
-      View Full BOM and Cost Estimation (Excel)
-    </a>
-  </p>
+<figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto;">
+<img src="../assets/images/ProcessSkid/Skid_Master_2D.jpg">
+</figure>
 </article>
 
-        
 <article class="prose-section">
-  <h2>Video</h2>
+<h2>Process Flow and Layout</h2>
 
-  <p class="note-muted">
-    This clip presents a walkthrough of the modular filtration skid, highlighting the arrangement of components, piping layout, and overall system integration within the skid structure.
-  </p>
+<div style="display:grid;grid-template-columns:52% 48%;gap:1.5rem;margin-top:1.5rem;align-items:stretch;">
 
-  <div class="video-wrap">
-    <iframe
-      src="https://drive.google.com/file/"
-      title="Modular filtration skid walkthrough"
-      allowfullscreen>
-    </iframe>
-  </div>
+<div>
+<p>
+The process flow diagram illustrates the sequence of operation from water inlet through pumping, filtration, and distribution to outlet streams.
+</p>
+</div>
 
+<div style="grid-row: span 2;">
+<img src="../assets/images/ProcessSkid/Process Flow Diagram.png" style="width:100%;">
+</div>
+
+<div>
+<img src="../assets/images/ProcessSkid/Floor Plan.png" style="width:100%;">
+</div>
+
+</div>
 </article>
 
-        
-        <p><a href="../projects.html">← All projects</a></p>
-      </div>
-    </section>
-  </main>
+<article class="prose-section">
+<h2>Component Design and Standard Integration</h2>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="y"></span> Ivangelo Caballero.</p>
-      <p><a href="../contact.html">Contact</a></p>
-    </div>
-  </footer>
+<div style="display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:start;margin-top:1rem;">
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    (function () {
-      var btn = document.getElementById("nav-toggle");
-      var menu = document.getElementById("site-nav");
-      if (!btn || !menu) return;
-      btn.addEventListener("click", function () {
-        var open = menu.classList.toggle("is-open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-    })();
-  </script>
-  <script src="../js/site.js"></script>
+<div>
+
+<p>
+The system incorporates both custom-designed components and standard parts. Valves and piping elements were selected from Inventor Content Center, while major equipment such as the filtration unit, tanks, pump configuration, and supporting skid structure were modeled to meet system requirements.
+</p>
+
+<p>
+Flange dimensions were developed based on ASME B16.5 Class 300 tables, and presented using a sectional view to clearly communicate mating geometry and sealing interfaces.
+</p>
+
+<ul>
+<li>Custom modeling of tanks, filter unit, and skid frame</li>
+<li>Use of Inventor Content Center for standard components</li>
+<li>Flange design based on ASME B16.5 dimensions</li>
+<li>Consideration of sealing surfaces and bolt arrangement</li>
+</ul>
+
+</div>
+
+<div style="display:flex;flex-direction:column;gap:0.75rem">
+
+<div style="border:1px solid var(--border);padding:0.5rem;background:#fff;border-radius:8px">
+<img src="../assets/images/ProcessSkid/Flange Section.png" style="width:100%;">
+<p style="font-size:0.8rem;text-align:center">
+NPS 3 CLASS 300 RF flange section with key dimensions defined.
+</p>
+</div>
+
+<div style="border:1px dashed var(--border);padding:0.5rem;background:#f7f8fa;border-radius:8px">
+<img src="../assets/images/ProcessSkid/Flange ASME.jpg" style="width:100%;">
+<p style="font-size:0.75rem;text-align:center">
+Reference:
+<a href="https://ssmalloys.com/wp-content/uploads/2024/08/ASME-B16.5-Dimensions-of-Class-300-Flanges-in-inches.pdf" target="_blank">
+ASME B16.5 Class 300 flange tables
+</a>
+</p>
+</div>
+
+</div>
+
+</div>
+</article>
+
+<article class="prose-section">
+<h2>Bill of Materials and Cost Estimation</h2>
+
+<p>
+A bill of materials was developed to document major components and provide cost estimation.
+</p>
+
+<p>
+<a href="../assets/files/ProcessSkid_BOM.xlsx" target="_blank">
+View Full BOM and Cost Estimation
+</a>
+</p>
+</article>
+
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="y"></span> Ivangelo Caballero</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
