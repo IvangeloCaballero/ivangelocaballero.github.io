@@ -6,6 +6,7 @@
 <title>Modular Filtration Skid - Mechanical Layout Design</title>
 <meta name="description" content="Piping system layout and flow design.">
 <link rel="stylesheet" href="../css/style.css">
+
 <style>
 .project-hero {
   margin: 1rem -1.5rem 1.75rem;
@@ -54,7 +55,7 @@
 <div class="container">
 
 <figure class="project-hero">
-<img src="../assets/images/ProcessSkid/Modular Filtration Skid.png">
+<img src="../assets/images/ProcessSkid/Modular Filtration Skid.png" class="zoomable-image">
 </figure>
 
 <article class="prose-section">
@@ -64,32 +65,26 @@ This project involves the design of a modular filtration skid, focusing on pipin
 </p>
 </article>
 
-
 <article class="prose-section">
 <h2>Design Basis</h2>
 
 <p>
-The system design was guided by assumed operating conditions and standard engineering practices typically applied to compact filtration systems. These assumptions established the basis for component sizing, pressure rating selection, and material consistency across the system.
+The system design was guided by assumed operating conditions and standard engineering practices typically applied to compact filtration systems.
 </p>
 
 <ul>
 <li><strong>Working Fluid:</strong> Water (clean / lightly contaminated)</li>
-<li><strong>Flow Rate (Design):</strong> 3 m³/hr — selected as a representative value for small-scale filtration systems and to maintain reasonable flow velocities within the selected pipe sizes.</li>
-<li><strong>Operating Pressure:</strong> 6 bar — assumed to account for pumping requirements and system resistance through filtration components.</li>
+<li><strong>Flow Rate (Design):</strong> 3 m³/hr</li>
+<li><strong>Operating Pressure:</strong> 6 bar</li>
 <li><strong>Design Pressure:</strong> 12 bar</li>
 <li><strong>Temperature Range:</strong> Ambient conditions (25–35°C)</li>
 </ul>
 
 <p>
-Industry-standard codes were referenced to support realistic implementation. Piping and components were aligned with ASME B31.3 guidelines, with consistent use of ASME B16.5 Class 300 ratings across primary connections.
+Piping and components were aligned with ASME B31.3 guidelines, with consistent use of ASME B16.5 Class 300 ratings across primary connections.
 </p>
-
-<p>
-Material selection and sizing decisions were made to balance structural integrity, safety margins, and practical fabrication considerations. These assumptions served as the foundation for layout development, component integration, and cost estimation.
-</p>
-
 </article>
-  
+
 <article class="prose-section">
 <h2>Conceptual Layout and Process Flow</h2>
 
@@ -97,18 +92,20 @@ Material selection and sizing decisions were made to balance structural integrit
 
 <div>
 <p>
-The conceptual floor plan illustrates the initial spatial arrangement of major components within the skid, focusing on placement, routing feasibility, and accessibility for operation and maintenance. Adequate spacing between equipment was considered to allow service access, inspection, and ease of installation.
-
-The process flow diagram complements this by defining the sequence of operation from inlet through pumping, filtration, and distribution, providing a clear representation of system functionality and flow direction.
+The conceptual floor plan illustrates the spatial arrangement of components while the process flow diagram defines system operation and flow direction.
 </p>
 </div>
 
 <div style="grid-row: span 2;">
-<img src="../assets/images/ProcessSkid/Process Flow Diagram.png" style="width:100%; class="zoomable-image">
+<img src="../assets/images/ProcessSkid/Process Flow Diagram.png"
+     style="width:100%;"
+     class="zoomable-image">
 </div>
 
 <div>
-<img src="../assets/images/ProcessSkid/Floor Plan.png" style="width:100%;">
+<img src="../assets/images/ProcessSkid/Floor Plan.png"
+     style="width:100%;"
+     class="zoomable-image">
 </div>
 
 </div>
@@ -116,165 +113,81 @@ The process flow diagram complements this by defining the sequence of operation 
 
 <article class="prose-section">
 <h2>System Layout Development</h2>
+
 <p>
-Following the conceptual stage, the system layout was refined to develop a structured arrangement of components, ensuring efficient use of space, proper routing, and accessibility for operation and maintenance. Orthographic and isometric views were used to validate spatial relationships and overall integration.
+The system layout was refined using orthographic and isometric views to validate spatial relationships and integration.
 </p>
 
 <figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
-         <img src="../assets/images/ProcessSkid/Skid_Master_2D.jpg"
-            alt="Static structural analysis results showing von Mises stress and factor of safety for operating and maximum pressure cases"
-           class="zoomable">
+<img src="../assets/images/ProcessSkid/Skid_Master_2D.jpg"
+     alt="System layout drawing"
+     class="zoomable-image">
+</figure>
 
 </article>
 
 <article class="prose-section">
 <h2>Component Design and Standard Integration</h2>
 
-<div style="
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 1.5rem;
-  align-items: start;
-  margin-top: 1rem;
-">
+<div style="display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:start;">
 
 <div>
-
-
 <p>
-The system incorporates both custom-designed components and standard parts. Valves and piping elements were selected from Inventor Content Center to ensure compatibility with commonly used industrial components. Major equipment such as the filtration unit, storage tanks, pump configuration, and supporting skid structure were modeled to meet system requirements and spatial constraints.
+The system incorporates both custom-designed components and standard parts from Inventor Content Center.
 </p>
 
 <ul>
-<li>Custom modeling of tanks, filter unit, pump setup, control panel, pipe support and skid frame</li>
-<li>Use of Inventor Content Center for standard valves and piping</li>
-<li>Consideration of component spacing and routing to allow service access and maintenance</li>
-<li>Consistent use of Class 300 flanges for NPS 1 and NPS 3 piping to ensure standardization and provide a conservative pressure rating beyond operating conditions</li>
-<li>Definition of sealing surfaces, bore, and bolt pattern in sectional view</li>
+<li>Custom modeling of tanks, filter unit, pump setup, control panel, support and skid frame</li>
+<li>Use of Inventor Content Center for valves and piping</li>
+<li>Standardized Class 300 flange usage</li>
+<li>Defined sectional flange geometry</li>
 </ul>
 
-
-<p>
-Piping and flange connections were designed following ASME B16.5 Class 300 standards, with NPS 1 and NPS 3 components used consistently throughout the system. Flange dimensions were interpreted from standard tables and translated into a detailed 2D sectional drawing to clearly define mating geometry, sealing surfaces, and bolt arrangement. The sectional drawing shown was created to represent these features based on standard dimensions, with the reference table provided alongside for validation.
-</p>
 </div>
-  
-<div style="
-  border: 1px dashed var(--border);
-  border-radius: 8px;
-  padding: 0.4rem 0.5rem;
-  background: #f7f8fa;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-">
 
-  <img
-    src="../assets/images/ProcessSkid/Flange ASME.jpg"
-    class="zoomable-image"
-    style="width:100%; height:auto; display:block;"
-    alt="ASME B16.5 flange reference table">
+<div style="border:1px dashed var(--border); border-radius:8px; padding:0.4rem; background:#f7f8fa;">
+<img src="../assets/images/ProcessSkid/Flange ASME.jpg"
+     class="zoomable-image"
+     style="width:100%;"
+     alt="ASME flange reference">
 
-  <p style="
-    font-size: 0.72rem;
-    text-align: center;
-    color: var(--text-muted);
-    margin: 0;
-    line-height: 1.2;
-  ">
-    Reference:
-    <a href="https://ssmalloys.com/wp-content/uploads/2024/08/ASME-B16.5-Dimensions-of-Class-300-Flanges-in-inches.pdf" target="_blank">
-      ASME B16.5 Class 300 flange tables
-    </a>
-  </p>
-
+<p style="font-size:0.72rem;text-align:center;color:var(--text-muted);margin:0;">
+Reference:
+<a href="https://ssmalloys.com/wp-content/uploads/2024/08/ASME-B16.5-Dimensions-of-Class-300-Flanges-in-inches.pdf" target="_blank">
+ASME B16.5 Class 300 flange tables
+</a>
+</p>
 </div>
 
 </div>
 </article>
 
- <article class="prose-section">
-        <h2>Fabrication Drawing and Detail Views</h2>
-
-        <div class="gallery">
-          <div class="gallery-item" data-label="Motor Pump">
-            <img src="../assets/images/ProcessSkid/Pump_Module.png"
-                 alt="Motor Pump"
-                 class="zoomable-image">
-          </div>
-
-          <div class="gallery-item" data-label="Buffer Tan">
-            <img src="../assets/images/ProcessSkid/Skid_Module.png"
-                 alt="Buffer Tank"
-                 class="zoomable-image">
-          </div>
-
-          <div class="gallery-item" data-label="Filter Tank">
-            <img src="../assets/images/ProcessSkid/Filter_Module.png"
-                 alt="Filter Tank"
-                 class="zoomable-image">
-          </div>
-        </div>
-      </article>
-
 <article class="prose-section">
-<h2>Bill of Materials and Cost Estimation</h2>
+<h2>Custom Mechanical System Designs</h2>
 
-<p>
-A bill of materials (BOM) was developed to quantify all major system components, including equipment, piping, structural elements, and supports. This formed the basis for an overall cost estimate and feasibility assessment.
-</p>
+<div class="gallery">
 
-<ul>
-<li><strong>Total Project Cost:</strong> ₱216,492.75</li>
-<li><strong>Primary Cost Drivers:</strong> Equipment, Labor, and Fabrication</li>
-</ul>
+<div class="gallery-item" data-label="Motor Pump">
+<img src="../assets/images/ProcessSkid/Pump_Module.png"
+     class="zoomable-image">
+</div>
 
-<!-- Smaller Chart -->
-<figure style="max-width:520px; margin:1.5rem auto; text-align:center;">
-  <img src="../assets/images/ProcessSkid/Project Cost.png"
-       style="width:100%; height:auto; border-radius:6px;"
-       alt="Project cost distribution pie chart">
-  
-  <figcaption style="font-size:0.85rem; color:var(--text-muted); margin-top:0.4rem;">
-    Cost distribution of major system components, based on grouped material, labor, and contingency costs (Total: ₱216,492.75)
-  </figcaption>
-</figure>
+<div class="gallery-item" data-label="Skid Assembly">
+<img src="../assets/images/ProcessSkid/Skid_Module.png"
+     class="zoomable-image">
+</div>
 
-<p><strong>Key Observation:</strong> Equipment and labor together account for nearly 50% of total project cost, indicating that both procurement and installation effort significantly influence system budgeting.</p>
+<div class="gallery-item" data-label="Filter Tank">
+<img src="../assets/images/ProcessSkid/Filter_Module.png"
+     class="zoomable-image">
+</div>
 
-<p>
-Piping and structural elements contribute secondary costs, while contingency provides an allowance for uncertainty in early-stage estimation, resulting in a more robust overall project budget.
-</p>
-
-<!-- Button -->
-<p style="text-align:center; margin-top:1.5rem;">
-<a href="https://view.officeapps.live.com/op/view.aspx?src=https://ivangelocaballero.github.io/assets/documents/Bill%20of%20Materials.xlsx"
-   target="_blank"
-   style="
-     display:inline-block;
-     padding:0.65rem 1.3rem;
-     background:#2b6cb0;
-     color:white;
-     border-radius:6px;
-     text-decoration:none;
-     font-weight:600;
-   ">
-   📊 View Full BOM (Excel)
-</a>
-</p>
-
-<p style="font-size:0.85rem; color:var(--text-muted); text-align:center;">
-<em>Note: Costs are based on indicative market pricing and intended for conceptual estimation purposes.</em>
-</p>
+</div>
 
 </article>
 
 <article class="prose-section">
 <h2>System Walkthrough</h2>
-
-<p>
-This video presents a walkthrough of the modular filtration skid, highlighting component arrangement, piping layout, and overall system integration within the structure.
-</p>
 
 <div style="max-width:800px;margin:1.5rem auto;">
 <iframe
@@ -285,6 +198,8 @@ This video presents a walkthrough of the modular filtration skid, highlighting c
 </div>
 
 </article>
+
+<p><a href="../projects.html">← All projects</a></p>
 
 </div>
 </section>
@@ -302,4 +217,3 @@ document.getElementById("y").textContent = new Date().getFullYear();
 
 </body>
 </html>
-``
