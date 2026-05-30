@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- EDIT: Page title & SEO description -->
   <title>Sheet‑Metal Electrical Enclosure - SolidWorks</title>
-  <meta name="description" content="Sample project: DFM-focused mechanical enclosure design.">
+  <meta name="description" content="Mechanical design project featuring a modular sheet-metal electrical enclosure with focus on fabrication, bend allowances, ventilation strategy, and assembly optimization.">
   <link rel="stylesheet" href="../css/style.css">
+
   <style>
-    
     .project-hero {
-      margin: 1rem -1.5rem 1.75rem; 
+      margin: 1rem -1.5rem 1.75rem;
       border-radius: var(--radius);
       overflow: hidden;
       background: var(--bg-alt);
       padding: 1rem;
     }
+
     .project-hero img {
       width: 100%;
       height: auto;
@@ -24,7 +24,8 @@
       object-position: center;
       display: block;
     }
-    .motor-linkage-two-column {
+
+    .two-column-layout {
       display: grid;
       gap: 1.5rem;
       grid-template-columns: 1fr;
@@ -32,162 +33,143 @@
       margin-top: 1rem;
       margin-bottom: 0.65rem;
     }
-    .motor-linkage-two-column > div,
-    .motor-linkage-two-column figure {
+
+    .two-column-layout > div,
+    .two-column-layout figure {
       min-width: 0;
-  }
-    .motor-linkage-placeholder {
-      border-radius: var(--radius);
-      background: #eef1f6;
-      border: 1px solid rgba(30, 58, 138, 0.45); /* dark navy tint */
-      padding: 0.75rem;
-      overflow: hidden;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      min-height: 0;
-      height: auto;
-      display: grid;
-      place-items: center;
-      align-self: center;
-      margin-top: 0.35rem; /* subtle downward nudge */
-      margin-bottom: 0.45rem;
     }
-    .motor-linkage-caption {  
-    margin-top: 0.75rem;
-    font-size: 0.95rem;     /* slightly larger */
-    font-style: italic;     /* figure-style caption */
-    line-height: 1.45;
-    color: var(--text-muted);
-    text-align: center;
-    }
+
     @media (min-width: 760px) {
-      .motor-linkage-two-column {
+      .two-column-layout {
         grid-template-columns: minmax(0, 1fr) 320px;
       }
     }
   </style>
 </head>
-<body>
-  <!--
-    ========== NEW PROJECT PAGE CHECKLIST ==========
-    1. Save a copy of this file: projects/your-project-slug.html
-    2. Update <title> and <meta name="description"> above.
-    3. On index.html and projects.html, add/update a project card:
-       - href="projects/your-project-slug.html"
-       - thumbnail in assets/thumbnails/
-    4. Replace hero image, gallery images, and all section text below.
-    5. Optional: uncomment video block and paste your YouTube embed or Google Drive preview URL.
 
-    PATHS: Files in projects/ use ../ to reach css/ and assets/
-  -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="../index.html">Ivangelo Caballero</a>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
-      <nav class="nav-menu" id="site-nav" aria-label="Main">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../projects.html">Projects</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../resume.html">Resume</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../index.html">Ivangelo Caballero</a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
+    <nav class="nav-menu" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <header class="page-header">
+    <div class="container">
+      <h1>Sheet‑Metal Electrical Enclosure - Fabrication Design</h1>
+      <p class="lede">Design for manufacturability with focus on fabrication efficiency and serviceability.</p>
     </div>
   </header>
 
-  <main>
-    <header class="page-header">
-      <div class="container">
-        <!-- EDIT: Project title -->
-        <h1>Sheet‑Metal Electrical Enclosure - Fabrication Design</h1>
-        <p class="lede">Design for Manufacturability<!-- EDIT: one-line summary --></p>
-      </div>
-    </header>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
 
-    <section class="section" style="padding-top:0;">
-      <div class="container">
-        <!-- EDIT: Large hero image — swap src and alt -->
-        <figure class="project-hero">
-          <img src="../assets/images/MetalEnclosure/Electric Metal Enclosure.jpg" width="1200" height="675" alt="Hero render of the sample enclosure project">
+      <figure class="project-hero">
+        <img src="../assets/images/MetalEnclosure/Electric Metal Enclosure.jpg"
+             width="1200"
+             height="675"
+             alt="Sheet metal electrical enclosure render">
+      </figure>
+
+      <article class="prose-section">
+        <h2>Overview</h2>
+        <p>
+          Modular sheet‑metal electrical enclosure developed as a fabrication‑focused design study, emphasizing ventilation strategy and service accessibility with representative production‑intent documentation.
+        </p>
+      </article>
+
+      <article class="prose-section">
+        <div class="two-column-layout">
+          <div>
+            <h2>Key Design Considerations</h2>
+            <ul>
+              <li>Panel layout and bend geometry were designed to simplify fabrication and reduce part complexity.</li>
+              <li>Bend allowance was defined using a K-factor of approximately 0.34, consistent with mild steel forming.</li>
+              <li>Fastener locations were positioned for accessible assembly and maintenance.</li>
+              <li>Sheet thickness (1.5 mm) was selected to balance structural strength and manufacturability.</li>
+              <li>Clearances between mating panels (~1 mm) ensure proper fit and alignment.</li>
+              <li>Ventilation openings were incorporated to maintain airflow while preserving structural rigidity.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="prose-section">
+        <h2>Modular Architecture & Assembly Intent</h2>
+        <p>
+          Exploded view illustrating how the enclosure is decomposed into independently fabricated panels and service components.
+        </p>
+
+        <figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
+          <img src="../assets/images/MetalEnclosure/Electric Metal Enclosure_Main Parts.JPG"
+               alt="Exploded view of enclosure components"
+               class="zoomable">
         </figure>
 
-        <article class="prose-section">
-          <h2>Overview</h2>
-          <p>
-            Modular sheet‑metal electrical enclosure developed as a fabrication‑focused design study, emphasizing ventilation strategy and service accessibility with representative production‑intent documentation.
-        </article>
+        <strong>Key Components & Functional Role</strong>
+        <ul>
+          <li><strong>A — Main Structural Chassis</strong><br>Folded sheet‑metal shell providing structural support and mounting features.</li>
+          <li><strong>B — Ventilation Side Panel (Exhaust)</strong><br>Panel configured for directional airflow and heat dissipation.</li>
+          <li><strong>C — Ventilation Side Panel (Intake)</strong><br>Removable panel supporting passive airflow intake.</li>
+          <li><strong>D — Front Access Door Assembly</strong><br>Hinged door with latch for secure and accessible servicing.</li>
+        </ul>
+      </article>
 
-     <article class="prose-section">
-          <div class="motor-linkage-two-column">
-            <div>
-              <h2>Key Design Considerations</h2>
-              <ul>
-<li>Panel layout and bend geometry were designed to simplify fabrication and reduce part complexity.</li>
-  <li>Bend allowance was defined using a K-factor of approximately 0.34, consistent with mild steel sheet metal forming.</li>
-  <li>Fastener locations were positioned to allow accessible assembly and maintenance.</li>
- <li>Sheet thickness (1.5 mm) was selected based on structural requirements while maintaining compatibility with standard fabrication processes.</li>
-  <li>Clearances between mating panels and door interfaces were maintained at approximately 1 mm to ensure proper fit and alignment.</li>
-  <li>Ventilation openings were incorporated to allow airflow while maintaining structural rigidity of the enclosure.</li>
-             </ul>
-            </div>
-          </div>
-        </article>
+      <article class="prose-section">
+        <h2>Fabrication Definition</h2>
+        <p>
+          This fabrication view illustrates panel interfaces and flat-pattern definition using standard sheet‑metal cutting and press‑brake forming processes.
+        </p>
 
-           <article class="prose-section">
-          <h2>Modular Architecture & Assembly Intent</h2>
-          <p>            
-            Exploded view illustrating how the enclosure is decomposed into independently fabricated panels and access components.</p>
-       <figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
-         <img src="../assets/images/MetalEnclosure/Electric Metal Enclosure_Main Parts.JPG"
-            alt="Static structural analysis results showing von Mises stress and factor of safety for operating and maximum pressure cases"
-           class="zoomable">
-  </figure>
-              <strong>Key Components & Functional Role</strong>
-             <ul>
-                <li><strong>A — Main Structural Chassis</strong> <br>Folded sheet‑metal shell providing structural support, mounting features, and identification provisions.</li>
-                <li><strong>B — Ventilation Side Panel (Exhaust / Outlet)</strong> <br>Ventilated side panel configured to support air exhaust and define the enclosure airflow path.</li>
-                <li><strong>C — Ventilation Side Panel (Passive Intake)</strong> <br>Removable side panel with integrated openings for passive air intake.</li>
-                <li><strong>D — Front Access Door Assembly</strong> <br>Hinged door with gasket and quarter‑turn latch for sealed, tool‑free service access.</li>
-             </ul>
-</article>
-        
-        <article class="prose-section">
-          <h2>Fabrication Definition</h2>
-          <p>            
-           This fabrication view illustrates how secondary panels and the door assembly interface with the folded chassis using standard sheet‑metal cutting and press‑brake forming operations.
-          </p>
-       <figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
-         <img src="../assets/images/MetalEnclosure/Chassis_FlatPattern.jpg"
-            alt="Static structural analysis results showing von Mises stress and factor of safety for operating and maximum pressure cases"
-           class="zoomable">
-  </figure>
-</article>
+        <figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
+          <img src="../assets/images/MetalEnclosure/Chassis_FlatPattern.jpg"
+               alt="Flat pattern fabrication drawing"
+               class="zoomable">
+        </figure>
+      </article>
 
-        <p><a href="../projects.html">← All projects</a></p>
-      </div>
-    </section>
-  </main>
+      <p><a href="../projects.html">← All projects</a></p>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="y"></span> Ivangelo Caballero.</p>
-      <p><a href="../contact.html">Contact</a></p>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    (function () {
-      var btn = document.getElementById("nav-toggle");
-      var menu = document.getElementById("site-nav");
-      if (!btn || !menu) return;
-      btn.addEventListener("click", function () {
-        var open = menu.classList.toggle("is-open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-    })();
-  </script>
-  <script src="../js/site.js"></script>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="y"></span> Ivangelo Caballero.</p>
+    <p><a href="../contact.html">Contact</a></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  (function () {
+    var btn = document.getElementById("nav-toggle");
+    var menu = document.getElementById("site-nav");
+
+    if (!btn || !menu) return;
+
+    btn.addEventListener("click", function () {
+      var open = menu.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  })();
+</script>
+
+<script src="../js/site.js"></script>
+
 </body>
 </html>
