@@ -8,135 +8,129 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!--
-    ========== EDIT: SITE / IDENTITY ==========
-    - Name appears in <title>, logo below, and footer.
-    - Change folder name or add favicon later: <link rel="icon" href="assets/images/favicon.ico">
-  -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">Ivangelo Caballero</a>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
-      <nav class="nav-menu" id="site-nav" aria-label="Main">
-        <ul class="nav-list">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner hero-layout">
-        <div class="hero-main">
-          <!-- EDIT: Tagline label (optional category line) -->
-          <p class="hero-label">Portfolio</p>
-          <!-- EDIT: Your name -->
-          <h1>Ivangelo Caballero</h1>
-          <div class="hero-divider" aria-hidden="true"></div>
-          <!-- EDIT: Professional title -->
-          <p class="title-line">Mechanical Design Engineer</p>
-          <!-- EDIT: Short tagline — one or two sentences -->
-          <p class="tagline">
-            I approach mechanical design through CAD, documentation, and supporting analysis, keeping manufacturability front and center.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="projects.html">View projects</a>
-            <a class="btn btn-secondary" href="contact.html">Get in touch</a>
-          </div>
-        </div>
-        <!-- Professional context block (unlabeled, technical, scan-friendly) -->
-        <aside class="hero-snapshot" aria-label="Professional Snapshot">
-          <ul>
-            <li class="snapshot-high">Registered Mechanical Engineer (PRC)</li>
-            <li class="snapshot-high">2+ years professional experience</li>
-            <li class="snapshot-mid">End‑to‑end mechanical & product design</li>
-            <li class="snapshot-low">Machined, cast & sheet‑metal part design exposure</li>
-            <li class="snapshot-low">GD&T and DFM‑driven design & documentation</li>
-            <li class="snapshot-low">Core CAD & FEA tools: PTC Creo, CATIA V5, SolidWorks, Inventor, AutoCAD</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Ivangelo Caballero</a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
+    <nav class="nav-menu" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-    <!--
-      ========== FEATURED PROJECTS (HOME) ==========
-      HOW TO ADD A NEW PROJECT CARD:
-      1. Copy one <a class="project-card">...</a> block below.
-      2. Set href to your new page, e.g. projects/my-new-project.html
-      3. Put a thumbnail in assets/thumbnails/ and update <img src="...">
-      4. Edit title and short description text.
+<main>
+  <section class="hero">
+    <div class="container hero-inner hero-layout">
+      
+      <div class="hero-main">
+        <p class="hero-label">Portfolio</p>
+        <h1>Ivangelo Caballero</h1>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <p class="title-line">Mechanical Design Engineer</p>
 
-      HOW TO CHANGE THUMBNAILS:
-      - Replace src with your image path (JPG/PNG/WebP/SVG). Recommended ~800px wide for cards.
-    -->
-    <section class="section section--home-gap">
-      <div class="container">
-        <h2 class="section-title">Selected work</h2>
-        <div class="project-grid">
-          
-          <a class="project-card" href="projects/Modular Filtration Skid.html">
-            <div class="project-card-thumb">
-              <img src="assets/thumbnails/Modular Filtration Skid.png" width="640" height="400" alt="Project thumbnail placeholder">
-            </div>
-            <div class="project-card-body">
-              <h3>Skid-Mounted Filtration System – Layout, Piping & System Integration</h3>   
-           <p class="tools">Inventor · AutoCAD · Excel · System Design · Estimation</p>
-              <p>Process system design including piping layout, flow distribution, structural support, and material estimation.</p>
-            </div>
-          </a>
-
-          <a class="project-card" href="projects/MotorLinkage.html">
-            <div class="project-card-thumb">
-              <img src="assets/thumbnails/Wiper Linkage Thumbnail.jpg" width="640" height="400"> <!alt="Sample project thumbnail">
-            </div>
-            <div class="project-card-body">
-              <h3>Motor Wiper Linkage - Mechanism & Motion Design</h3>
-               <p class="tools">PTC Creo · Mechanism · Kinematics · Assembly</p>
-              <p>Mechanical system design including kinematic analysis, parametric CAD modeling, and assembly development.</p>
-            </div>
-          </a>
-
-          <a class="project-card" href="projects/Buffer Tank.html">
-            <div class="project-card-thumb">
-              <img src="assets/thumbnails/Buffer Tank_Hero.jpg" width="640" height="400" alt="Project thumbnail placeholder">
-            </div>
-            <div class="project-card-body">
-              <h3>Buffer Tank - Pressure Vessel Analysis</h3>
-               <p class="tools">SolidWorks · Simulation · Pressure Vessel · Reverse Engineering</p>              
-              <p>Pressure vessel design including reverse engineering, 3D modeling, and structural simulation under internal loading.</p>
-            </div>
-          </a>
-        </div>
-        <p style="margin-top:1.5rem;">
-          <a href="projects.html">See all projects →</a>
+        <p class="tagline">
+          I work on mechanical design from concept development through detailed modeling, focusing on assemblies and fabrication-ready designs supported by simulation and documentation.
         </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="projects.html">View projects</a>
+          <a class="btn btn-secondary" href="contact.html">Get in touch</a>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="y"></span> Ivangelo Caballero. <!-- EDIT: name --></p>
-      <p><a href="contact.html">Contact</a></p>
+      <aside class="hero-snapshot" aria-label="Professional Snapshot">
+        <ul>
+          <li class="snapshot-high">Registered Mechanical Engineer (PRC)</li>
+          <li class="snapshot-high">2+ years in mechanical design roles</li>
+          <li class="snapshot-mid">End‑to‑end product and system design</li>
+          <li class="snapshot-low">GD&amp;T and DFM‑driven design</li>
+          <li class="snapshot-low">CAD: SolidWorks, Creo, Inventor, AutoCAD</li>
+          <li class="snapshot-low">Simulation: CAD‑native FEA (SolidWorks Simulation, Creo Simulate, Inventor Nastran)</li>
+          <li class="snapshot-low">Visualization: SolidWorks Visualize, Creo Render Studio, Inventor Studio</li>
+        </ul>
+      </aside>
+
     </div>
-  </footer>
+  </section>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    (function () {
-      var btn = document.getElementById("nav-toggle");
-      var menu = document.getElementById("site-nav");
-      if (!btn || !menu) return;
-      btn.addEventListener("click", function () {
-        var open = menu.classList.toggle("is-open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-    })();
-  </script>
+  <section class="section section--home-gap">
+    <div class="container">
+      <h2 class="section-title">Selected work</h2>
+
+      <div class="project-grid">
+
+        <a class="project-card" href="projects/Modular Filtration Skid.html">
+          <div class="project-card-thumb">
+            <img src="assets/thumbnails/Modular Filtration Skid.png" width="640" height="400" alt="Modular filtration skid project thumbnail">
+          </div>
+          <div class="project-card-body">
+            <h3>Skid-Mounted Filtration System – Layout, Piping &amp; System Integration</h3>
+            <p class="tools">Inventor · AutoCAD · Excel · System Design · Estimation</p>
+            <p>Process system design including piping layout, flow distribution, structural support, and material estimation.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="projects/MotorLinkage.html">
+          <div class="project-card-thumb">
+            <img src="assets/thumbnails/Wiper Linkage Thumbnail.jpg" width="640" height="400" alt="Wiper linkage mechanism thumbnail">
+          </div>
+          <div class="project-card-body">
+            <h3>Motor Wiper Linkage - Mechanism &amp; Motion Design</h3>
+            <p class="tools">PTC Creo · Mechanism · Kinematics · Assembly</p>
+            <p>Mechanical system design including kinematic analysis, parametric CAD modeling, and assembly development.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="projects/Buffer Tank.html">
+          <div class="project-card-thumb">
+            <img src="assets/thumbnails/Buffer Tank_Hero.jpg" width="640" height="400" alt="Buffer tank pressure vessel thumbnail">
+          </div>
+          <div class="project-card-body">
+            <h3>Buffer Tank - Pressure Vessel Analysis</h3>
+            <p class="tools">SolidWorks · Simulation · Pressure Vessel · Reverse Engineering</p>
+            <p>Pressure vessel design including reverse engineering, 3D modeling, and structural simulation under internal loading.</p>
+          </div>
+        </a>
+
+      </div>
+
+      <p style="margin-top:1.5rem;">
+        <a href="projects.html">See all projects →</a>
+      </p>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="y"></span> Ivangelo Caballero.</p>
+    <p><a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  (function () {
+    var btn = document.getElementById("nav-toggle");
+    var menu = document.getElementById("site-nav");
+
+    if (!btn || !menu) return;
+
+    btn.addEventListener("click", function () {
+      var open = menu.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  })();
+</script>
+
 </body>
 </html>
