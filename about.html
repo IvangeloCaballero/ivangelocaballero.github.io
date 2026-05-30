@@ -206,5 +206,40 @@ document.getElementById("y").textContent = new Date().getFullYear();
 })();
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".zoomable-image");
+
+  const overlay = document.createElement("div");
+  overlay.className = "image-overlay";
+
+  const img = document.createElement("img");
+
+  overlay.appendChild(img);
+  document.body.appendChild(overlay);
+
+  function closeOverlay() {
+    overlay.classList.remove("is-open");
+    img.src = "";
+  }
+
+  images.forEach(image => {
+    image.addEventListener("click", function () {
+      img.src = this.src;
+      overlay.classList.add("is-open");
+    });
+  });
+
+  overlay.addEventListener("click", closeOverlay);
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeOverlay();
+    }
+  });
+});
+</script>
+
+
 </body>
 </html>
