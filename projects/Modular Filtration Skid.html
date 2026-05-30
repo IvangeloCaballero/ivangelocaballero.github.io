@@ -66,13 +66,37 @@ This project involves the design of a modular filtration skid, focusing on pipin
 </article>
 
 <article class="prose-section">
+<h2>Design Basis</h2>
+
+<p>
+The system design was guided by assumed operating conditions and standard engineering practices typically applied to compact filtration systems. These assumptions established the basis for component sizing, pressure rating selection, and material consistency across the system.
+</p>
+
+<ul>
+<li><strong>Working Fluid:</strong> Water (clean / lightly contaminated)</li>
+<li><strong>Flow Rate (Design):</strong> 3 m³/hr</li>
+<li><strong>Operating Pressure:</strong> 6 bar</li>
+<li><strong>Design Pressure:</strong> 12 bar</li>
+<li><strong>Temperature Range:</strong> Ambient conditions (25–35°C)</li>
+</ul>
+
+<p>
+Industry-standard codes were referenced to support realistic implementation. Piping and components were aligned with ASME B31.3 guidelines, with consistent use of ASME B16.5 Class 300 ratings across primary connections.
+</p>
+
+<p>
+Material selection and sizing decisions were made to balance structural integrity, safety margins, and practical fabrication considerations.
+</p>
+</article>
+
+<article class="prose-section">
 <h2>Conceptual Layout and Process Flow</h2>
 
 <div style="display:grid;grid-template-columns:52% 48%;gap:1.5rem;margin-top:1.5rem;align-items:end;">
 
 <div>
 <p>
-Conceptual layout and flow routing used to establish system configuration and spatial arrangement.
+The conceptual layout illustrates spatial arrangement while the process flow diagram defines system functionality and sequence.
 </p>
 </div>
 
@@ -94,11 +118,58 @@ Conceptual layout and flow routing used to establish system configuration and sp
 <article class="prose-section">
 <h2>System Layout Development</h2>
 
+<p>
+The system layout was refined to ensure structured arrangement, efficient routing, and accessibility for operation and maintenance.
+</p>
+
 <figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto;">
 <img src="../assets/images/ProcessSkid/Skid_Master_2D.jpg"
      class="zoomable-image">
 </figure>
 
+</article>
+
+<article class="prose-section">
+<h2>Component Design and Standard Integration</h2>
+
+<div style="display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:start;">
+
+<div>
+
+<p>
+The system incorporates both custom-designed components and standard parts. Valves and piping elements were selected from Inventor Content Center to ensure compatibility with commonly used industrial components. Major equipment such as the filtration unit, storage tanks, pump configuration, and supporting skid structure were modeled to meet system requirements and spatial constraints.
+</p>
+
+<ul>
+<li>Custom modeling of tanks, filter unit, pump setup, control panel, pipe support and skid frame</li>
+<li>Use of Inventor Content Center for standard valves and piping</li>
+<li>Consideration of component spacing and routing to allow service access and maintenance</li>
+<li>Consistent use of Class 300 flanges for NPS 1 and NPS 3 piping</li>
+<li>Definition of sealing surfaces, bore, and bolt pattern in sectional view</li>
+</ul>
+
+<p>
+Piping and flange connections were designed following ASME B16.5 Class 300 standards, with NPS 1 and NPS 3 components used consistently throughout the system.
+</p>
+</div>
+
+<div style="border:1px dashed var(--border); border-radius:8px; padding:0.4rem; background:#f7f8fa;">
+
+<img src="../assets/images/ProcessSkid/Flange ASME.jpg"
+     class="zoomable-image"
+     style="width:100%;"
+     alt="Flange reference">
+
+<p style="font-size:0.72rem;text-align:center;color:var(--text-muted);margin:0;">
+Reference:
+<a href="https://ssmalloys.com/wp-content/uploads/2024/08/ASME-B16.5-Dimensions-of-Class-300-Flanges-in-inches.pdf" target="_blank">
+ASME B16.5 Class 300 flange tables
+</a>
+</p>
+
+</div>
+
+</div>
 </article>
 
 <article class="prose-section">
@@ -150,8 +221,9 @@ Conceptual layout and flow routing used to establish system configuration and sp
   </div>
 </footer>
 
-<!-- ✅ WORKING IMAGE ZOOM SCRIPT -->
 <script>
+document.getElementById("y").textContent = new Date().getFullYear();
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const images = document.querySelectorAll(".zoomable-image");
@@ -164,6 +236,11 @@ document.addEventListener("DOMContentLoaded", function () {
   overlay.appendChild(img);
   document.body.appendChild(overlay);
 
+  function closeOverlay() {
+    overlay.classList.remove("is-open");
+    img.src = "";
+  }
+
   images.forEach(image => {
     image.addEventListener("click", function () {
       img.src = this.src;
@@ -171,16 +248,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  overlay.addEventListener("click", function () {
-    overlay.classList.remove("is-open");
-    img.src = "";
+  overlay.addEventListener("click", closeOverlay);
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeOverlay();
+    }
   });
 
 });
-</script>
-
-<script>
-document.getElementById("y").textContent = new Date().getFullYear();
 </script>
 
 </body>
