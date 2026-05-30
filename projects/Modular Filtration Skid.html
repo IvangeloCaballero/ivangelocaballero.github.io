@@ -66,33 +66,13 @@ This project involves the design of a modular filtration skid, focusing on pipin
 </article>
 
 <article class="prose-section">
-<h2>Design Basis</h2>
-
-<p>
-The system design was guided by assumed operating conditions and standard engineering practices typically applied to compact filtration systems.
-</p>
-
-<ul>
-<li><strong>Working Fluid:</strong> Water (clean / lightly contaminated)</li>
-<li><strong>Flow Rate (Design):</strong> 3 m³/hr</li>
-<li><strong>Operating Pressure:</strong> 6 bar</li>
-<li><strong>Design Pressure:</strong> 12 bar</li>
-<li><strong>Temperature Range:</strong> Ambient conditions (25–35°C)</li>
-</ul>
-
-<p>
-Piping and components were aligned with ASME B31.3 guidelines, with consistent use of ASME B16.5 Class 300 ratings across primary connections.
-</p>
-</article>
-
-<article class="prose-section">
 <h2>Conceptual Layout and Process Flow</h2>
 
 <div style="display:grid;grid-template-columns:52% 48%;gap:1.5rem;margin-top:1.5rem;align-items:end;">
 
 <div>
 <p>
-The conceptual floor plan illustrates the spatial arrangement of components while the process flow diagram defines system operation and flow direction.
+Conceptual layout and flow routing used to establish system configuration and spatial arrangement.
 </p>
 </div>
 
@@ -114,52 +94,11 @@ The conceptual floor plan illustrates the spatial arrangement of components whil
 <article class="prose-section">
 <h2>System Layout Development</h2>
 
-<p>
-The system layout was refined using orthographic and isometric views to validate spatial relationships and integration.
-</p>
-
-<figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
+<figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto;">
 <img src="../assets/images/ProcessSkid/Skid_Master_2D.jpg"
-     alt="System layout drawing"
      class="zoomable-image">
 </figure>
 
-</article>
-
-<article class="prose-section">
-<h2>Component Design and Standard Integration</h2>
-
-<div style="display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:start;">
-
-<div>
-<p>
-The system incorporates both custom-designed components and standard parts from Inventor Content Center.
-</p>
-
-<ul>
-<li>Custom modeling of tanks, filter unit, pump setup, control panel, support and skid frame</li>
-<li>Use of Inventor Content Center for valves and piping</li>
-<li>Standardized Class 300 flange usage</li>
-<li>Defined sectional flange geometry</li>
-</ul>
-
-</div>
-
-<div style="border:1px dashed var(--border); border-radius:8px; padding:0.4rem; background:#f7f8fa;">
-<img src="../assets/images/ProcessSkid/Flange ASME.jpg"
-     class="zoomable-image"
-     style="width:100%;"
-     alt="ASME flange reference">
-
-<p style="font-size:0.72rem;text-align:center;color:var(--text-muted);margin:0;">
-Reference:
-<a href="https://ssmalloys.com/wp-content/uploads/2024/08/ASME-B16.5-Dimensions-of-Class-300-Flanges-in-inches.pdf" target="_blank">
-ASME B16.5 Class 300 flange tables
-</a>
-</p>
-</div>
-
-</div>
 </article>
 
 <article class="prose-section">
@@ -210,6 +149,35 @@ ASME B16.5 Class 300 flange tables
     <p>© <span id="y"></span> Ivangelo Caballero</p>
   </div>
 </footer>
+
+<!-- ✅ WORKING IMAGE ZOOM SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const images = document.querySelectorAll(".zoomable-image");
+
+  const overlay = document.createElement("div");
+  overlay.className = "image-overlay";
+
+  const img = document.createElement("img");
+
+  overlay.appendChild(img);
+  document.body.appendChild(overlay);
+
+  images.forEach(image => {
+    image.addEventListener("click", function () {
+      img.src = this.src;
+      overlay.classList.add("is-open");
+    });
+  });
+
+  overlay.addEventListener("click", function () {
+    overlay.classList.remove("is-open");
+    img.src = "";
+  });
+
+});
+</script>
 
 <script>
 document.getElementById("y").textContent = new Date().getFullYear();
