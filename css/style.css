@@ -36,14 +36,9 @@
   --header-height: 64px;
 }
 
-*,*::before,*::after {
-  box-sizing: border-box;
-}
+*,*::before,*::after { box-sizing: border-box; }
 
-/* ---------- Image hover labels ---------- */
-.gallery-item {
-  position: relative;
-}
+.gallery-item { position: relative; }
 
 .gallery-item::after {
   content: attr(data-label);
@@ -60,9 +55,7 @@
   transition: opacity 0.15s ease;
 }
 
-.gallery-item:hover::after {
-  opacity: 1;
-}
+.gallery-item:hover::after { opacity: 1; }
 
 body {
   margin: 0;
@@ -97,7 +90,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ---------- Layout ---------- */
 .container {
   width: 100%;
   max-width: var(--max-width);
@@ -114,17 +106,15 @@ a:hover {
 .section-title {
   font-size: 1.4rem;
   font-weight: 600;
-  letter-spacing: -0.015em;
   margin: 0 0 1.2rem;
   color: var(--text);
 }
 
-/* ---------- Header ---------- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(248, 250, 252, 0.94);
+  background: rgba(248,250,252,0.94);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -149,8 +139,6 @@ a:hover {
   color: var(--accent);
 }
 
-.logo:hover { color: var(--accent-hover); }
-
 .nav-toggle {
   display: none;
   border: 1px solid var(--border);
@@ -172,12 +160,6 @@ a:hover {
   color: var(--text-muted);
 }
 
-.nav-list a:hover,
-.nav-list a[aria-current="page"] {
-  color: var(--accent);
-}
-
-/* ---------- Hero ---------- */
 .hero {
   padding: 2.25rem 0;
   border-bottom: 1px solid var(--rule-color);
@@ -192,9 +174,7 @@ a:hover {
 
 .hero-label {
   font-size: 0.88rem;
-  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--accent-soft);
 }
 
@@ -203,22 +183,15 @@ a:hover {
   color: #f8fafc;
 }
 
-.hero-divider {
-  height: 1px;
-  background: var(--rule-color);
-}
+.hero-divider { height: 1px; background: var(--rule-color); }
 
-.title-line {
-  font-size: 1.05rem;
-  color: var(--hero-text);
-}
+.title-line { color: var(--hero-text); }
 
 .tagline {
   color: var(--hero-muted);
   max-width: 38rem;
 }
 
-/* ---------- Buttons ---------- */
 .btn {
   padding: 0.65rem 1.25rem;
   border-radius: 8px;
@@ -230,40 +203,49 @@ a:hover {
   color: #eff6ff;
 }
 
-.btn-primary:hover {
-  background: #2563eb;
-}
-
 .btn-secondary {
   border: 1px solid var(--border);
   background: #f8fafc;
 }
 
-.hero .btn-secondary {
-  background: transparent;
-  color: var(--hero-text);
-  border: 1px solid rgba(203,213,225,0.35);
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, max-content));
+  gap: 0.9rem;
+  justify-content: center;
 }
 
-/* ---------- Gallery ---------- */
+.project-card {
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.project-card-thumb {
+  aspect-ratio: 16/10;
+  background: #e8eef5;
+}
+
+.project-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card-body {
+  padding: 0.95rem 1.1rem 1.1rem;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 1rem;
 }
 
-.gallery-item {
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-
-.gallery-item img {
-  aspect-ratio: 16/11;
-  object-fit: cover;
-}
-
-/* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid var(--rule-color);
   padding: 0.75rem 0;
@@ -273,7 +255,6 @@ a:hover {
   background: #111827;
 }
 
-/* ---------- Zoom overlay ---------- */
 .zoomable-image { cursor: zoom-in; }
 
 .image-overlay {
@@ -283,7 +264,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   background: rgba(15,23,42,0.84);
-  z-index: 1200;
 }
 
 .image-overlay.is-open { display: flex; }
