@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- EDIT: Page title & SEO description -->
-  <title>Buffer Tank - SolidWorks Simulation</title>
-  <meta name="description" content="Sample project: DFM-focused mechanical enclosure design.">
+  <title>Buffer Tank - Pressure Vessel Analysis</title>
+  <meta name="description" content="Mechanical engineering project: Buffer tank pressure vessel design and SolidWorks FEA analysis focusing on nozzle stress distribution and safety factor evaluation.">
   <link rel="stylesheet" href="../css/style.css">
+
   <style>
-    
     .project-hero {
-      margin: 1rem -1.5rem 1.75rem; 
+      margin: 1rem -1.5rem 1.75rem;
       border-radius: var(--radius);
       overflow: hidden;
       background: var(--bg-alt);
       padding: 1rem;
     }
+
     .project-hero img {
       width: 100%;
       height: auto;
@@ -24,7 +24,8 @@
       object-position: center;
       display: block;
     }
-    .motor-linkage-two-column {
+
+    .two-column-layout {
       display: grid;
       gap: 1.5rem;
       grid-template-columns: 1fr;
@@ -32,196 +33,194 @@
       margin-top: 1rem;
       margin-bottom: 0.65rem;
     }
-    .motor-linkage-two-column > div,
-    .motor-linkage-two-column figure {
+
+    .two-column-layout > div,
+    .two-column-layout figure {
       min-width: 0;
-  }
-    .motor-linkage-placeholder {
+    }
+
+    .image-placeholder {
       border-radius: var(--radius);
       background: #eef1f6;
-      border: 1px solid rgba(30, 58, 138, 0.45); /* dark navy tint */
+      border: 1px solid rgba(30, 58, 138, 0.45);
       padding: 0.75rem;
       overflow: hidden;
       width: 100%;
       aspect-ratio: 1 / 1;
-      min-height: 0;
-      height: auto;
       display: grid;
       place-items: center;
       align-self: center;
-      margin-top: 0.35rem; /* subtle downward nudge */
+      margin-top: 0.35rem;
       margin-bottom: 0.45rem;
     }
-    .motor-linkage-caption {  
-    margin-top: 0.75rem;
-    font-size: 0.95rem;     /* slightly larger */
-    font-style: italic;     /* figure-style caption */
-    line-height: 1.45;
-    color: var(--text-muted);
-    text-align: center;
+
+    .image-caption {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      font-style: italic;
+      line-height: 1.45;
+      color: var(--text-muted);
+      text-align: center;
     }
+
     @media (min-width: 760px) {
-      .motor-linkage-two-column {
+      .two-column-layout {
         grid-template-columns: minmax(0, 1fr) 320px;
       }
     }
   </style>
 </head>
-<body>
-  <!--
-    ========== NEW PROJECT PAGE CHECKLIST ==========
-    1. Save a copy of this file: projects/your-project-slug.html
-    2. Update <title> and <meta name="description"> above.
-    3. On index.html and projects.html, add/update a project card:
-       - href="projects/your-project-slug.html"
-       - thumbnail in assets/thumbnails/
-    4. Replace hero image, gallery images, and all section text below.
-    5. Optional: uncomment video block and paste your YouTube embed or Google Drive preview URL.
 
-    PATHS: Files in projects/ use ../ to reach css/ and assets/
-  -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="../index.html">Ivangelo Caballero</a>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
-      <nav class="nav-menu" id="site-nav" aria-label="Main">
-        <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../projects.html">Projects</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../resume.html">Resume</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../index.html">Ivangelo Caballero</a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
+    <nav class="nav-menu" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <header class="page-header">
+    <div class="container">
+      <h1>Buffer Tank - Pressure Vessel Analysis</h1>
+      <p class="lede">Concept‑level pressure vessel design with structural evaluation of nozzle interfaces.</p>
     </div>
   </header>
 
-  <main>
-    <header class="page-header">
-      <div class="container">
-        <!-- EDIT: Project title -->
-        <h1>Buffer Tank - Pressure Vessel Analysis</h1>
-        <p class="lede">Concept‑level pressure vessel design with structural evaluation of nozzle interfaces. <!-- EDIT: one-line summary --></p>
-      </div>
-    </header>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
 
-    <section class="section" style="padding-top:0;">
-      <div class="container">
-        <!-- EDIT: Large hero image — swap src and alt -->
-        <figure class="project-hero">
-          <img src="../assets/thumbnails/Buffer Tank_Hero.jpg" width="1200" height="675" alt="Hero render of the sample enclosure project">
-        </figure>
-
-        <article class="prose-section">
-          <h2>Overview</h2>
-          <p>
-            This project presents a concept‑level buffer tank design developed to evaluate shell sizing, nozzle geometry, and structural behavior under internal pressure using static analysis. <br>
-            <em>The geometry was reconstructed from publicly available reference images of generic industrial buffer tanks for concept‑level evaluation. </em>  </p>
-        </article>
-
-        <article class="prose-section">
-          <h2>Engineering Analysis</h2>    
-<ul>
-  <li>Internal pressure conditions were defined as the primary loading case for structural evaluation.</li>
-  <li>The maximum pressure case was treated as the governing condition for structural evaluation and design validation.</li>
-  <li>Shell thickness (6 mm) was determined to maintain stresses within acceptable limits under operating conditions</li>
-  <li>Stress distribution was evaluated using FEA, with focus on nozzle openings (Ø160–Ø300 range) and geometric discontinuities.</li>
-  <li>Tank volume (~250–300 L) was defined based on process requirements, with geometry adjusted to achieve the required capacity while maintaining structural stability.</li>
-  <li>Nozzle placement was configured to support flow requirements while minimizing stress concentration.</li>
-</ul>
-        </article>
-
-        <article class="prose-section">
-          <div class="motor-linkage-two-column">
-            <div>
-              <h2>Key Parameters</h2>
-              <ul>
-                <li><strong>Material:</strong> AISI A36 Steel</li>
-                <li><strong>Shell thickness:</strong> 6&nbsp;mm</li>
-                <li><strong>Operating pressure:</strong> 0.2&nbsp;MPa</li>
-                <li><strong>Maximum pressure:</strong> 0.6&nbsp;MPa</li>
-                <li><strong>Evaluation:</strong> von&nbsp;Mises stress &amp; yield‑based Factor of Safety</li>
-             </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="prose-section">
-          <h2>Structural Results</h2>
-          <p>            
-            Structural response is governed by the maximum internal pressure case (0.6 MPa).
-            Comparison of operating (0.2 MPa) and maximum internal pressure cases shows von Mises
-            stress and yield‑based Factor of Safety concentrated at nozzle–shell junctions, with
-            minimum FoS ≈ 2.4 at maximum pressure. <br>
-            <em>The operating pressure case exhibits a
-            significantly higher safety margin and does not govern design decisions.</em>
-          </p>
-       <figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
-         <img src="../assets/images/Buffer Tank/Buffer Tank_Simulation-Static v1v2.jpg"
-            alt="Static structural analysis results showing von Mises stress and factor of safety for operating and maximum pressure cases"
-           class="zoomable">
-      <figcaption class="analysis-caption" style="text-align: center;">
-        <em> Structural analysis comparing operating (0.2 MPa) and maximum (0.6 MPa) internal pressure cases; <br>
-        nozzle–shell junctions govern the minimum Factor of Safety.</em>
-    </figcaption>
-  </figure>
-</article>
-        <article class="prose-section">
-          <h2>Image Gallery</h2>
-          <p class="note-muted">
-            <!-- HOW TO ADD IMAGES: Copy a <div class="gallery-item">...</div> block and set img src to your file in ../assets/images/ -->
-          </p>
-          <div class="gallery">
-            <div class="gallery-item" data-label="Nozzle Section Detail">
-              <img
-                src="../assets/images/Buffer Tank/Buffer Tank_Nozzle Details.JPG"
-                alt="Nozzle Section Geometry"
-                class="zoomable-image">
-      </div>
-            <div class="gallery-item" data-label="Concept 2D Drawing">
-            <img
-            src="../assets/images/Buffer Tank/Buffer Tank 2D.jpg"
-            alt="Concept‑level 2D drawing created to support dimensional clarity and design communication."
-            class="zoomable-image">
-      </div>
-            <div class="gallery-item" data-label="Reinforced Nozzle Layout">
-            <img
-            src="../assets/images/Buffer Tank/Buffer Tank Back Iso.JPG"
-            alt="Back details of buffer tank"
-            class="zoomable-image">
-        </div>
-          </div>
-        </article>
+      <figure class="project-hero">
+        <img src="../assets/thumbnails/Buffer Tank_Hero.jpg" width="1200" height="675" alt="Buffer tank render">
+      </figure>
 
       <article class="prose-section">
-          <h2>Conclusion</h2>
-          <p>
-            Based on the concept‑level analysis, the buffer tank remains structurally acceptable at the assumed maximum internal pressure of 0.6 MPa, with the nozzle–shell junctions clearly governing the structural response and a minimum Factor of Safety of about 2.4. To improve margin for higher or maximum pressure operation, I would increase the shell thickness from the current 6 mm to roughly 8–10 mm. In addition, I would recommend adding local reinforcement pads around the nozzle flanges—on the order of 1.0–1.5 times the shell thickness and approximately 2–3 times the nozzle diameter—to better distribute load and reduce local stress concentration.  </p>
-        </article>
-        <p><a href="../projects.html">← All projects</a></p>
-      </div>
-    </section>
-  </main>
+        <h2>Overview</h2>
+        <p>
+          This project presents a concept‑level buffer tank design developed to evaluate shell sizing, nozzle geometry, and structural behavior under internal pressure using static analysis.<br>
+          <em>The geometry was reconstructed from publicly available reference images of generic industrial buffer tanks for concept‑level evaluation.</em>
+        </p>
+      </article>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="y"></span> Ivangelo Caballero.</p>
-      <p><a href="../contact.html">Contact</a></p>
+      <article class="prose-section">
+        <h2>Engineering Analysis</h2>
+        <ul>
+          <li>Internal pressure conditions were defined as the primary loading case for structural evaluation.</li>
+          <li>The maximum pressure case was treated as the governing condition for structural evaluation and design validation.</li>
+          <li>Shell thickness (6 mm) was determined to maintain stresses within acceptable limits under operating conditions.</li>
+          <li>Stress distribution was evaluated using FEA, with focus on nozzle openings (Ø160–Ø300 range) and geometric discontinuities.</li>
+          <li>Tank volume (~250–300 L) was defined based on process requirements.</li>
+          <li>Nozzle placement was configured to support flow requirements while minimizing stress concentration.</li>
+        </ul>
+      </article>
+
+      <article class="prose-section">
+        <div class="two-column-layout">
+          <div>
+            <h2>Key Parameters</h2>
+            <ul>
+              <li><strong>Material:</strong> AISI A36 Steel</li>
+              <li><strong>Shell thickness:</strong> 6&nbsp;mm</li>
+              <li><strong>Operating pressure:</strong> 0.2&nbsp;MPa</li>
+              <li><strong>Maximum pressure:</strong> 0.6&nbsp;MPa</li>
+              <li><strong>Evaluation:</strong> von&nbsp;Mises stress &amp; yield‑based Factor of Safety</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="prose-section">
+        <h2>Structural Results</h2>
+        <p>
+          Structural response is governed by the maximum internal pressure case (0.6 MPa). Comparison of operating (0.2 MPa) and maximum internal pressure cases shows von Mises stress and yield‑based Factor of Safety concentrated at nozzle–shell junctions, with minimum FoS ≈ 2.4.<br>
+          <em>The operating pressure case exhibits a significantly higher safety margin and does not govern design decisions.</em>
+        </p>
+
+        <figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
+          <img src="../assets/images/Buffer Tank/Buffer Tank_Simulation-Static v1v2.jpg"
+               alt="Static structural analysis results showing stress and safety factor"
+               class="zoomable">
+
+          <figcaption class="analysis-caption" style="text-align: center;">
+            <em>
+              Structural analysis comparing operating (0.2 MPa) and maximum (0.6 MPa) internal pressure cases;<br>
+              nozzle–shell junctions govern the minimum Factor of Safety.
+            </em>
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="prose-section">
+        <h2>Fabrication Drawing and Detail Views</h2>
+
+        <div class="gallery">
+          <div class="gallery-item" data-label="Nozzle Section Detail">
+            <img src="../assets/images/Buffer Tank/Buffer Tank_Nozzle Details.JPG"
+                 alt="Nozzle section geometry"
+                 class="zoomable-image">
+          </div>
+
+          <div class="gallery-item" data-label="Concept 2D Drawing">
+            <img src="../assets/images/Buffer Tank/Buffer Tank 2D.jpg"
+                 alt="Concept 2D drawing"
+                 class="zoomable-image">
+          </div>
+
+          <div class="gallery-item" data-label="Reinforced Nozzle Layout">
+            <img src="../assets/images/Buffer Tank/Buffer Tank Back Iso.JPG"
+                 alt="Buffer tank back view"
+                 class="zoomable-image">
+          </div>
+        </div>
+      </article>
+
+      <article class="prose-section">
+        <h2>Conclusion</h2>
+        <p>
+          Based on the concept‑level analysis, the buffer tank remains structurally acceptable at the assumed maximum internal pressure of 0.6 MPa, with the nozzle–shell junctions governing the response and a minimum Factor of Safety of about 2.4. To improve margin for higher pressure operation, increasing shell thickness from 6 mm to approximately 8–10 mm is recommended. Additional reinforcement pads around nozzle flanges would further reduce stress concentration and improve durability.
+        </p>
+      </article>
+
+      <p><a href="../projects.html">← All projects</a></p>
+
     </div>
-  </footer>
+  </section>
+</main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    (function () {
-      var btn = document.getElementById("nav-toggle");
-      var menu = document.getElementById("site-nav");
-      if (!btn || !menu) return;
-      btn.addEventListener("click", function () {
-        var open = menu.classList.toggle("is-open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-    })();
-  </script>
-  <script src="../js/site.js"></script>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="y"></span> Ivangelo Caballero.</p>
+    <p><a href="../contact.html">Contact</a></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  (function () {
+    var btn = document.getElementById("nav-toggle");
+    var menu = document.getElementById("site-nav");
+
+    if (!btn || !menu) return;
+
+    btn.addEventListener("click", function () {
+      var open = menu.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  })();
+</script>
+
+<script src="../js/site.js"></script>
+
 </body>
 </html>
