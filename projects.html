@@ -116,5 +116,18 @@
       });
     })();
   </script>
+  
+<script>
+window.addEventListener("scroll", () => {
+  const bar = document.getElementById("progress");
+  if (!bar) return;
+
+  let scrollTop = window.scrollY;
+  let height = document.body.scrollHeight - window.innerHeight;
+  bar.style.width = (scrollTop / height) * 100 + "%";
+});
+</script>
+
+  
 </body>
 </html>
