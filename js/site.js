@@ -1,6 +1,4 @@
 (() => {
-
-  // ✅ TARGET ALL CLICKABLE IMAGES
   const images = Array.from(document.querySelectorAll(
     ".project-hero img, \
      .gallery-item img, \
@@ -14,10 +12,8 @@
 
   if (!images.length) return;
 
-  // ✅ ENSURE ALL HAVE CLICK CURSOR
   images.forEach(img => img.classList.add("zoomable-image"));
 
-  // ✅ CREATE OVERLAY
   const overlay = document.createElement("div");
   overlay.className = "image-overlay";
   overlay.setAttribute("aria-hidden", "true");
@@ -28,7 +24,6 @@
 
   document.body.appendChild(overlay);
 
-  // ✅ CLOSE FUNCTION
   const closeOverlay = () => {
     overlay.classList.remove("is-open");
     overlay.setAttribute("aria-hidden", "true");
@@ -37,7 +32,6 @@
     document.body.style.overflow = "";
   };
 
-  // ✅ OPEN ON CLICK
   images.forEach(img => {
     img.addEventListener("click", () => {
       overlayImg.src = img.currentSrc || img.src;
@@ -48,10 +42,8 @@
     });
   });
 
-  // ✅ CLICK OUTSIDE TO CLOSE
   overlay.addEventListener("click", closeOverlay);
 
-  // ✅ ESC KEY CLOSE
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && overlay.classList.contains("is-open")) {
       closeOverlay();
@@ -136,3 +128,47 @@ document.querySelectorAll("a").forEach((link) => {
   }
 });
 ``
+<script>
+document.querySelectorAll("a").forEach(link => {
+  if (link.hostname === window.location.hostname) {
+    link.addEventListener("click", function (e) {
+      if (this.target === "_blank") return;
+      e.preventDefault();
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location = this.href;
+      }, 200);
+    });
+  }
+});
+</script>
+<script>
+document.querySelectorAll(".btn").forEach(btn => {
+  btn.addEventListener("mousemove", e => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.12}px, ${y * 0.12}px)`;
+  });
+
+  btn.addEventListener("mouseleave", () => {
+    btn.style.transform = "none";
+  });
+});
+</script>
+
+
+<script>
+const toggle = document.createElement("button");
+toggle.textContent = "Dark";
+toggle.style.position = "fixed";
+toggle.style.bottom = "20px";
+toggle.style.right = "20px";
+toggle.className = "btn btn-secondary";
+
+toggle.onclick = () => {
+  document.body.classList.toggle("dark");
+};
+
+document.body.appendChild(toggle);
+</script>
