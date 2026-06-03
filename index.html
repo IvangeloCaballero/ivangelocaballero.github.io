@@ -143,5 +143,27 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
+<script>
+function revealOnScroll() {
+  const elements = document.querySelectorAll(
+    ".project-card, .prose-section, .section, .gallery-item"
+  );
+
+  const trigger = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    el.classList.add("reveal");
+    const top = el.getBoundingClientRect().top;
+
+    if (top < trigger) {
+      el.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
 </body>
 </html>
