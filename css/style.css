@@ -1062,3 +1062,48 @@ h1, h2, h3 {
   letter-spacing: -0.025em;
 }
 
+
+.section {
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.02));
+  pointer-events: none;
+}
+
+body {
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+.prose-section {
+  max-width: 720px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --bg-alt: #111827;
+  --bg-card: #1f2937;
+  --text: #e5e7eb;
+  --text-muted: #9ca3af;
+}
+
+.project-card {
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
