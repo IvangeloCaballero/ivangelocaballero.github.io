@@ -1076,14 +1076,6 @@ body.fade-out {
   opacity: 0;
 }
 
-.prose-section {
-  max-width: 720px;
-}
-
-.container {
-  max-width: 1200px;
-}
-
 body.dark {
   --bg: #0f172a;
   --bg-alt: #111827;
@@ -1098,4 +1090,15 @@ body.dark {
 
 html {
   scroll-behavior: smooth;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(15,23,42,0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(15,23,42,0.02) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
 }
