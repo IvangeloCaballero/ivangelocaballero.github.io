@@ -1102,3 +1102,10 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
+
+.dark-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
