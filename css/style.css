@@ -1067,14 +1067,6 @@ h1, h2, h3 {
   position: relative;
 }
 
-.section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.02));
-  pointer-events: none;
-}
-
 body {
   opacity: 1;
   transition: opacity 0.25s ease;
