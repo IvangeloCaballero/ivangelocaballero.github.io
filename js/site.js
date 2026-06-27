@@ -34,13 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   images.forEach(img => {
-    img.addEventListener("click", () => {
-      overlayImg.src = img.currentSrc || img.src;
-      overlayImg.alt = img.alt || "";
-      overlay.classList.add("is-open");
-      overlay.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-    });
+    
+img.addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  overlayImg.src = img.currentSrc || img.src;
+  overlayImg.alt = img.alt || "";
+
+  overlay.classList.add("is-open");
+  overlay.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+});
+
+overlay.addEventListener("click", (e) => {
+  e.stopPropagation();
+  closeOverlay();
+});
+
   });
 
   overlay.addEventListener("click", closeOverlay);
