@@ -1,4 +1,5 @@
-(() => {
+document.addEventListener("DOMContentLoaded", () => {
+
   const images = Array.from(document.querySelectorAll(
     ".project-hero img, \
      .gallery-item img, \
@@ -50,10 +51,9 @@
     }
   });
 
-})();
+}); // ✅ FIXED (was IIFE)
 
-
-
+/* ================= NAV ================= */
 (function () {
   var btn = document.getElementById("nav-toggle");
   var menu = document.getElementById("site-nav");
@@ -73,6 +73,7 @@
   }
 })();
 
+/* ================= REVEAL ================= */
 function revealOnScroll() {
   const elements = document.querySelectorAll(
     ".project-card, .prose-section, .hero, .section, .gallery-item"
@@ -93,6 +94,7 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
+/* ================= PROGRESS BAR ================= */
 window.addEventListener("scroll", () => {
   const bar = document.getElementById("progress");
   if (!bar) return;
@@ -102,6 +104,7 @@ window.addEventListener("scroll", () => {
   bar.style.width = (scrollTop / height) * 100 + "%";
 });
 
+/* ================= BUTTON EFFECT ================= */
 document.querySelectorAll(".btn").forEach((btn) => {
   btn.addEventListener("mousemove", (e) => {
     const rect = btn.getBoundingClientRect();
@@ -115,6 +118,7 @@ document.querySelectorAll(".btn").forEach((btn) => {
   });
 });
 
+/* ================= FADE NAV ================= */
 document.querySelectorAll("a").forEach((link) => {
   if (link.hostname === window.location.hostname) {
     link.addEventListener("click", function (e) {
@@ -127,48 +131,3 @@ document.querySelectorAll("a").forEach((link) => {
     });
   }
 });
-``
-<script>
-document.querySelectorAll("a").forEach(link => {
-  if (link.hostname === window.location.hostname) {
-    link.addEventListener("click", function (e) {
-      if (this.target === "_blank") return;
-      e.preventDefault();
-      document.body.classList.add("fade-out");
-      setTimeout(() => {
-        window.location = this.href;
-      }, 200);
-    });
-  }
-});
-</script>
-<script>
-document.querySelectorAll(".btn").forEach(btn => {
-  btn.addEventListener("mousemove", e => {
-    const rect = btn.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    btn.style.transform = `translate(${x * 0.12}px, ${y * 0.12}px)`;
-  });
-
-  btn.addEventListener("mouseleave", () => {
-    btn.style.transform = "none";
-  });
-});
-</script>
-
-
-<script>
-const toggle = document.createElement("button");
-toggle.textContent = "Dark";
-toggle.style.position = "fixed";
-toggle.style.bottom = "20px";
-toggle.style.right = "20px";
-toggle.className = "btn btn-secondary";
-
-toggle.onclick = () => {
-  document.body.classList.toggle("dark");
-};
-
-document.body.appendChild(toggle);
-</script>
