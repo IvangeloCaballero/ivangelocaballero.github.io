@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UAV Payload Bracket – Structural Optimization</title>
+<meta name="description" content="Design and structural optimization of a UAV payload support bracket using Creo and FEA, focusing on load-path-driven geometry and efficient material utilization.">
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+.project-hero {
+  margin: 1rem -1.5rem 1.75rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-alt);
+  padding: 1rem;
+}
+.project-hero img {
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  object-fit: contain;
+  display: block;
+}
+</style>
+</head>
+
+<body>
+<div id="progress"></div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../index.html">Ivangelo Caballero</a>
+    <button type="button" class="nav-toggle" id="nav-toggle">Menu</button>
+    <nav class="nav-menu" id="site-nav">
+      <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../about.html">About</a></li>
+   <!--     <li><a href="../resume.html">Resume</a></li>  -->
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<header class="page-header">
+  <div class="container">
+    <h1>UAV Payload Bracket – Structural Optimization</h1>
+    <p class="lede">Load-path-driven bracket design and FEA-based structural optimization.</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:0;">
+<div class="container">
+
+<figure class="project-hero">
+<img src="../assets/images/Bracket/UAV Bracket.png" class="zoomable-image">
+</figure>
+
+<article class="prose-section">
+<h2>Overview</h2>
+<p>
+Design and structural optimization of a UAV payload support bracket using FEA-driven geometry refinement in Creo. The project focuses on improving load transfer efficiency while minimizing excess material.
+</p>
+</article>
+
+<article class="prose-section">
+<h2>Load Configuration & Design Challenge</h2>
+
+<p>
+The bracket supports a payload through three inclined struts, creating a multi-directional load condition. Due to the asymmetrical strut arrangement, load distribution is non-uniform, requiring a geometry that efficiently transfers forces to the mounting interface while minimizing unnecessary material.
+</p>
+
+<ul>
+<li><strong>Working Fluid:</strong> Water (clean / lightly contaminated)</li>
+<li><strong>Flow Rate (Design):</strong> 3 m³/hr — selected to maintain manageable pipe velocities while aligning with compact system sizing</li>
+<li><strong>Operating Pressure:</strong> 6 bar — assumed to account for pumping requirements and system resistance through filtration components.</li>
+<li><strong>Design Pressure:</strong> 12 bar</li>
+<li><strong>Temperature Range:</strong> Ambient conditions (25–35°C)</li>
+</ul>
+
+<p>
+Industry-standard codes were referenced to support realistic implementation. Piping and components were aligned with ASME B31.3 guidelines, with consistent use of ASME B16.5 Class 300 ratings across primary connections.
+</p>
+
+<p>
+Material selection and sizing decisions were made to balance structural integrity, safety margins, and practical fabrication considerations. These assumptions served as the foundation for layout development, component integration, and cost estimation.
+</p>
+
+</article>
+  
+<article class="prose-section">
+<h2>Conceptual Layout and Process Flow</h2>
+
+<div style="display:grid;grid-template-columns:52% 48%;gap:1.5rem;margin-top:1.5rem;align-items:end;">
+
+<div>
+<p>
+The conceptual floor plan illustrates the initial spatial arrangement of major components within the skid, focusing on placement, routing feasibility, and accessibility for operation and maintenance. Adequate spacing between equipment was considered to allow service access, inspection, and ease of installation.
+
+The process flow diagram complements this by defining the sequence of operation from inlet through pumping, filtration, and distribution, providing a clear representation of system functionality and flow direction.
+</p>
+</div>
+
+<div style="grid-row: span 2;">
+<img src="../assets/images/ProcessSkid/Process Flow Diagram.png"
+     style="width:100%;"
+     class="zoomable-image">
+</div>
+
+<div>
+<img src="../assets/images/ProcessSkid/Floor Plan.png"
+     style="width:100%;"
+     class="zoomable-image">
+</div>
+
+
+</article>
+
+<article class="prose-section">
+<h2>System Layout Development</h2>
+<p>
+The layout was refined by iterating component positioning to improve accessibility and piping efficiency. Orthographic and isometric views were used to verify clearances, routing feasibility, and overall integration before finalizing the skid arrangement.
+
+<figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
+  <div class="gallery-item" data-label="Orthographic and Isometric Views" style="border:none; background:none;">
+    <img src="../assets/images/ProcessSkid/Skid_Master_2D.jpg"
+         class="zoomable-image">
+  </div>
+</figure>
+
+</article>
+
+<article class="prose-section">
+<h2>Component Design and Standard Integration</h2>
+
+<div style="display: grid;grid-template-columns: 1fr 320px;gap: 1.5rem;align-items: start;margin-top: 1rem;">
+
+<div>
+<p>
+The system incorporates both custom-designed components and standard parts. Valves and piping elements were selected from Inventor Content Center to ensure compatibility with commonly used industrial components. Major equipment such as the filtration unit, storage tanks, pump configuration, and supporting skid structure were modeled to meet system requirements and spatial constraints.
+</p>
+
+<ul>
+<li>Custom modeling of tanks, filter unit, pump setup, control panel, pipe support and skid frame</li>
+<li>Use of Inventor Content Center for standard valves and piping</li>
+<li>Consideration of component spacing and routing to allow service access and maintenance</li>
+<li>Consistent use of Class 300 flanges for NPS 1 and NPS 3 piping ensures standardization and provides a conservative pressure margin relative to the 6 bar operating condition.</li>
+</ul>
+
+<p>Piping and custom components were designed in accordance with ASME B16.5 Class 300 standards to ensure dimensional compatibility, correct bolt alignment, and reliable sealing across all flange connections.
+</p>
+</div>
+  
+<div style="border:1px dashed var(--border);border-radius:8px;padding:0.4rem 0.5rem;background:#f7f8fa;display:flex;flex-direction:column;gap:0.3rem;">
+
+<img src="../assets/images/ProcessSkid/Flange ASME.jpg"
+     class="zoomable-image"
+     style="width:100%; height:auto; display:block;"
+     alt="ASME B16.5 flange reference table">
+
+<p style="font-size:0.72rem;text-align:center;color:var(--text-muted);margin:0;">
+Reference:
+<a href="https://ssmalloys.com/wp-content/uploads/2024/08/ASME-B16.5-Dimensions-of-Class-300-Flanges-in-inches.pdf" target="_blank">
+ASME B16.5 Class 300 flange tables
+</a>
+</p>
+
+</div>
+
+</div>
+</article>
+
+<article class="prose-section">
+<h2>Custom Component Design</h2>
+<p>
+Custom components were modeled to match system requirements while maintaining realistic proportions, connection interfaces, and manufacturability considerations.
+</p>
+<div class="gallery">
+<div class="gallery-item" data-label="Motor Pump">
+<img src="../assets/images/ProcessSkid/Pump_Module.png" class="zoomable-image">
+</div>
+
+<div class="gallery-item" data-label="Buffer Tank">
+<img src="../assets/images/ProcessSkid/Skid_Module.png" class="zoomable-image">
+</div>
+
+<div class="gallery-item" data-label="Filter Tank">
+<img src="../assets/images/ProcessSkid/Filter_Module.png" class="zoomable-image">
+</div>
+</div>
+</article>
+
+<article class="prose-section">
+<h2>Bill of Materials and Cost Estimation</h2>
+
+<p>
+A bill of materials (BOM) was developed to quantify all major system components, including equipment, piping, structural elements, and supports. This formed the basis for an overall cost estimate and feasibility assessment.
+</p>
+
+<ul>
+<li><strong>Total Project Cost:</strong> ₱216,492.75</li>
+<li><strong>Primary Cost Drivers:</strong> Equipment, Labor, and Fabrication</li>
+</ul>
+
+<figure style="max-width:520px; margin:1.5rem auto; text-align:center;">
+<img src="../assets/images/ProcessSkid/Project Cost.png"
+     class="zoomable-image"
+     style="width:100%;">
+<figcaption style="font-size:0.85rem; color:var(--text-muted); margin-top:0.4rem;">
+Cost distribution of major system components, based on grouped material, labor, and contingency costs (Total: ₱216,492.75)
+</figcaption>
+</figure>
+<p><strong>Key Observation:</strong> Equipment and labor together account for nearly 50% of total project cost, indicating that both procurement and installation effort significantly influence system budgeting.</p>
+
+<p>
+Piping and structural elements contribute secondary costs, while contingency provides an allowance for uncertainty in early-stage estimation, resulting in a more robust overall project budget.
+</p>
+<p style="text-align:center; margin-top:1.5rem;">
+<a href="https://view.officeapps.live.com/op/view.aspx?src=https://ivangelocaballero.github.io/assets/documents/Bill%20of%20Materials.xlsx"
+   target="_blank"
+   style="display:inline-block;padding:0.65rem 1.3rem;background:#2b6cb0;color:white;border-radius:6px;text-decoration:none;font-weight:600;">
+📊 View Full BOM (Excel)
+</a>
+</p>
+
+</article>
+
+<article class="prose-section">
+<h2>System Walkthrough</h2>
+<p>A full system walkthrough demonstrates component integration, spatial layout, and overall assembly structure within the CAD environment.</p>
+<div style="max-width:800px;margin:1.5rem auto;">
+<iframe
+  src="https://drive.google.com/file/d/1S-t6Yia0dU55gCabBX1PwAqGe4oGqBZB/preview"
+  style="width:100%; height:450px; border:none;"
+  allowfullscreen>
+</iframe>
+</div>
+
+</article>
+
+<p style="margin-top:1.5rem; text-align:center;">
+<a href="../projects.html" class="btn btn-primary">See all projects →</a>
+</p>
+
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="y"></span> Ivangelo Caballero</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".zoomable-image");
+
+  const overlay = document.createElement("div");
+  overlay.className = "image-overlay";
+
+  const img = document.createElement("img");
+
+  overlay.appendChild(img);
+  document.body.appendChild(overlay);
+
+  function closeOverlay() {
+    overlay.classList.remove("is-open");
+    img.src = "";
+  }
+
+  images.forEach(image => {
+    image.addEventListener("click", function () {
+      img.src = this.src;
+      overlay.classList.add("is-open");
+    });
+  });
+
+  overlay.addEventListener("click", closeOverlay);
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeOverlay();
+    }
+  });
+});
+</script>
+
+<script>
+window.addEventListener("scroll", () => {
+  const bar = document.getElementById("progress");
+  if (!bar) return;
+
+  let scrollTop = window.scrollY;
+  let height = document.body.scrollHeight - window.innerHeight;
+  bar.style.width = (scrollTop / height) * 100 + "%";
+});
+</script>
+
+<script>
+function revealOnScroll() {
+  const elements = document.querySelectorAll(
+    ".project-card, .prose-section, .section, .gallery-item"
+  );
+
+  const trigger = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    el.classList.add("reveal");
+    const top = el.getBoundingClientRect().top;
+
+    if (top < trigger) {
+      el.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+</body>
+</html>
