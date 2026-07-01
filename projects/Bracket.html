@@ -101,177 +101,123 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
     force condition, which directly influences the resulting stress behavior and motivates the need for structural optimization.
   </p>
 
-</article>
-
-<p>
-The bracket supports a payload through three inclined struts, creating a multi-directional load condition. Due to the asymmetrical strut arrangement, load distribution is non-uniform, requiring a geometry that efficiently transfers forces to the mounting interface while minimizing unnecessary material.
-</p>
-
-<ul>
-<li><strong>Working Fluid:</strong> Water (clean / lightly contaminated)</li>
-<li><strong>Flow Rate (Design):</strong> 3 m³/hr — selected to maintain manageable pipe velocities while aligning with compact system sizing</li>
-<li><strong>Operating Pressure:</strong> 6 bar — assumed to account for pumping requirements and system resistance through filtration components.</li>
-<li><strong>Design Pressure:</strong> 12 bar</li>
-<li><strong>Temperature Range:</strong> Ambient conditions (25–35°C)</li>
-</ul>
-
-<p>
-Industry-standard codes were referenced to support realistic implementation. Piping and components were aligned with ASME B31.3 guidelines, with consistent use of ASME B16.5 Class 300 ratings across primary connections.
-</p>
-
-<p>
-Material selection and sizing decisions were made to balance structural integrity, safety margins, and practical fabrication considerations. These assumptions served as the foundation for layout development, component integration, and cost estimation.
-</p>
-
-</article>
-  
-<article class="prose-section">
-<h2>Conceptual Layout and Process Flow</h2>
-
-<div style="display:grid;grid-template-columns:52% 48%;gap:1.5rem;margin-top:1.5rem;align-items:end;">
-
-<div>
-<p>
-The conceptual floor plan illustrates the initial spatial arrangement of major components within the skid, focusing on placement, routing feasibility, and accessibility for operation and maintenance. Adequate spacing between equipment was considered to allow service access, inspection, and ease of installation.
-
-The process flow diagram complements this by defining the sequence of operation from inlet through pumping, filtration, and distribution, providing a clear representation of system functionality and flow direction.
-</p>
-</div>
-
-<div style="grid-row: span 2;">
-<img src="../assets/images/ProcessSkid/Process Flow Diagram.png"
-     style="width:100%;"
-     class="zoomable-image">
-</div>
-
-<div>
-<img src="../assets/images/ProcessSkid/Floor Plan.png"
-     style="width:100%;"
-     class="zoomable-image">
-</div>
-
-
-</article>
 
 <article class="prose-section">
-<h2>System Layout Development</h2>
-<p>
-The layout was refined by iterating component positioning to improve accessibility and piping efficiency. Orthographic and isometric views were used to verify clearances, routing feasibility, and overall integration before finalizing the skid arrangement.
+  <h2>Initial Design & Overdesign</h2>
 
-<figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
-  <div class="gallery-item" data-label="Orthographic and Isometric Views" style="border:none; background:none;">
-    <img src="../assets/images/ProcessSkid/Skid_Master_2D.jpg"
-         class="zoomable-image">
+  <p>
+    Based on the defined loading conditions, an initial bracket design was developed with a conservative 
+    uniform thickness to ensure structural integrity during early stages of the design process.
+  </p>
+
+  <div class="gallery" style="grid-template-columns: 1fr;">
+    <div class="gallery-item" data-label="Initial Bracket Geometry (6 mm thickness)">
+      ../assets/images/Bracket/initial-design.jpg
+    </div>
   </div>
-</figure>
+
+  <p>
+    Simulation results show a maximum stress of approximately <strong>28 MPa</strong>, which is significantly 
+    lower than the material yield strength (~500 MPa). This indicates that the structure is overdesigned, 
+    containing excess material and unnecessary weight.
+  </p>
+
+</article>
+
+
+<article class="prose-section">
+  <h2>Initial Design & Overdesign</h2>
+
+  <p>
+    Based on the defined loading conditions, an initial bracket design was developed with a conservative 
+    uniform thickness to ensure structural integrity during early stages of the design process.
+  </p>
+
+  <div class="gallery" style="grid-template-columns: 1fr;">
+    <div class="gallery-item" data-label="Initial Bracket Geometry (6 mm thickness)">
+      ../assets/images/Bracket/initial-design.jpg
+    </div>
+  </div>
+
+  <p>
+    Simulation results show a maximum stress of approximately <strong>28 MPa</strong>, which is significantly 
+    lower than the material yield strength (~500 MPa). This indicates that the structure is overdesigned, 
+    containing excess material and unnecessary weight.
+  </p>
 
 </article>
 
 <article class="prose-section">
-<h2>Component Design and Standard Integration</h2>
+  <h2>Load Path–Driven Geometry</h2>
 
-<div style="display: grid;grid-template-columns: 1fr 320px;gap: 1.5rem;align-items: start;margin-top: 1rem;">
+  <p>
+    Material was selectively redistributed to follow primary load paths, resulting in a rib-supported 
+    structure. Low-stress regions were reduced, while high-stress areas were reinforced to efficiently 
+    carry applied loads.
+  </p>
 
-<div>
-<p>
-The system incorporates both custom-designed components and standard parts. Valves and piping elements were selected from Inventor Content Center to ensure compatibility with commonly used industrial components. Major equipment such as the filtration unit, storage tanks, pump configuration, and supporting skid structure were modeled to meet system requirements and spatial constraints.
-</p>
+  <div class="gallery" style="grid-template-columns: 1fr 1fr;">
+    
+    <div class="gallery-item" data-label="Rib Structure and Material Reduction">
+      ../assets/images/Bracket/ribs.jpg
+    </div>
 
-<ul>
-<li>Custom modeling of tanks, filter unit, pump setup, control panel, pipe support and skid frame</li>
-<li>Use of Inventor Content Center for standard valves and piping</li>
-<li>Consideration of component spacing and routing to allow service access and maintenance</li>
-<li>Consistent use of Class 300 flanges for NPS 1 and NPS 3 piping ensures standardization and provides a conservative pressure margin relative to the 6 bar operating condition.</li>
-</ul>
+    <div class="gallery-item" data-label="Stress Flow and Load Paths">
+      ../assets/images/Bracket/load-path.jpg
+    </div>
 
-<p>Piping and custom components were designed in accordance with ASME B16.5 Class 300 standards to ensure dimensional compatibility, correct bolt alignment, and reliable sealing across all flange connections.
-</p>
-</div>
+  </div>
+
+</article>
+
   
-<div style="border:1px dashed var(--border);border-radius:8px;padding:0.4rem 0.5rem;background:#f7f8fa;display:flex;flex-direction:column;gap:0.3rem;">
-
-<img src="../assets/images/ProcessSkid/Flange ASME.jpg"
-     class="zoomable-image"
-     style="width:100%; height:auto; display:block;"
-     alt="ASME B16.5 flange reference table">
-
-<p style="font-size:0.72rem;text-align:center;color:var(--text-muted);margin:0;">
-Reference:
-<a href="https://ssmalloys.com/wp-content/uploads/2024/08/ASME-B16.5-Dimensions-of-Class-300-Flanges-in-inches.pdf" target="_blank">
-ASME B16.5 Class 300 flange tables
-</a>
-</p>
-
-</div>
-
-</div>
-</article>
-
 <article class="prose-section">
-<h2>Custom Component Design</h2>
-<p>
-Custom components were modeled to match system requirements while maintaining realistic proportions, connection interfaces, and manufacturability considerations.
-</p>
-<div class="gallery">
-<div class="gallery-item" data-label="Motor Pump">
-<img src="../assets/images/ProcessSkid/Pump_Module.png" class="zoomable-image">
-</div>
+  <h2>Final Optimized Design</h2>
 
-<div class="gallery-item" data-label="Buffer Tank">
-<img src="../assets/images/ProcessSkid/Skid_Module.png" class="zoomable-image">
-</div>
+  <p>
+    The final geometry integrates rib-supported features and optimized thickness distribution, 
+    resulting in an efficient structure capable of handling the applied loads while minimizing weight.
+  </p>
 
-<div class="gallery-item" data-label="Filter Tank">
-<img src="../assets/images/ProcessSkid/Filter_Module.png" class="zoomable-image">
-</div>
-</div>
-</article>
-
-<article class="prose-section">
-<h2>Bill of Materials and Cost Estimation</h2>
-
-<p>
-A bill of materials (BOM) was developed to quantify all major system components, including equipment, piping, structural elements, and supports. This formed the basis for an overall cost estimate and feasibility assessment.
-</p>
-
-<ul>
-<li><strong>Total Project Cost:</strong> ₱216,492.75</li>
-<li><strong>Primary Cost Drivers:</strong> Equipment, Labor, and Fabrication</li>
-</ul>
-
-<figure style="max-width:520px; margin:1.5rem auto; text-align:center;">
-<img src="../assets/images/ProcessSkid/Project Cost.png"
-     class="zoomable-image"
-     style="width:100%;">
-<figcaption style="font-size:0.85rem; color:var(--text-muted); margin-top:0.4rem;">
-Cost distribution of major system components, based on grouped material, labor, and contingency costs (Total: ₱216,492.75)
-</figcaption>
-</figure>
-<p><strong>Key Observation:</strong> Equipment and labor together account for nearly 50% of total project cost, indicating that both procurement and installation effort significantly influence system budgeting.</p>
-
-<p>
-Piping and structural elements contribute secondary costs, while contingency provides an allowance for uncertainty in early-stage estimation, resulting in a more robust overall project budget.
-</p>
-<p style="text-align:center; margin-top:1.5rem;">
-<a href="https://view.officeapps.live.com/op/view.aspx?src=https://ivangelocaballero.github.io/assets/documents/Bill%20of%20Materials.xlsx"
-   target="_blank"
-   style="display:inline-block;padding:0.65rem 1.3rem;background:#2b6cb0;color:white;border-radius:6px;text-decoration:none;font-weight:600;">
-📊 View Full BOM (Excel)
-</a>
-</p>
+  <div class="gallery" style="grid-template-columns: 1fr;">
+    <div class="gallery-item" data-label="Final Bracket Geometry">
+      ../assets/images/Bracket/final-design.jpg
+    </div>
+  </div>
 
 </article>
 
 <article class="prose-section">
-<h2>System Walkthrough</h2>
-<p>A full system walkthrough demonstrates component integration, spatial layout, and overall assembly structure within the CAD environment.</p>
-<div style="max-width:800px;margin:1.5rem auto;">
-<iframe
-  src="https://drive.google.com/file/d/1S-t6Yia0dU55gCabBX1PwAqGe4oGqBZB/preview"
-  style="width:100%; height:450px; border:none;"
-  allowfullscreen>
-</iframe>
-</div>
+  <h2>Simulation Results</h2>
+
+  <div class="gallery" style="grid-template-columns: 1fr;">
+    <div class="gallery-item" data-label="Final Stress Distribution">
+      ../assets/images/Bracket/final-stress.jpg
+    </div>
+  </div>
+
+  <ul>
+    <li>Maximum stress: <strong>~110 MPa</strong></li>
+    <li>Material yield strength: <strong>~500 MPa</strong></li>
+    <li>Factor of Safety: <strong>~4.5</strong></li>
+  </ul>
+
+  <p>
+    Stress concentrations occur at connection interfaces and rib intersections, which are expected 
+    due to load transfer conditions. The stress levels remain well within safe limits, confirming 
+    the structural integrity of the design.
+  </p>
+
+</article>
+
+<article class="prose-section">
+  <h2>Conclusion</h2>
+
+  <p>
+    The bracket design was successfully optimized through iterative FEA, reducing excess material 
+    while maintaining structural integrity. The final geometry achieves an efficient balance between 
+    strength and weight under multi-directional loading conditions.
+  </p>
 
 </article>
 
