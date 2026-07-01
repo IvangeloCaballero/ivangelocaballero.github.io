@@ -1109,3 +1109,27 @@ body::before {
   right: 20px;
   z-index: 1000;
 }
+
+table {
+  width: 100%;             
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 12px 14px;
+  border: 1px solid #e2e2e2;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;   
+}
+
+th {
+  background-color: #1f2937; 
+  color: #ffffff;           
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fafb; 
+}
