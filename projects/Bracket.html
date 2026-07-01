@@ -152,18 +152,23 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
   <div class="gallery" style="grid-template-columns: 1fr;">
     <div class="gallery-item">
      
-
 <img src="../assets/images/Bracket/Initial_Final.jpg"
      alt="Initial and optimized bracket comparison"
      class="zoomable-image"
-     style="width:100%; max-width:850px; height:auto; margin:0 auto; display:block;">
-
+     style="width:100%; height:auto; max-height:460px; object-fit:contain; display:block; margin:0 auto;">
 
     </div>
   </div>
 
 
 <p><strong>Iteration Summary</strong></p>
+  <p>
+
+The bracket geometry was progressively refined by reducing thickness and removing material 
+  from low-stress regions based on FEA results. Increasing stress levels across iterations indicate 
+  improved material utilization while maintaining a safe margin below the material yield strength. 
+  The final configuration achieves an effective balance between weight reduction and structural performance.
+  </p>
 
 <table>
   <thead>
@@ -210,62 +215,43 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
 </table>
 
 
-  <p>
-    The bracket geometry was progressively refined by reducing thickness and redistributing material 
-    based on stress behavior. Increasing stress levels across iterations indicate improved material 
-    utilization, while remaining well below the material yield strength. The final configuration achieves 
-    a balance between structural performance and weight efficiency.
-  </p>
 
 </article>
 
-  
-<article class="prose-section">
-  <h2>Final Optimized Design</h2>
-
-  <p>
-    The final geometry integrates rib-supported features and optimized thickness distribution, 
-    resulting in an efficient structure capable of handling the applied loads while minimizing weight.
-  </p>
-
-  <div class="gallery" style="grid-template-columns: 1fr;">
-    <div class="gallery-item" data-label="Final Bracket Geometry">
-      ../assets/images/Bracket/final-design.jpg
-    </div>
-  </div>
-
-</article>
 
 <article class="prose-section">
-  <h2>Simulation Results</h2>
+  <h2>Simulation Results & Final Validation</h2>
 
-  <div class="gallery" style="grid-template-columns: 1fr;">
-    <div class="gallery-item" data-label="Final Stress Distribution">
-      ../assets/images/Bracket/final-stress.jpg
+  <!-- IMAGES -->
+  <div class="gallery" style="grid-template-columns: 1fr 1fr;">
+    
+    <div class="gallery-item" data-label="Stress Distribution (Isometric View)">
+      ../assets/images/Bracket/final-iso.png
     </div>
+
+    <div class="gallery-item" data-label="Stress Distribution (Top View)">
+      ../assets/images/Bracket/final-top.png
+    </div>
+
   </div>
 
+  <!-- RESULTS -->
+  <p><strong>Key Results</strong></p>
   <ul>
     <li>Maximum stress: <strong>~110 MPa</strong></li>
-    <li>Material yield strength: <strong>~500 MPa</strong></li>
+    <li>Material yield strength: <strong>~500 MPa</strong> (Aluminum 7075-T6)</li>
     <li>Factor of Safety: <strong>~4.5</strong></li>
+    <li>Maximum deformation: <strong>0.13 mm</strong></li>
+    <li>Stress concentrations localized at load-bearing interfaces and rib junctions</li>
   </ul>
 
   <p>
-    Stress concentrations occur at connection interfaces and rib intersections, which are expected 
-    due to load transfer conditions. The stress levels remain well within safe limits, confirming 
-    the structural integrity of the design.
-  </p>
-
-</article>
-
-<article class="prose-section">
-  <h2>Conclusion</h2>
-
-  <p>
-    The bracket design was successfully optimized through iterative FEA, reducing excess material 
-    while maintaining structural integrity. The final geometry achieves an efficient balance between 
-    strength and weight under multi-directional loading conditions.
+  Final simulation results confirm that the optimized bracket design effectively carries the applied load 
+  while maintaining a comfortable margin below material limits. Stress distribution follows expected load 
+  paths, with localized concentrations occurring at structural junctions. Targeted material removal in 
+  low-stress regions based on FEA results improves material utilization, while the achieved balance between 
+  reduced weight and structural integrity demonstrates the effectiveness of the iterative, load-driven 
+  design approach applied in this project.
   </p>
 
 </article>
