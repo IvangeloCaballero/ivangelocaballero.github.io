@@ -140,12 +140,8 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
       <img src="../assets/images/Bracket/results_initial.png"
            alt="Initial bracket stress distribution"
            class="zoomable-image"
+           data-label="Initial Design and Simulation"
            style="width:100%; height:auto; display:block;">
-
-
-      <p style="
-        font-size: 0.72rem;
-        text-align:article>
        </div>
 </article>
 
@@ -162,45 +158,53 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
     </div>
   </div>
 
-<th>Max Stress</th>
-        <th>Observation</th>
-      </tr>
-    </thead>
-    <tbody>
 
-      <tr>
-        <td>Initial</td>
-        <td>Uniform thickness of 6 mm across plate, ribs, and bolt lug regions</td>
-        <td>~28 MPa</td>
-        <td>Overdesigned, low material utilization</td>
-      </tr>
+<p><strong>Iteration Summary</strong></p>
 
-      <tr>
-        <td>Iteration 1</td>
-        <td>
-          Plate reduced to 5 mm<br>
-          Lower rib reduced to 4 mm<br>
-          Bolt lug thickness retained at 6 mm
-        </td>
-        <td>~50 MPa</td>
-        <td>Improved stress utilization while maintaining strength in critical regions</td>
-      </tr>
+<table>
+  <thead>
+    <tr>
+      <th>Iteration</th>
+      <th>Design Changes</th>
+      <th>Max Stress</th>
+      <th>Observation</th>
+    </tr>
+  </thead>
 
-      <tr>
-        <td>Final</td>
-        <td>
-          Plate reduced to 4 mm<br>
-          Dual rib height reduced<br>
-          Cutouts added in low-stress regions<br>
-          Bolt lug thickness reduced to 4 mm<br>
-          Lug OD reduced (26 → 24 mm)
-        </td>
-        <td>~110 MPa</td>
-        <td>Efficient load distribution with optimized material usage</td>
-      </tr>
+  <tbody>
+    <tr>
+      <td>Initial</td>
+      <td>Uniform thickness of 6 mm across plate, ribs, and bolt lug regions</td>
+      <td>~28 MPa</td>
+      <td>Overdesigned, low material utilization</td>
+    </tr>
 
-    </tbody>
-  </table>
+    <tr>
+      <td>Iteration 1</td>
+      <td>
+        Plate reduced to 5 mm<br>
+        Lower rib reduced to 4 mm<br>
+        Bolt lug thickness retained at 6 mm
+      </td>
+      <td>~50 MPa</td>
+      <td>Improved stress utilization while maintaining strength in critical regions</td>
+    </tr>
+
+    <tr>
+      <td>Final</td>
+      <td>
+        Plate reduced to 4 mm<br>
+        Dual rib height reduced<br>
+        Cutouts added in low-stress regions<br>
+        Bolt lug thickness reduced to 4 mm<br>
+        Lug OD reduced (26 → 24 mm)
+      </td>
+      <td>~110 MPa</td>
+      <td>Efficient load distribution with optimized material usage</td>
+    </tr>
+  </tbody>
+</table>
+
 
   <p>
     The bracket geometry was progressively refined by reducing thickness and redistributing material 
