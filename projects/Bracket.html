@@ -103,44 +103,62 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
     force condition, which directly influences the resulting stress behavior and motivates the need for structural optimization.
   </p>
 
-
 <article class="prose-section">
-  <h2>Initial Design & Overdesign</h2>
+  <h2>Initial Design &amp; Overdesign</h2>
 
-  <p>
-    Based on the defined loading conditions, an initial bracket design was developed with a conservative 
-    uniform thickness to ensure structural integrity during early stages of the design process.
-  </p>
+  <div style="
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    gap: 1.5rem;
+    align-items: start;
+    margin-top: 1rem;
+  ">
 
-  <div class="gallery" style="grid-template-columns: 1fr;">
-    <div class="gallery-item" data-label="Initial Bracket Geometry (6 mm thickness)">
-      ../assets/images/Bracket/initial-design.jpg
+    <div>
+      <p>
+        Based on the defined loading conditions, an initial bracket design was developed with a conservative 
+        uniform thickness to ensure structural integrity during early stages of the design process.
+      </p>
+
+      <p><strong>Initial Design Parameters</strong></p>
+      <ul>
+        <li>Uniform thickness of <strong>6 mm</strong> applied across primary structure</li>
+        <li>Dual rib configuration for reinforcement at critical load regions</li>
+        <li>Base plate and mounting regions designed conservatively for structural integrity</li>
+        <li>Filleted transitions included to reduce stress concentrations</li>
+      </ul>
     </div>
-  </div>
-<p><strong>Initial Design Parameters</strong></p>
-<ul>
-  <li>Uniform thickness of <strong>6 mm</strong> applied across primary structure</li>
-  <li>Dual rib configuration for reinforcement at critical load regions</li>
-  <li>Base plate and mounting regions designed conservatively for structural integrity</li>
-  <li>Filleted transitions included to reduce stress concentrations</li>
-</ul>
 
-</article>
+    <div style="
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      padding: 0.5rem;
+      background: #f7f8fa;
+    ">
 
-<article class="prose-section">
-  <h2>Iteration & Structural Optimization</h2>
+      <img src="../assets/images/Bracket/results_initial.png"
+           alt="Initial bracket design"
+           class="zoomable-image"
+           style="width:100%; height:auto; display:block;">
+
+      <p style="
+        font-size: 0.72rem;
+        text-align:article>
+
+
+
+article class="prose-section">
+  <h2>Iteration &amp; Structural Optimization</h2>
 
   <div class="gallery" style="grid-template-columns: 1fr;">
-    <div class="gallery-item" data-label="Initial vs Optimized Design">
-      <img src="../assets/images/Bracket/comparison.jpg"
+    <div class="gallery-item">
+      <img src="../assets/images/Bracket/Initial_Final.jpg"
            alt="Initial and optimized bracket comparison"
-           class="zoomable-image">
+           class="zoomable-image"
+           style="width:100%; height:auto; display:block;">
     </div>
   </div>
-      <tr>
-        <th>Iteration</th>
-        <th>Design Changes</th>
-        <th>Max Stress</th>
+
         <th>Observation</th>
       </tr>
     </thead>
@@ -190,7 +208,6 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
   </p>
 
 </article>
-
 
   
 <article class="prose-section">
