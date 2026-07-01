@@ -85,13 +85,15 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
     </div>
   </div>
 
- <p><strong>Load Assumptions and Distribution</strong></p>
-  <ul>
-    <li>Given payload mass: <strong>100 kg</strong></li>
-    <li>Equivalent static load: <strong>~981 N</strong> (F = m·g)</li>
-    <li>Applied load amplification factor: <strong>~3×</strong> (to account for dynamic effects and safety)</li>
-    <li>Total design load: <strong>~3000 N</strong></li>
-    <li>Load distributed across three inclined struts based on geometry</li>
+
+<p><strong>Load Assumptions and Distribution</strong></p>
+<ul>
+  <li>Payload mass: <strong>100 kg</strong> → equivalent static load <strong>≈ 981 N</strong> (F = m·g)</li>
+  <li>Applied load factor: <strong>~3×</strong> to account for dynamic effects and safety</li>
+  <li>Total design load: <strong>~3000 N</strong> distributed across three inclined struts</li>
+  <li>Material: <strong>Aluminum 7075‑T6</strong> (high strength-to-weight ratio, yield strength ≈ 500 MPa)</li>
+</ul>
+
   </ul>
 
   <p>
@@ -115,12 +117,13 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
       ../assets/images/Bracket/initial-design.jpg
     </div>
   </div>
-
-  <p>
-    Simulation results show a maximum stress of approximately <strong>28 MPa</strong>, which is significantly 
-    lower than the material yield strength (~500 MPa). This indicates that the structure is overdesigned, 
-    containing excess material and unnecessary weight.
-  </p>
+<p><strong>Initial Design Parameters</strong></p>
+<ul>
+  <li>Uniform thickness of <strong>6 mm</strong> applied across primary structure</li>
+  <li>Dual rib configuration for reinforcement at critical load regions</li>
+  <li>Base plate and mounting regions designed conservatively for structural integrity</li>
+  <li>Filleted transitions included to reduce stress concentrations</li>
+</ul>
 
 </article>
 
@@ -128,22 +131,21 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
 <article class="prose-section">
   <h2>Initial Design & Overdesign</h2>
 
-  <p>
-    Based on the defined loading conditions, an initial bracket design was developed with a conservative 
-    uniform thickness to ensure structural integrity during early stages of the design process.
-  </p>
-
   <div class="gallery" style="grid-template-columns: 1fr;">
     <div class="gallery-item" data-label="Initial Bracket Geometry (6 mm thickness)">
-      ../assets/images/Bracket/initial-design.jpg
+      ../assets/images/Bracket/results_initial.png
     </div>
   </div>
 
-  <p>
-    Simulation results show a maximum stress of approximately <strong>28 MPa</strong>, which is significantly 
-    lower than the material yield strength (~500 MPa). This indicates that the structure is overdesigned, 
-    containing excess material and unnecessary weight.
-  </p>
+  <p><strong>Initial Design Parameters</strong></p>
+  <ul>
+    <li>Uniform thickness of <strong>6 mm</strong> applied across primary structural components</li>
+    <li>Dual rib configuration implemented on top and bottom bracket regions</li>
+    <li>Base plate thickness set to <strong>6 mm</strong> for structural support</li>
+    <li>Reinforced mounting bosses at connection points to accommodate strut interfaces</li>
+    <li>Filleted transitions introduced to reduce stress concentrations at junctions</li>
+    <li>Conservative geometry adopted to ensure structural integrity under estimated loads</li>
+  </ul>
 
 </article>
 
