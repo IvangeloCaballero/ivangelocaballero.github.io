@@ -104,6 +104,7 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
   </p>
 </article>
   
+
 <article class="prose-section">
   <h2>Initial Design &amp; Overdesign</h2>
 
@@ -115,6 +116,7 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
     margin-top: 1rem;
   ">
 
+    <!-- LEFT -->
     <div>
       <p>
         Based on the defined loading conditions, an initial bracket design was developed with a conservative 
@@ -130,17 +132,18 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
       </ul>
     </div>
 
+    <!-- RIGHT -->
     <div style="
-      border: 1px dashed var(--border);
+      border: 1px solid #d1d5db;
       border-radius: 8px;
       padding: 0.5rem;
       background: #f7f8fa;
     ">
-
       <img src="../assets/images/Bracket/results_initial.png"
-           alt="Initial bracket design"
+           alt="Initial bracket stress distribution"
            class="zoomable-image"
            style="width:100%; height:auto; display:block;">
+
 
       <p style="
         font-size: 0.72rem;
@@ -149,6 +152,8 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
 
 
 article class="prose-section">
+
+<article class="prose-section">
   <h2>Iteration &amp; Structural Optimization</h2>
 
   <div class="gallery" style="grid-template-columns: 1fr;">
@@ -160,6 +165,7 @@ article class="prose-section">
     </div>
   </div>
 
+<th>Max Stress</th>
         <th>Observation</th>
       </tr>
     </thead>
@@ -167,9 +173,7 @@ article class="prose-section">
 
       <tr>
         <td>Initial</td>
-        <td>
-          Uniform thickness of 6 mm across plate, ribs, and bolt lug regions
-        </td>
+        <td>Uniform thickness of 6 mm across plate, ribs, and bolt lug regions</td>
         <td>~28 MPa</td>
         <td>Overdesigned, low material utilization</td>
       </tr>
@@ -177,7 +181,7 @@ article class="prose-section">
       <tr>
         <td>Iteration 1</td>
         <td>
-          Plate and primary ribs reduced to 5 mm<br>
+          Plate reduced to 5 mm<br>
           Lower rib reduced to 4 mm<br>
           Bolt lug thickness retained at 6 mm
         </td>
@@ -188,11 +192,11 @@ article class="prose-section">
       <tr>
         <td>Final</td>
         <td>
-          Plate and ribs reduced to 4 mm<br>
+          Plate reduced to 4 mm<br>
           Dual rib height reduced<br>
-          Material removed in low-stress regions (cutouts)<br>
+          Cutouts added in low-stress regions<br>
           Bolt lug thickness reduced to 4 mm<br>
-          Lug outer diameter reduced from 26 → 24 mm
+          Lug OD reduced (26 → 24 mm)
         </td>
         <td>~110 MPa</td>
         <td>Efficient load distribution with optimized material usage</td>
@@ -204,8 +208,8 @@ article class="prose-section">
   <p>
     The bracket geometry was progressively refined by reducing thickness and redistributing material 
     based on stress behavior. Increasing stress levels across iterations indicate improved material 
-    utilization, while remaining well below the material yield strength. The final configuration 
-    achieves a balance between structural performance and weight efficiency.
+    utilization, while remaining well below the material yield strength. The final configuration achieves 
+    a balance between structural performance and weight efficiency.
   </p>
 
 </article>
