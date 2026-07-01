@@ -67,7 +67,43 @@ Design and structural optimization of a UAV payload support bracket using FEA-dr
 
 <article class="prose-section">
 <h2>Load Configuration & Design Challenge</h2>
+  <p>
+    The following section illustrates the structural configuration of the bracket and the resulting load distribution derived from initial payload calculations.
+  </p>
+ <div class="gallery">
 
+    <div class="gallery-item" data-label="Assembly Configuration">
+      <img src="../assets/images/Bracket/full assy.png"
+           alt="Bracket assembly"
+           class="zoomable-image">
+    </div>
+
+    <div class="gallery-item" data-label="Load Distribution and Strut Forces">
+      <img src="../assets/images/Bracket/topview_strut.png"
+           alt="Force diagram"
+           class="zoomable-image">
+    </div>
+  </div>
+
+ <p><strong>Load Assumptions and Distribution</strong></p>
+  <ul>
+    <li>Given payload mass: <strong>100 kg</strong></li>
+    <li>Equivalent static load: <strong>~981 N</strong> (F = m·g)</li>
+    <li>Applied load amplification factor: <strong>~3×</strong> (to account for dynamic effects and safety)</li>
+    <li>Total design load: <strong>~3000 N</strong></li>
+    <li>Load distributed across three inclined struts based on geometry</li>
+  </ul>
+
+  <p>
+    The applied load is transferred to the bracket through three supporting struts arranged in a non-symmetrical configuration. 
+    Each strut is inclined at approximately 65° relative to the mounting platform, resolving the load into combined vertical 
+    and lateral components. Due to the unequal load distribution across the struts, the bracket experiences a non-uniform 
+    force condition, which directly influences the resulting stress behavior and motivates the need for structural optimization.
+  </p>
+
+</article>
+
+  </div>
 <p>
 The bracket supports a payload through three inclined struts, creating a multi-directional load condition. Due to the asymmetrical strut arrangement, load distribution is non-uniform, requiring a geometry that efficiently transfers forces to the mounting interface while minimizing unnecessary material.
 </p>
