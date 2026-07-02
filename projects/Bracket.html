@@ -170,22 +170,31 @@ The bracket geometry was progressively refined by reducing thickness and removin
   The final configuration achieves an effective balance between weight reduction and structural performance.
   </p>
 
+
+<p><strong>Iteration Summary</strong></p>
+
 <table>
   <thead>
     <tr>
       <th>Iteration</th>
       <th>Design Changes</th>
+      <th>Mass</th>
+      <th>Max Deformation</th>
       <th>Max Stress</th>
       <th>Observation</th>
     </tr>
   </thead>
-
   <tbody>
+
     <tr>
-      <td>Initial</td>
-      <td>Uniform thickness of 6 mm across plate, ribs, and bolt lug regions</td>
-      <td>~28 MPa</td>
-      <td>Overdesigned, low material utilization</td>
+      <td>Initial Design</td>
+      <td>
+        Uniform 6 mm thickness across plate, ribs, and lug regions
+      </td>
+      <td>4.11 kg</td>
+      <td>0.014 mm</td>
+      <td>28 MPa</td>
+      <td>Conservative baseline with low material utilization</td>
     </tr>
 
     <tr>
@@ -193,26 +202,31 @@ The bracket geometry was progressively refined by reducing thickness and removin
       <td>
         Plate reduced to 5 mm<br>
         Lower rib reduced to 4 mm<br>
-        Bolt lug thickness retained at 6 mm
+        Lug thickness retained at 6 mm
       </td>
-      <td>~50 MPa</td>
-      <td>Improved stress utilization while maintaining strength in critical regions</td>
+      <td>3.19 kg</td>
+      <td>0.029 mm</td>
+      <td>46 MPa</td>
+      <td>Improved material utilization with moderate weight reduction</td>
     </tr>
 
     <tr>
-      <td>Final</td>
+      <td>Final Design</td>
       <td>
-        Plate reduced to 4 mm<br>
+        Plate and ribs reduced to 4 mm<br>
         Dual rib height reduced<br>
         Cutouts added in low-stress regions<br>
-        Bolt lug thickness reduced to 4 mm<br>
         Lug OD reduced (26 → 24 mm)
       </td>
-      <td>~110 MPa</td>
-      <td>Efficient load distribution with optimized material usage</td>
+      <td>1.83 kg</td>
+      <td>0.13 mm</td>
+      <td>110 MPa</td>
+      <td>Optimized balance between weight, stiffness, and strength</td>
     </tr>
+
   </tbody>
 </table>
+
 
 
 
@@ -239,23 +253,27 @@ The bracket geometry was progressively refined by reducing thickness and removin
     </div>
   </div>
 
-  <p><strong>Key Results</strong></p>
-  <ul>
-    <li>Maximum stress: <strong>~110 MPa</strong></li>
-    <li>Material yield strength: <strong>~500 MPa</strong> (Aluminum 7075-T6)</li>
-    <li>Factor of Safety: <strong>~4.5</strong></li>
-    <li>Maximum deformation: <strong>0.13 mm</strong></li>
-    <li>Stress concentrations localized at load-bearing interfaces and rib junctions</li>
-  </ul>
+ 
+p><strong>Key Results</strong></p>
+<ul>
+  <li>Maximum stress: <strong>110 MPa</strong></li>
+  <li>Material yield strength: <strong>500 MPa</strong> (Aluminum 7075-T6)</li>
+  <li>Factor of Safety: <strong>4.5</strong></li>
+  <li>Maximum deformation: <strong>0.13 mm</strong></li>
+  <li>Final mass: <strong>1.83 kg</strong></li>
+  <li>Weight reduction: <strong>55.5%</strong> compared to the initial design</li>
+</ul>
 
-  <p>
+<p>
   Final simulation results confirm that the optimized bracket design effectively carries the applied load 
   while maintaining a comfortable margin below material limits. Stress distribution follows expected load 
   paths, with localized concentrations occurring at structural junctions. Targeted material removal in 
   low-stress regions based on FEA results improves material utilization, while the achieved balance between 
   reduced weight and structural integrity demonstrates the effectiveness of the iterative, load-driven 
-  design approach applied in this project.
-  </p>
+  design approach. Overall, the optimization process reduced bracket mass by approximately 55.5% while 
+  maintaining structural stiffness and a comfortable safety margin relative to the material yield strength.
+</p>
+
 
 </article>
 
