@@ -267,7 +267,6 @@ The bracket geometry was progressively refined by reducing thickness and removin
 
 
 
-
 <p><strong>Modal Validation</strong></p>
 
 <div style="
@@ -278,10 +277,22 @@ The bracket geometry was progressively refined by reducing thickness and removin
   margin-top: 1rem;
 ">
 
-
   <div>
     <table style="margin:0;">
-      ...
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Natural Frequency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>2396.38 Hz</td></tr>
+        <tr><td>2</td><td>2428.46 Hz</td></tr>
+        <tr><td>3</td><td>2542.14 Hz</td></tr>
+        <tr><td>4</td><td>2598.93 Hz</td></tr>
+        <tr><td>5</td><td>2624.75 Hz</td></tr>
+        <tr><td>6</td><td>2892.50 Hz</td></tr>
+      </tbody>
     </table>
   </div>
 
@@ -291,18 +302,16 @@ The bracket geometry was progressively refined by reducing thickness and removin
     padding: 0.5rem;
     background: #f7f8fa;
   ">
-  
-  <img src="../assets/images/Bracket/modal_analysis.png"
+    .png"
          alt="Modal Analysis"
          class="zoomable-image"
-  op: -0.75rem;">
-
+         data-label="Design and Vibration Simulation"
+         style="width:100%; height:auto; display:block;">
   </div>
 
 </div>
 
 <p style="margin-top:1rem;">
-<p>
   A modal analysis was performed on the optimized bracket using fixed mounting
   conditions to identify its natural frequencies and assess susceptibility to
   vibration-induced resonance. The first six modes were found between
@@ -310,10 +319,6 @@ The bracket geometry was progressively refined by reducing thickness and removin
   stiff structure despite the significant mass reduction achieved through
   optimization.
 </p>
-
-  </div>
-
-</div>
 
 </article>
 
