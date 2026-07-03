@@ -240,8 +240,33 @@ The bracket geometry was progressively refined by reducing thickness and removin
 </article>
 
 <article class="prose-section">
-  <h2>Modal Analysis and Vibration Assessment</h2>
+  <h2>Design Validation</h2>
+  <h3>Static Structural Validation</h3>
+    <div class="gallery" style="grid-template-columns: 1fr 1fr;">
 
+    <div class="gallery-item" data-label="Final Simulation - Isometric">
+      <img src="../assets/images/Bracket/final_results_iso.jpg"
+           alt="Final Simulation"
+           class="zoomable-image"
+       style="width:90%; height:auto; display:block; margin:auto;">
+    </div>
+
+    <div class="gallery-item" data-label="Final Simulation - Top">
+      <img src="../assets/images/Bracket/final_results_top.jpg"
+           alt="Final Simulation"
+           class="zoomable-image"
+       style="width:90%; height:auto; display:block; margin:auto;">
+    </div>
+  </div>
+
+ <p>
+    Static structural analysis confirmed that the optimized bracket safely
+    carries the design load while maintaining stress levels well below the
+    yield strength of Aluminum 7075-T6. Peak stresses are confined to expected
+    load-transfer regions, while the overall stress distribution indicates
+    efficient material utilization throughout the structure.
+  </p>
+  <h3>Dynamic Validation (Modal Analysis)</h3>
   <div style="
     display: grid;
     grid-template-columns: 1fr 50%;
@@ -309,59 +334,55 @@ The bracket geometry was progressively refined by reducing thickness and removin
            data-label="Design and Vibration Simulation"
            style="width:100%; height:auto; display:block;">
        </div>
-<div>
-     <p>
+
+<div style="grid-column: 1 / -1;">
+
+<p>
   A modal analysis was performed on the optimized bracket using fixed mounting
-  conditions to evaluate its dynamic characteristics and identify the natural
-  frequencies of the structure.
+  conditions to identify its natural frequencies and assess susceptibility to
+  vibration-induced resonance. The first six modes were found between
+  <strong>2396 Hz</strong> and <strong>2893 Hz</strong>, indicating a highly
+  stiff structure despite the significant mass reduction achieved through
+  optimization.
 </p>
-</div>
+
+  </div>
 </article>
 
   
+
 <article class="prose-section">
-  <h2>Simulation Results & Final Validation</h2>
+  <h2>Results &amp; Conclusion</h2>
 
- <div class="gallery" style="grid-template-columns: 1fr 1fr;">
+  <p><strong>Key Results</strong></p>
 
-    <div class="gallery-item" data-label="Final Simulation - Isometric">
-      <img src="../assets/images/Bracket/final_results_iso.jpg"
-           alt="Final Simulation"
-           class="zoomable-image"
-       style="width:90%; height:auto; display:block; margin:auto;">
-    </div>
+  <ul>
+    <li>Maximum stress: <strong>110 MPa</strong></li>
+    <li>Material yield strength: <strong>500 MPa</strong> (Aluminum 7075-T6)</li>
+    <li>Factor of Safety: <strong>4.5</strong></li>
+    <li>Maximum deformation: <strong>0.13 mm</strong></li>
+    <li>Final mass: <strong>183.10 g</strong></li>
+    <li>Weight reduction: <strong>55.5%</strong></li>
+    <li>First natural frequency: <strong>2396 Hz</strong></li>
+  </ul>
 
-    <div class="gallery-item" data-label="Final Simulation - Top">
-      <img src="../assets/images/Bracket/final_results_top.jpg"
-           alt="Final Simulation"
-           class="zoomable-image"
-       style="width:90%; height:auto; display:block; margin:auto;">
-    </div>
-  </div>
-
- 
-<p><strong>Key Results</strong></p>
-<ul>
-  <li>Maximum stress: <strong>110 MPa</strong></li>
-  <li>Material yield strength: <strong>500 MPa</strong> (Aluminum 7075-T6)</li>
-  <li>Factor of Safety: <strong>4.5</strong></li>
-  <li>Maximum deformation: <strong>0.13 mm</strong></li>
-  <li>Final mass: <strong>183.10 g</strong></li>
-  <li>Weight reduction: <strong>55.5%</strong> compared to the initial design</li>
-</ul>
-
-<p>
-  Final simulation results confirm that the optimized bracket design effectively carries the applied load 
-  while maintaining a comfortable margin below material limits. Stress distribution follows expected load 
-  paths, with localized concentrations occurring at structural junctions. Targeted material removal in 
-  low-stress regions based on FEA results improves material utilization, while the achieved balance between 
-  reduced weight and structural integrity demonstrates the effectiveness of the iterative, load-driven 
-  design approach. Overall, the optimization process reduced bracket mass by approximately 55.5% while 
-  maintaining structural stiffness and a comfortable safety margin relative to the material yield strength.
-</p>
-
+  <p>
+    The optimization process successfully reduced bracket mass from
+    <strong>411.04 g</strong> to <strong>183.10 g</strong>, achieving a
+    <strong>55.5% weight reduction</strong> while maintaining structural
+    integrity. Static analysis produced a maximum stress of
+    <strong>110 MPa</strong>, a factor of safety of <strong>4.5</strong>,
+    and a maximum deformation of <strong>0.13 mm</strong> under the design
+    load. Modal analysis identified a first natural frequency of
+    <strong>2396 Hz</strong>, indicating a highly stiff structural response
+    with natural frequencies well separated from expected UAV excitation
+    sources. Together, these results demonstrate that the final design
+    effectively balances weight reduction, strength, stiffness, and dynamic
+    performance.
+  </p>
 
 </article>
+
 
 <p style="margin-top:1.5rem; text-align:center;">
 <a href="../projects.html" class="btn btn-primary">See all projects →</a>
