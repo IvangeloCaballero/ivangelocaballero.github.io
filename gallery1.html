@@ -1,219 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gallery | Ivangelo Caballero</title>
-
-css/style.css
-
-<style>
-
-.gallery-header{
-    text-align:center;
-    margin-bottom:2rem;
-}
-
-.gallery-filters{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-    margin-bottom:2rem;
-}
-
-.filter-btn{
-    border:none;
-    cursor:pointer;
-    padding:.7rem 1.2rem;
-    border-radius:999px;
-    background:#1f2937;
-    color:#fff;
-    transition:.25s;
-}
-
-.filter-btn.active{
-    background:var(--accent-color);
-}
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-    grid-auto-rows:180px;
-    gap:18px;
-}
-
-.gallery-item{
-    position:relative;
-    overflow:hidden;
-    border-radius:16px;
-    cursor:pointer;
-}
-
-.gallery-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.4s;
-}
-
-.gallery-item:hover img{
-    transform:scale(1.05);
-}
-
-.gallery-overlay{
-    position:absolute;
-    inset:0;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    padding:1rem;
-    color:#fff;
-    opacity:0;
-    transition:.25s;
-
-    background:
-    linear-gradient(
-        to top,
-        rgba(0,0,0,.85),
-        rgba(0,0,0,.2),
-        transparent
-    );
-}
-
-.gallery-item:hover .gallery-overlay{
-    opacity:1;
-}
-
-.gallery-badge{
-    display:inline-block;
-    width:max-content;
-    padding:.25rem .75rem;
-    border-radius:999px;
-    background:rgba(255,255,255,.2);
-    font-size:.75rem;
-}
-
-.large{
-    grid-column:span 2;
-    grid-row:span 2;
-}
-
-.wide{
-    grid-column:span 2;
-}
-
-.tall{
-    grid-row:span 2;
-}
-
-@media(max-width:768px){
-
-    .large,
-    .wide{
-        grid-column:span 1;
-    }
-
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivangelo Caballero — Design Engineer</title>
+  <meta name="description" content="Mechanical design portfolio of Ivangelo Caballero.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
 <div id="progress"></div>
-
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html">Ivangelo Caballero</a>
-
-    <button type="button"
-            class="nav-toggle"
-            id="nav-toggle">
-      Menu
-    </button>
-
-    <nav class="nav-menu" id="site-nav">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
+    <nav class="nav-menu" id="site-nav" aria-label="Main">
       <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
-        <li>">About</a></li>
-        <li>.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+     <!--   <li><a href="resume.html">Resume</a></li>   -->
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
-</header>
-
+</header> 
 <main>
 
-<section class="section">
+  <!-- =========================
+       Gallery Hero
+  ========================== -->
 
-<div class="container">
+  <section class="gallery-hero">
+    <div class="container">
 
-<div class="gallery-header">
-    <h1>Gallery</h1>
-    <p class="lede">
-        Engineering Projects & Technical Studies
-    </p>
-</div>
+      <p class="hero-label">Portfolio</p>
 
-<div class="gallery-filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="engineering">Engineering Projects</button>
-    <button class="filter-btn" data-filter="study">Technical Studies</button>
-</div>
+      <h1>Gallery</h1>
 
-<div class="gallery-grid">
+      <div class="hero-divider"></div>
 
-    <div class="gallery-item engineering large">
-        assets/thumbnails/Modular Filtration Skid.png"
-             alt="Modular Filtration Skid">
+      <p class="gallery-intro">
+        A visual showcase of engineering projects and technical studies.
+      </p>
 
-        <div class="gallery-overlay">
-            <span class="gallery-badge">Engineering Project</span>
-            <h3>Modular Filtration Skid</h3>
-        </div>
+    </div>
+  </section>
+
+
+
+  <!-- =========================
+       Gallery Filters
+  ========================== -->
+
+  <section class="gallery-toolbar">
+
+    <div class="container">
+
+      <div class="gallery-filters">
+
+        <button class="filter-btn active"
+                data-filter="all">
+          All
+        </button>
+
+        <button class="filter-btn"
+                data-filter="engineering">
+          Engineering Projects
+        </button>
+
+        <button class="filter-btn"
+                data-filter="study">
+          Technical Studies
+        </button>
+
+      </div>
+
     </div>
 
-    <div class="gallery-item engineering wide">
-         Bracket.png"
-             alt="UAV Payload Bracket">
+  </section>
 
-        <div class="gallery-overlay">
-            <span class="gallery-badge">Engineering Project</span>
-            <h3>UAV Payload Bracket</h3>
-        </div>
+
+
+  <!-- =========================
+       Gallery Grid
+  ========================== -->
+
+  <section class="gallery-section">
+
+    <div class="container">
+
+      <div class="gallery-grid">
+
+
+
+
+        <!-- ========================================= -->
+        <!-- ENGINEERING PROJECTS -->
+        <!-- ========================================= -->
+
+
+
+        <article class="gallery-card engineering large"
+                 data-title="Modular Filtration Skid"
+                 data-category="Engineering Project"
+                 data-software="Autodesk Inventor"
+                 data-link="projects/Modular Filtration Skid.html">
+
+          <img
+            src="assets/gallery/skid-render.jpg"
+            alt="Modular Filtration Skid">
+
+          <div class="gallery-overlay">
+
+            <span class="gallery-badge">
+              Engineering Project
+            </span>
+
+            <h3>
+              Modular Filtration Skid
+            </h3>
+
+          </div>
+
+        </article>
+
+
+
+
+        <article class="gallery-card engineering"
+                 data-title="UAV Payload Bracket"
+                 data-category="Engineering Project"
+                 data-software="PTC Creo"
+                 data-link="projects/Bracket.html">
+
+          <img
+            src="assets/gallery/uav.jpg"
+            alt="UAV Payload Bracket">
+
+          <div class="gallery-overlay">
+
+            <span class="gallery-badge">
+              Engineering Project
+            </span>
+
+            <h3>
+              UAV Payload Bracket
+            </h3>
+
+          </div>
+
+        </article>
+
+
+
+
+        <article class="gallery-card engineering tall"
+                 data-title="Motor Wiper Linkage"
+                 data-category="Engineering Project"
+                 data-software="PTC Creo"
+                 data-link="projects/MotorLinkage.html">
+
+          <img
+            src="assets/gallery/wiper.jpg"
+            alt="Motor Wiper Linkage">
+
+          <div class="gallery-overlay">
+
+            <span class="gallery-badge">
+              Engineering Project
+            </span>
+
+            <h3>
+              Motor Wiper Linkage
+            </h3>
+
+          </div>
+
+        </article>
+
+
+
+
+        <article class="gallery-card engineering"
+                 data-title="Pressure Buffer Tank"
+                 data-category="Engineering Project"
+                 data-software="SolidWorks"
+                 data-link="projects/BufferTank.html">
+
+          <img
+            src="assets/gallery/tank.jpg"
+            alt="Pressure Buffer Tank">
+
+          <div class="gallery-overlay">
+
+            <span class="gallery-badge">
+              Engineering Project
+            </span>
+
+            <h3>
+              Pressure Buffer Tank
+            </h3>
+
+          </div>
+
+        </article>
+
+
+
+
+        <article class="gallery-card engineering wide"
+                 data-title="Sheet Metal Enclosure"
+                 data-category="Engineering Project"
+                 data-software="Inventor"
+                 data-link="projects/Enclosure.html">
+
+          <img
+            src="assets/gallery/enclosure.jpg"
+            alt="Sheet Metal Enclosure">
+
+          <div class="gallery-overlay">
+
+            <span class="gallery-badge">
+              Engineering Project
+            </span>
+
+            <h3>
+              Sheet Metal Enclosure
+            </h3>
+
+          </div>
+
+        </article>
+
+
+
+
+        <!-- ========================================= -->
+        <!-- TECHNICAL STUDIES -->
+        <!-- ========================================= -->
+
+
+
+        <article class="gallery-card study"
+                 data-title="Butterfly Valve"
+                 data-category="Technical Study"
+                 data-software="PTC Creo">
+
+          <img
+            src="assets/gallery/valve.jpg"
+            alt="Butterfly Valve">
+
+          <div class="gallery-overlay">
+
+            <span class="gallery-badge">
+              Technical Study
+            </span>
+
+            <h3>
+              Butterfly Valve
+            </h3>
+
+          </div>
+
+        </article>
+
+
+
+
+        <article class="gallery-card study tall"
+                 data-title="Planetary Gearbox"
+                 data-category="Technical Study"
+                 data-software="SolidWorks">
+
+          <img
+            src="assets/gallery/gearbox.jpg"
+            alt="Planetary Gearbox">
+
+          <div class="gallery-overlay">
+
+            <span class="gallery-badge">
+              Technical Study
+            </span>
+
+            <h3>
+              Planetary Gearbox
+            </h3>
+
+          </div>
+
+        </article>
+
+
+
+
+        <article class="gallery-card study"
+                 data-title="Steam Turbine"
+                 data-category="Technical Study"
+                 data-software="Inventor">
+
+          <img
+            src="assets/gallery/turbine.jpg"
+            alt="Steam Turbine">
+
+          <div class="gallery-overlay">
+
+            <span class="gallery-badge">
+              Technical Study
+            </span>
+
+            <h3>
+              Steam Turbine
+            </h3>
+
+          </div>
+
+        </article>
+
+
+
+
+        <article class="gallery-card study wide"
+                 data-title="Hydraulic Cylinder"
+                 data-category="Technical Study"
+                 data-software="SolidWorks">
+
+          <img
+            src="assets/gallery/cylinder.jpg"
+            alt="Hydraulic Cylinder">
+
+          <div class="gallery-overlay">
+
+            <span class="gallery-badge">
+              Technical Study
+            </span>
+
+            <h3>
+              Hydraulic Cylinder
+            </h3>
+
+          </div>
+
+        </article>
+
+
+
+
+        <article class="gallery-card study"
+                 data-title="Engine Block"
+                 data-category="Technical Study"
+                 data-software="PTC Creo">
+
+          <img
+            src="assets/gallery/engine.jpg"
+            alt="Engine Block">
+
+          <div class="gallery-overlay">
+
+            <span class="gallery-badge">
+              Technical Study
+            </span>
+
+            <h3>
+              Engine Block
+            </h3>
+
+          </div>
+
+        </article>
+
+      </div>
+
     </div>
 
-    <div class="gallery-item engineering tall">
-        /Wiper Linkage Thumbnail.jpg"
-             alt="Motor Wiper Linkage">
-
-        <div class="gallery-overlay">
-            <span class="gallery-badge">Engineering Project</span>
-            <h3>Motor Wiper Linkage</h3>
-        </div>
-    </div>
-
-    <div class="gallery-item engineering">
-        assets/thumbnails/MetalEnclosure.png
-
-        <div class="gallery-overlay">
-            <span class="gallery-badge">Engineering Project</span>
-            <h3>Electrical Enclosure</h3>
-        </div>
-    </div>
-
-</div>
-
-</div>
-
-</section>
+  </section>
 
 </main>
-
 <footer class="site-footer">
   <div class="container">
 
@@ -223,22 +384,70 @@ css/style.css
 
     <p class="footer-credit">
       Designed &amp; Developed by Ivangelo Caballero
+      <span class="divider">•</span>
+      Built with HTML, CSS &amp; JavaScript
     </p>
 
     <nav class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About</a>
-      .html">Contact</a>
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../gallery.html">Gallery</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      
+      
     </nav>
 
   </div>
 </footer>
 
 <script>
-document.getElementById("y").textContent =
-new Date().getFullYear();
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  (function () {
+    var btn = document.getElementById("nav-toggle");
+    var menu = document.getElementById("site-nav");
+
+    if (!btn || !menu) return;
+
+    btn.addEventListener("click", function () {
+      var open = menu.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  })();
+</script>
+
+<script>
+window.addEventListener("scroll", () => {
+  const bar = document.getElementById("progress");
+  if (!bar) return;
+
+  let scrollTop = window.scrollY;
+  let height = document.body.scrollHeight - window.innerHeight;
+  bar.style.width = (scrollTop / height) * 100 + "%";
+});
+</script>
+
+<script>
+function revealOnScroll() {
+  const elements = document.querySelectorAll(
+    ".project-card, .prose-section, .section, .gallery-item"
+  );
+
+  const trigger = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    el.classList.add("reveal");
+    const top = el.getBoundingClientRect().top;
+
+    if (top < trigger) {
+      el.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
 </script>
 
 </body>
