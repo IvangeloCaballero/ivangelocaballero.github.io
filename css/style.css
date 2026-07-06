@@ -1134,29 +1134,29 @@ tr:nth-child(even) {
   background-color: #f9fafb; 
 }
 .site-footer{
-    padding:40px 20px;
+    padding:24px 20px;
     text-align:center;
 }
 
 .footer-copy{
     font-size:0.95rem;
-    margin-bottom:8px;
+    margin-bottom:4px;
 }
 
 .footer-credit{
     font-size:0.85rem;
     color:#9ca3af;
-    margin-bottom:18px;
+    margin-bottom:12px;
 }
 
 .footer-credit .divider{
-    margin:0 8px;
+    margin:0 6px;
 }
 
 .footer-links{
     display:flex;
     justify-content:center;
-    gap:24px;
+    gap:18px;
     flex-wrap:wrap;
 }
 
