@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | Ivangelo Caballero</title>
+
+<meta name="description"
+      content="Engineering projects and technical CAD studies by Ivangelo Caballero.">
+
+<link rel.css
+
+<style>
+
+.gallery-header{
+    text-align:center;
+    margin-bottom:2rem;
+}
+
+.gallery-header p{
+    max-width:700px;
+    margin:0 auto;
+}
+
+.gallery-filters{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin:2rem 0;
+}
+
+.filter-btn{
+    border:none;
+    cursor:pointer;
+    padding:.75rem 1.2rem;
+    border-radius:999px;
+    background:#1f2937;
+    color:#fff;
+    transition:.25s;
+}
+
+.filter-btn:hover{
+    transform:translateY(-2px);
+}
+
+.filter-btn.active{
+    background:var(--accent-color);
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    grid-auto-rows:180px;
+    gap:18px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:16px;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:1rem;
+    color:#fff;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.25),
+        transparent
+    );
+    opacity:0;
+    transition:.3s;
+}
+
+.gallery-item:hover .gallery-overlay{
+    opacity:1;
+}
+
+.gallery-overlay h3{
+    margin:.25rem 0 0;
+    color:#fff;
+}
+
+.gallery-badge{
+    display:inline-block;
+    width:max-content;
+    padding:.3rem .75rem;
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:600;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(8px);
+}
+
+.tall{
+    grid-row:span 2;
+}
+
+.wide{
+    grid-column:span 2;
+}
+
+.large{
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:5000;
+    padding:1rem;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-content{
+    width:min(1100px,100%);
+    max-height:90vh;
+    overflow:auto;
+    background:#111827;
+    border-radius:16px;
+    overflow:hidden;
+}
+
+.modal-content img{
+    width:100%;
+    display:block;
+}
+
+.modal-info{
+    padding:1.5rem;
+}
+
+.modal-info h2{
+    margin:.5rem 0;
+}
+
+.modal-meta{
+    color:#9ca3af;
+    margin-bottom:1rem;
+}
+
+.close-modal{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:44px;
+    height:44px;
+    border:none;
+    border-radius:50%;
+    font-size:1.5rem;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    .wide,
+    .large{
+        grid-column:span 1;
+    }
+
+    .large{
+        grid-row:span 2;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="progress"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    index.html">Ivangelo Caballero</a>
+
+    <button type="button"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            id="nav-toggle">
+      Menu
+    </button>
+
+    <nav class="nav-menu" id="site-nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li>about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="section">
+
+<div class="container">
+
+<div class="gallery-header">
+<h1>Gallery</h1>
+<p>
+A collection of engineering projects and CAD technical studies.
+</p>
+</div>
+
+<div class="gallery-filters">
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="engineering">Engineering Projects</button>
+<button class="filter-btn" data-filter="study">Technical Studies</button>
+</div>
+
+<div class="gallery-grid">
+
+<!-- ENGINEERING -->
+
+<div class="gallery-item engineering large"
+     data-title="Modular Filtration Skid"
+     data-category="Engineering Project"
+     data-software="Inventor, AutoCAD"
+     data-image="assets/thumbnails/Modular Filtration Skid.png"
+     data-link="projects/Modular Filtration Skid.html">
+
+id.png">
+
+<div class="gallery-overlay">
+<span class="gallery-badge">Engineering Project</span>
+<h3>Modular Filtration Skid</h3>
+</div>
+</div>
+
+<div class="gallery-item engineering wide"
+     data-title="UAV Payload Bracket"
+     data-category="Engineering Project"
+     data-software="Creo"
+     data-image="assets/thumbnails/UAV Bracket.png"
+     data-link="projects/Bracket.html">
+
+ Bracket.png">
+
+<div class="gallery-overlay">
+<span class="gallery-badge">Engineering Project</span>
+<h3>UAV Payload Bracket</h3>
+</div>
+</div>
+
+<div class="gallery-item engineering tall"
+     data-title="Motor Wiper Linkage"
+     data-category="Engineering Project"
+     data-software="Creo"
+     data-image="assets/thumbnails/Wiper Linkage Thumbnail.jpg"
+     data-link="projects/MotorLinkage.html">
+
+assets/thumbnails/Wiper Linkage Thumbnail.jpg">
+
+<div class="gallery-overlay">
+<span class="gallery-badge">Engineering Project</span>
+<h3>Motor Wiper Linkage</h3>
+</div>
+</div>
+
+<!-- TECHNICAL STUDIES -->
+
+<div class="gallery-item study"
+     data-title="Bench Vise Recreation"
+     data-category="Technical Study"
+     data-software="SolidWorks"
+     data-image="assets/images/studies/vise.jpg">
+
+assets/images/studies/vise.jpg
+
+<div class="gallery-overlay">
+<span class="gallery-badge">Technical Study</span>
+<h3>Bench Vise Recreation</h3>
+</div>
+</div>
+
+<div class="gallery-item study wide"
+     data-title="Gearbox Recreation"
+     data-category="Technical Study"
+     data-software="Inventor"
+     data-image="assets/images/studies/gearbox.jpg">
+
+.jpg">
+
+<div class="gallery-overlay">
+<span class="gallery-badge">Technical Study</span>
+<h3>Gearbox Recreation</h3>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+<div class="modal" id="galleryModal">
+
+<button class="close-modal">&times;</button>
+
+<div class="modal-content">
+
+<img id="modalImage">
+
+<div class="modal-info">
+
+<div class="modal-meta" id="modalCategory"></div>
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalSoftware"></p>
+
+<a id="modalProjectLink"
+   class="btn btn-primary"
+   target="_self">
+   View Project →
+</a>
+
+</div>
+
+</div>
+</div>
+
+<footer class="site-footer">
+<div class="container">
+
+<p class="footer-copy">
+© <span id="y"></span> Ivangelo Caballero. All rights reserved.
+</p>
+
+<p class="footer-credit">
+Designed & Developed by Ivangelo Caballero
+</p>
+
+<nav class="footer-links">
+<a href="index.html">Home</a>
+<a href="projects.html">Projects</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</div>
+</footer>
+
+<script>
+
+document.getElementById("y").textContent =
+new Date().getFullYear();
+
+const filters =
+document.querySelectorAll(".filter-btn");
+
+const items =
+document.querySelectorAll(".gallery-item");
+
+filters.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+filters.forEach(btn=>
+btn.classList.remove("active"));
+
+button.classList.add("active");
+
+const filter =
+button.dataset.filter;
+
+items.forEach(item=>{
+
+if(filter==="all"){
+item.style.display="";
+return;
+}
+
+if(item.classList.contains(filter)){
+item.style.display="";
+}else{
+item.style.display="none";
+}
+
+});
+
+});
+
+});
+
+const modal =
+document.getElementById("galleryModal");
+
+const modalImage =
+document.getElementById("modalImage");
+
+const modalTitle =
+document.getElementById("modalTitle");
+
+const modalCategory =
+document.getElementById("modalCategory");
+
+const modalSoftware =
+document.getElementById("modalSoftware");
+
+const modalLink =
+document.getElementById("modalProjectLink");
+
+items.forEach(item=>{
+
+item.addEventListener("click",()=>{
+
+modal.classList.add("show");
+
+modalImage.src =
+item.dataset.image;
+
+modalTitle.textContent =
+item.dataset.title;
+
+modalCategory.textContent =
+item.dataset.category;
+
+modalSoftware.textContent =
+"Software: " + item.dataset.software;
+
+if(item.dataset.category ===
+"Engineering Project"){
+
+modalLink.style.display="inline-block";
+modalLink.href =
+item.dataset.link;
+
+}else{
+
+modalLink.style.display="none";
+
+}
+
+});
+
+});
+
+document
+.querySelector(".close-modal")
+.addEventListener("click",()=>{
+
+modal.classList.remove("show");
+
+});
+
+modal.addEventListener("click",(e)=>{
+
+if(e.target === modal){
+
+modal.classList.remove("show");
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
