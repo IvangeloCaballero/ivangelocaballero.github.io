@@ -142,3 +142,172 @@ document.querySelectorAll("a").forEach((link) => {
     });
   }
 });
+<script>
+/* ==========================================================
+   GALLERY
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cards = document.querySelectorAll(".gallery-card");
+    const filters = document.querySelectorAll(".filter-btn");
+
+    /* ==========================
+       FILTERS
+    ========================== */
+
+    filters.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            filters.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            const filter = button.dataset.filter;
+
+            cards.forEach(card => {
+
+                if (
+                    filter === "all" ||
+                    card.classList.contains(filter)
+                ) {
+
+                    card.classList.remove("hide");
+
+                } else {
+
+                    card.classList.add("hide");
+
+                }
+
+            });
+
+        });
+
+    });
+
+    /* ==========================
+       LIGHTBOX
+    ========================== */
+
+    const modal = document.createElement("div");
+
+    modal.className = "gallery-modal";
+
+    modal.innerHTML = `
+        <div class="gallery-modal-content">
+
+            <button class="gallery-close">&times;</button>
+
+            <img id="galleryModalImage" src="" alt="">
+
+            <div class="gallery-modal-info">
+
+                <span id="galleryCategory"></span>
+
+                <h2 id="galleryTitle"></h2>
+
+                <p id="gallerySoftware"></p>
+
+                <a id="galleryLink"
+                   class="btn btn-primary"
+                   href="#">
+                    View Project →
+                </a>
+
+            </div>
+
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    const modalImg = document.getElementById("galleryModalImage");
+    const modalTitle = document.getElementById("galleryTitle");
+    const modalCategory = document.getElementById("galleryCategory");
+    const modalSoftware = document.getElementById("gallerySoftware");
+    const modalLink = document.getElementById("galleryLink");
+
+    /* ==========================
+       OPEN MODAL
+    ========================== */
+
+    cards.forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            modal.classList.add("show");
+
+            modalImg.src =
+                card.querySelector("img").src;
+
+            modalTitle.textContent =
+                card.dataset.title;
+
+            modalCategory.textContent =
+                card.dataset.category;
+
+            modalSoftware.textContent =
+                card.dataset.software || "";
+
+            if (card.dataset.link) {
+
+                modalLink.href =
+                    card.dataset.link;
+
+                modalLink.style.display =
+                    "inline-flex";
+
+            } else {
+
+                modalLink.style.display =
+                    "none";
+
+            }
+
+        });
+
+    });
+
+    /* ==========================
+       CLOSE BUTTON
+    ========================== */
+
+    modal
+        .querySelector(".gallery-close")
+        .addEventListener("click", () => {
+
+            modal.classList.remove("show");
+
+        });
+
+    /* ==========================
+       CLICK OUTSIDE
+    ========================== */
+
+    modal.addEventListener("click", e => {
+
+        if (e.target === modal) {
+
+            modal.classList.remove("show");
+
+        }
+
+    });
+
+    /* ==========================
+       ESC KEY
+    ========================== */
+
+    document.addEventListener("keydown", e => {
+
+        if (e.key === "Escape") {
+
+            modal.classList.remove("show");
+
+        }
+
+    });
+
+});
+</script>
