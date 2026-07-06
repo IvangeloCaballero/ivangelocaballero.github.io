@@ -15,7 +15,7 @@
       background: var(--bg-alt);
       padding: 1rem;
     }
-  
+
     .project-hero img {
       width: 100%;
       height: auto;
@@ -90,45 +90,158 @@
         </p>
       </article>
 
-<h3>Component Overview</h3>
+      <article class="prose-section">
+        <div class="two-column-layout">
+          <div>
+            
+<h2>Key Design Considerations</h2>
+<ul>
+  <li>
+    A material thickness of <strong>1.5 mm</strong> was selected to provide
+    adequate enclosure rigidity while remaining compatible with common laser
+    cutting and press-brake forming processes.
+  </li>
 
-<table>
-  <thead>
-    <tr>
-      <th style="width:25%;">Component</th>
-      <th style="width:35%;">Functional Role</th>
-      <th style="width:40%;">Manufacturing Method</th>
-    </tr>
-  </thead>
+  <li>
+    An internal bend radius of <strong>1.5 mm</strong> was applied throughout
+    the design to maintain forming consistency and reduce localized material
+    stresses during bending operations.
+  </li>
 
-  <tbody>
+  <li>
+    A <strong>K-factor of 0.34</strong> was used for flat-pattern development,
+    providing realistic bend allowance calculations for mild-steel sheet metal
+    and improving dimensional accuracy after forming.
+  </li>
 
-    <tr>
-      <td><strong>A — Main Structural Chassis</strong></td>
-      <td>Primary enclosure structure providing rigidity and mounting interfaces.</td>
-      <td>Laser Cutting &rarr; Press Brake Forming &rarr; Powder Coating</td>
-    </tr>
+  <li>
+    Return flanges were incorporated to increase panel stiffness and minimize
+    deflection without increasing material thickness.
+  </li>
 
-    <tr>
-      <td><strong>B/C — Ventilation Side Panels</strong></td>
-      <td>Provide intake and exhaust airflow while maintaining enclosure integrity.</td>
-      <td>Laser Cutting &rarr; Louver Forming &rarr; Press Brake Forming &rarr; Powder Coating</td>
-    </tr>
+  <li>
+    Panel clearances of approximately <strong>1 mm</strong> were maintained to
+    ensure proper fit-up while accommodating manufacturing tolerances and
+    assembly requirements.
+  </li>
 
-    <tr>
-      <td><strong>D — Front Access Door</strong></td>
-      <td>Provides secure access for maintenance and servicing.</td>
-      <td>Laser Cutting &rarr; Press Brake Forming &rarr; Powder Coating</td>
-    </tr>
+  <li>
+    Ventilation louvers were positioned to encourage passive airflow while
+    preserving structural integrity and simplifying fabrication.
+  </li>
+</ul>
 
-    <tr>
-      <td><strong>Hardware &amp; Seals</strong></td>
-      <td>Enable enclosure sealing, door operation, and assembly.</td>
-      <td>Purchased Components / Die-Cut EPDM Gasket</td>
-    </tr>
+          </div>
+        </div>
+      </article>
 
-  </tbody>
-</table>
+<article class="prose-section">
+  <h2>Modular Architecture &amp; Assembly Intent</h2>
+
+  <p>
+    Exploded view illustrating how the enclosure is decomposed into independently
+    fabricated panels, sealing components, and standard hardware to simplify
+    manufacturing, assembly, and maintenance.
+  </p>
+
+  <figure class="project-hero" style="max-width: 1000px; margin: 1.5rem auto; text-align: center;">
+    <div class="gallery-item" data-label="Exploded Assembly View">
+      assets/images/MetalEnclosure/Electric Metal Enclosure_2.JPG"
+           alt="Exploded view of enclosure components"
+           class="zoomable-image">
+    </div>
+  </figure>
+
+  <h3>Component Overview</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:22%;">Component</th>
+        <th style="width:38%;">Functional Role</th>
+        <th style="width:40%;">Manufacturing Method</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td><strong>A — Main Structural Chassis</strong></td>
+        <td>
+          Primary enclosure structure providing rigidity, mounting interfaces,
+          and support for all attached components.
+        </td>
+        <td>
+          Laser Cutting &rarr; Press Brake Forming &rarr; Powder Coating
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>B — Ventilation Side Panel (Exhaust)</strong></td>
+        <td>
+          Provides exhaust airflow while protecting internal components and
+          maintaining enclosure integrity.
+        </td>
+        <td>
+          Laser Cutting &rarr; Louver Forming &rarr; Press Brake Forming &rarr; Powder Coating
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>C — Ventilation Side Panel (Intake)</strong></td>
+        <td>
+          Supports passive intake airflow while allowing easy panel removal for
+          servicing and inspection.
+        </td>
+        <td>
+          Laser Cutting &rarr; Louver Forming &rarr; Press Brake Forming &rarr; Powder Coating
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>D — Front Access Door</strong></td>
+        <td>
+          Provides secure access to internal equipment for maintenance and operation.
+        </td>
+        <td>
+          Laser Cutting &rarr; Press Brake Forming &rarr; Powder Coating
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>E — Door Gasket</strong></td>
+        <td>
+          Creates a sealing interface between the door and enclosure frame.
+        </td>
+        <td>
+          Die-Cut EPDM Rubber
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>F — Cam Latch</strong></td>
+        <td>
+          Secures the access door during operation while allowing rapid servicing.
+        </td>
+        <td>
+          Standard Purchased Component
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>G — Hinge Assembly</strong></td>
+        <td>
+          Supports door rotation and enables repeatable opening and closing.
+        </td>
+        <td>
+          Standard Purchased Component
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</article>
 
       <article class="prose-section">
         <h2>Fabrication Definition</h2>
