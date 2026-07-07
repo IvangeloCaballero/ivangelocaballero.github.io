@@ -1335,6 +1335,8 @@ tr:nth-child(even) {
 
     transition:
         transform .5s ease;
+    cursor: zoom-in;
+}
 
 }
 
