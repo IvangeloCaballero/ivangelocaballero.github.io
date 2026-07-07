@@ -413,6 +413,52 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+
+  
+</script>
+
+<script>
+
+const overlay = document.getElementById("imageOverlay");
+const overlayImage = document.getElementById("overlayImage");
+const overlayCaption = document.getElementById("overlayCaption");
+
+document.querySelectorAll(".gallery-card").forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        const img = card.querySelector("img");
+        const title = card.querySelector("h3");
+
+        if (!img) return;
+
+        overlayImage.src = img.src;
+        overlayImage.alt = img.alt;
+
+        if (title) {
+            overlayCaption.textContent = title.textContent;
+        }
+
+        overlay.classList.add("is-open");
+
+    });
+
+});
+
+overlay.addEventListener("click", () => {
+
+    overlay.classList.remove("is-open");
+
+});
+
+document.addEventListener("keydown", (e) => {
+
+    if (e.key === "Escape") {
+        overlay.classList.remove("is-open");
+    }
+
+});
+
 </script>
 
 </body>
