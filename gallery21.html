@@ -158,7 +158,7 @@
 </article>
         
 <!-- BUFFER TANK DRAWING -->
-<article class="gallery-card engineering">
+<article class="gallery-card engineering large">
    <img src="assets/gallery/Buffer Tank_2D.jpg" alt="Buffer Tank Drawing">
                <div class="gallery-overlay">
         <span class="gallery-badge">
@@ -448,45 +448,37 @@ window.addEventListener("load", revealOnScroll);
 
 <script>
 
+
 const overlay = document.getElementById("imageOverlay");
 const overlayImage = document.getElementById("overlayImage");
 const overlayCaption = document.getElementById("overlayCaption");
 
-document.querySelectorAll(".gallery-card").forEach(card => {
+if (overlay && overlayImage && overlayCaption) {
 
-    card.addEventListener("click", () => {
+    document.querySelectorAll(".gallery-card").forEach(card => {
 
-        const img = card.querySelector("img");
-        const title = card.querySelector("h3");
+        card.addEventListener("click", () => {
 
-        if (!img) return;
+            const img = card.querySelector("img");
+            const title = card.querySelector("h3");
 
-        overlayImage.src = img.src;
-        overlayImage.alt = img.alt;
+            if (!img) return;
 
-        if (title) {
-            overlayCaption.textContent = title.textContent;
-        }
+            overlayImage.src = img.src;
+            overlayImage.alt = img.alt;
+            overlayCaption.textContent = title?.textContent || "";
 
-        overlay.classList.add("is-open");
+            overlay.classList.add("is-open");
+
+        });
 
     });
 
-});
-
-overlay.addEventListener("click", () => {
-
-    overlay.classList.remove("is-open");
-
-});
-
-document.addEventListener("keydown", (e) => {
-
-    if (e.key === "Escape") {
+    overlay.addEventListener("click", () => {
         overlay.classList.remove("is-open");
-    }
+    });
 
-});
+}
 
 </script>
 
