@@ -1203,40 +1203,36 @@ tr:nth-child(even) {
 .filter-btn {
 
     background: transparent;
+    color: var(--text);
 
-    color: inherit;
+    border: 1px solid rgba(148,163,184,.35);
 
-    border: 1px solid rgba(255,255,255,.12);
-
-    border-radius: 999px;
+    border-radius: 10px;
 
     padding: .75rem 1.35rem;
 
-    font: inherit;
+    font-weight: 600;
 
     cursor: pointer;
 
-    transition:
-        background .25s,
-        border-color .25s,
-        transform .25s;
+    transition: .25s ease;
 }
 
 .filter-btn:hover {
 
-    transform: translateY(-2px);
+    border-color: var(--accent);
 
-    border-color: rgba(255,255,255,.35);
+    color: var(--accent);
 
 }
 
 .filter-btn.active {
 
-    background: var(--accent-color);
+    background: #1d4ed8;
 
-    color: white;
+    color: #fff;
 
-    border-color: var(--accent-color);
+    border-color: #1d4ed8;
 
 }
 
@@ -1722,38 +1718,3 @@ tr:nth-child(even) {
 
 }
 
-.filter-btn {
-
-    background: transparent;
-    color: var(--text);
-
-    border: 1px solid rgba(148,163,184,.35);
-
-    border-radius: 10px;
-
-    padding: .75rem 1.35rem;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: .25s ease;
-}
-
-.filter-btn:hover {
-
-    border-color: var(--accent);
-
-    color: var(--accent);
-
-}
-
-.filter-btn.active {
-
-    background: #1d4ed8;
-
-    color: #fff;
-
-    border-color: #1d4ed8;
-
-}
