@@ -142,7 +142,7 @@ document.querySelectorAll("a").forEach((link) => {
     });
   }
 });
-<script>
+
 /* ==========================================================
    GALLERY
 ========================================================== */
@@ -310,19 +310,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-</script>
+
+
+/* VIDEO AUTOPLAY */
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    document.querySelectorAll(".gallery-card video")
-    .forEach(video => {
+    document
+        .querySelectorAll(".gallery-card video")
+        .forEach(video => {
 
-        video.muted = true;
-        video.loop = true;
-        video.autoplay = true;
-        video.playsInline = true;
+            video.muted = true;
+            video.loop = true;
+            video.autoplay = true;
+            video.playsInline = true;
 
-        video.play().catch(() => {});
+            video.play().catch(() => {});
 
-    });
+        });
 
 });
+
