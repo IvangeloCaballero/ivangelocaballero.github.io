@@ -1743,7 +1743,7 @@ gallery-toolbar{
     display: block;
 
     transition: transform .5s ease;
-
+ object-position: center center;
 }
 
 .gallery-card:hover video {
