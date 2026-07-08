@@ -62,7 +62,7 @@ overlay.addEventListener("click", (e) => {
     }
   });
 
-}); // ✅ FIXED (was IIFE)
+}); // 
 
 /* ================= NAV ================= */
 (function () {
@@ -238,8 +238,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             modal.classList.add("show");
 
-            modalImg.src =
-                card.querySelector("img").src;
+            
+const media =
+    card.querySelector("img");
+
+if(media){
+    modalImg.src = media.src;
 
             modalTitle.textContent =
                 card.dataset.title;
@@ -331,13 +335,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* VIDEO FULLSCREEN */
 
+/* VIDEO FULLSCREEN */
 
 document.querySelectorAll(".gallery-video")
 .forEach(video => {
 
-    video.addEventListener("click", async () => {
+    video.addEventListener("click", async (e) => {
+
+        e.preventDefault();
+        e.stopPropagation();
 
         try {
 
@@ -345,7 +352,6 @@ document.querySelectorAll(".gallery-video")
                 await video.requestFullscreen();
             }
 
-            video.muted = true;
             video.play();
 
         } catch(err) {
