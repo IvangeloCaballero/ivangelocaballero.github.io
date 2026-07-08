@@ -333,16 +333,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* VIDEO FULLSCREEN */
 
+
 document.querySelectorAll(".gallery-video")
 .forEach(video => {
 
-    video.addEventListener("click", () => {
+    video.addEventListener("click", async () => {
 
-        if (video.requestFullscreen) {
-            video.requestFullscreen();
+        try {
+
+            if (video.requestFullscreen) {
+                await video.requestFullscreen();
+            }
+
+            video.muted = true;
+            video.play();
+
+        } catch(err) {
+            console.log(err);
         }
 
     });
 
 });
-
