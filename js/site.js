@@ -361,30 +361,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* VIDEO FULLSCREEN */
 
+document.querySelectorAll(".gallery-card")
+.forEach(card => {
 
-document.addEventListener("DOMContentLoaded", () => {
+    const video = card.querySelector(".gallery-video");
 
-    document.querySelectorAll(".gallery-video")
-    .forEach(video => {
+    if (!video) return;
 
-        video.addEventListener("click", async (e) => {
+    card.addEventListener("click", async (e) => {
 
-            e.preventDefault();
-            e.stopPropagation();
+        e.preventDefault();
+        e.stopPropagation();
 
-            try {
+        try {
 
-                await video.requestFullscreen();
+            await video.requestFullscreen();
+            video.play();
 
-                setTimeout(() => {
-                    video.play();
-                }, 100);
-
-            } catch(err) {
-                console.log(err);
-            }
-
-        });
+        } catch(err) {
+            console.log(err);
+        }
 
     });
 
