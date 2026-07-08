@@ -311,3 +311,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    document.querySelectorAll(".gallery-card video")
+    .forEach(video => {
+
+        video.muted = true;
+        video.loop = true;
+        video.autoplay = true;
+        video.playsInline = true;
+
+        video.play().catch(() => {});
+
+    });
+
+});
