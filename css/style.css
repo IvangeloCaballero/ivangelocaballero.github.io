@@ -1732,3 +1732,22 @@ gallery-toolbar{
     position:relative;
     z-index:50;
 }
+
+.gallery-card video {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .5s ease;
+
+}
+
+.gallery-card:hover video {
+
+    transform: scale(1.06);
+
+}
