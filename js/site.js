@@ -331,3 +331,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+/* VIDEO FULLSCREEN */
+
+document.querySelectorAll(".gallery-video")
+.forEach(video => {
+
+    video.addEventListener("click", () => {
+
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        }
+
+    });
+
+});
+
