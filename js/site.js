@@ -165,15 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const filter = button.dataset.filter;
 
-            
-cards.forEach(card => {
-
-    card.addEventListener("click", () => {
-
-        if(card.querySelector("video")) return;
-
-        modal.classList.add("show");
-
         const media = card.querySelector("img");
 
         if(media){
@@ -359,29 +350,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/* VIDEO FULLSCREEN */
-
-document.querySelectorAll(".gallery-card")
-.forEach(card => {
-
-    const video = card.querySelector(".gallery-video");
-
-    if (!video) return;
-
-    card.addEventListener("click", async (e) => {
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        try {
-
-            await video.requestFullscreen();
-            video.play();
-
-        } catch(err) {
-            console.log(err);
-        }
-
-    });
-
-});
