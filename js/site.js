@@ -165,26 +165,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const filter = button.dataset.filter;
 
-            cards.forEach(card => {
+            
+cards.forEach(card => {
 
-                if (
-                    filter === "all" ||
-                    card.classList.contains(filter)
-                ) {
+    card.addEventListener("click", () => {
 
-                    card.classList.remove("hide");
+        if(card.querySelector("video")) return;
 
-                } else {
+        modal.classList.add("show");
 
-                    card.classList.add("hide");
+        const media = card.querySelector("img");
 
-                }
+        if(media){
+            modalImg.src = media.src;
+        }
 
-            });
+        modalTitle.textContent =
+            card.dataset.title || "";
 
-        });
+        modalCategory.textContent =
+            card.dataset.category || "";
+
+        modalSoftware.textContent =
+            card.dataset.software || "";
+
+        if (card.dataset.link) {
+
+            modalLink.href =
+                card.dataset.link;
+
+            modalLink.style.display =
+                "inline-flex";
+
+        } else {
+
+            modalLink.style.display =
+                "none";
+
+        }
 
     });
+
+});
+
 
     /* ==========================
        LIGHTBOX
@@ -338,25 +361,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* VIDEO FULLSCREEN */
 
-document.querySelectorAll(".gallery-video")
-.forEach(video => {
 
-    video.addEventListener("click", async (e) => {
+document.addEventListener("DOMContentLoaded", () => {
 
-        e.preventDefault();
-        e.stopPropagation();
+    document.querySelectorAll(".gallery-video")
+    .forEach(video => {
 
-        try {
+        video.addEventListener("click", async (e) => {
 
-            if (video.requestFullscreen) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            try {
+
                 await video.requestFullscreen();
+
+                setTimeout(() => {
+                    video.play();
+                }, 100);
+
+            } catch(err) {
+                console.log(err);
             }
 
-            video.play();
-
-        } catch(err) {
-            console.log(err);
-        }
+        });
 
     });
 
