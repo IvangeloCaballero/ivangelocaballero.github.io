@@ -1255,6 +1255,7 @@ tr:nth-child(even) {
     gap:18px;
 
     grid-auto-flow:dense;
+    position:relative;
 }
 
 
@@ -1434,10 +1435,20 @@ tr:nth-child(even) {
 /* ==========================================================
    HIDDEN CARDS
 ========================================================== */
+.gallery-card{
+    transition:
+        opacity .35s ease,
+        transform .35s ease,
+        visibility 0s linear .35s;
+}
 
-.gallery-card.hide {
+.gallery-card.hide{
 
-    display: none;
+    opacity:0;
+    transform:scale(.94);
+
+    visibility:hidden;
+    pointer-events:none;
 
 }
 
