@@ -277,7 +277,7 @@ if(media){
                 modalLink.style.display =
                     "none";
 
-            }
+            }}
 
         });
 
