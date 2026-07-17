@@ -1755,3 +1755,38 @@ gallery-toolbar{
 .gallery-video {
     pointer-events: none;
 }
+
+.gallery-card{
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform-origin: center center;
+
+    transition:
+        transform .45s cubic-bezier(.22,1,.36,1),
+        opacity .35s ease,
+        box-shadow .3s ease;
+}
+
+/* Card fading out */
+.gallery-card.is-filtering-out{
+
+    opacity:0;
+    transform:scale(.92);
+
+    pointer-events:none;
+
+}
+
+/* Card returning */
+.gallery-card.is-filtering-in{
+
+    opacity:1;
+
+}
+
+/* Prevent transition while FLIP calculates positions */
+.gallery-card.no-transition{
+
+    transition:none !important;
+
+}
