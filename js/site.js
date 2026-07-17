@@ -150,10 +150,10 @@ document.querySelectorAll("a").forEach((link) => {
 document.addEventListener("DOMContentLoaded", () => {
 
     const cards = document.querySelectorAll(".gallery-card");
-    const filters = document.querySelectorAll(".filter-btn");
+    const s = document.querySelectorAll(".filter-btn");
 
 /* ==========================
-   FILTERS (FLIP Animation)
+   FILTERS
 ========================== */
 
 filters.forEach(button => {
@@ -165,107 +165,37 @@ filters.forEach(button => {
 
         const filter = button.dataset.filter;
 
-        // Save current positions
-        const first = new Map();
-
-        cards.forEach(card => {
-            first.set(card, card.getBoundingClientRect());
-        });
-
-        // Fade out cards that will disappear
         cards.forEach(card => {
 
             const show =
                 filter === "all" ||
-                card.dataset.category === filter;
+                card.classList.contains(filter);
 
-            if (!show) {
+            if (show) {
 
-                card.classList.add("is-filtering-out");
+                card.classList.remove("hide");
+
+                requestAnimationFrame(() => {
+                    card.style.opacity = "1";
+                    card.style.transform = "scale(1)";
+                });
 
             } else {
 
-                card.classList.remove("hide");
-                card.classList.remove("is-filtering-out");
+                card.style.opacity = "0";
+                card.style.transform = "scale(.95)";
+
+                setTimeout(() => {
+                    card.classList.add("hide");
+                }, 300);
 
             }
 
         });
 
-        // Wait for fade-out
-        setTimeout(() => {
-
-            cards.forEach(card => {
-
-                const show =
-                    filter === "all" ||
-                    card.dataset.category === filter;
-
-                if (!show) {
-
-                    card.classList.add("hide");
-
-                } else {
-
-                    card.classList.remove("hide");
-
-                }
-
-            });
-
-            requestAnimationFrame(() => {
-
-                // Save new positions
-                const last = new Map();
-
-                cards.forEach(card => {
-
-                    if (!card.classList.contains("hide")) {
-
-                        last.set(card, card.getBoundingClientRect());
-
-                    }
-
-                });
-
-                // Animate movement
-                cards.forEach(card => {
-
-                    if (card.classList.contains("hide")) return;
-
-                    const firstBox = first.get(card);
-                    const lastBox = last.get(card);
-
-                    if (!firstBox || !lastBox) return;
-
-                    const dx = firstBox.left - lastBox.left;
-                    const dy = firstBox.top - lastBox.top;
-
-                    if (dx === 0 && dy === 0) return;
-
-                    card.classList.add("no-transition");
-
-                    card.style.transform =
-                        `translate(${dx}px, ${dy}px)`;
-
-                    requestAnimationFrame(() => {
-
-                        card.classList.remove("no-transition");
-
-                        card.style.transform = "";
-
-                    });
-
-                });
-
-            });
-
-        }, 250);
-
     });
 
 });
-
     /* ==========================
        LIGHTBOX
     ========================== */
