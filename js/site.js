@@ -152,53 +152,119 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".gallery-card");
     const filters = document.querySelectorAll(".filter-btn");
 
-    /* ==========================
-       FILTERS
-    ========================== */
+/* ==========================
+   FILTERS (FLIP Animation)
+========================== */
 
-    filters.forEach(button => {
+filters.forEach(button => {
 
-        button.addEventListener("click", () => {
+    button.addEventListener("click", () => {
 
-            filters.forEach(btn => btn.classList.remove("active"));
-            button.classList.add("active");
+        filters.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
 
-            const filter = button.dataset.filter;
+        const filter = button.dataset.filter;
 
-        const media = card.querySelector("img");
+        // Save current positions
+        const first = new Map();
 
-        if(media){
-            modalImg.src = media.src;
-        }
+        cards.forEach(card => {
+            first.set(card, card.getBoundingClientRect());
+        });
 
-        modalTitle.textContent =
-            card.dataset.title || "";
+        // Fade out cards that will disappear
+        cards.forEach(card => {
 
-        modalCategory.textContent =
-            card.dataset.category || "";
+            const show =
+                filter === "all" ||
+                card.dataset.category === filter;
 
-        modalSoftware.textContent =
-            card.dataset.software || "";
+            if (!show) {
 
-        if (card.dataset.link) {
+                card.classList.add("is-filtering-out");
 
-            modalLink.href =
-                card.dataset.link;
+            } else {
 
-            modalLink.style.display =
-                "inline-flex";
+                card.classList.remove("hide");
+                card.classList.remove("is-filtering-out");
 
-        } else {
+            }
 
-            modalLink.style.display =
-                "none";
+        });
 
-        }
+        // Wait for fade-out
+        setTimeout(() => {
+
+            cards.forEach(card => {
+
+                const show =
+                    filter === "all" ||
+                    card.dataset.category === filter;
+
+                if (!show) {
+
+                    card.classList.add("hide");
+
+                } else {
+
+                    card.classList.remove("hide");
+
+                }
+
+            });
+
+            requestAnimationFrame(() => {
+
+                // Save new positions
+                const last = new Map();
+
+                cards.forEach(card => {
+
+                    if (!card.classList.contains("hide")) {
+
+                        last.set(card, card.getBoundingClientRect());
+
+                    }
+
+                });
+
+                // Animate movement
+                cards.forEach(card => {
+
+                    if (card.classList.contains("hide")) return;
+
+                    const firstBox = first.get(card);
+                    const lastBox = last.get(card);
+
+                    if (!firstBox || !lastBox) return;
+
+                    const dx = firstBox.left - lastBox.left;
+                    const dy = firstBox.top - lastBox.top;
+
+                    if (dx === 0 && dy === 0) return;
+
+                    card.classList.add("no-transition");
+
+                    card.style.transform =
+                        `translate(${dx}px, ${dy}px)`;
+
+                    requestAnimationFrame(() => {
+
+                        card.classList.remove("no-transition");
+
+                        card.style.transform = "";
+
+                    });
+
+                });
+
+            });
+
+        }, 250);
 
     });
 
 });
-
 
     /* ==========================
        LIGHTBOX
